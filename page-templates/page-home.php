@@ -255,7 +255,7 @@ get_header();
                       $day = date('l', strtotime($date));
                   ?>
                   <div class="col-12 col-md-3 bootcamp" id ="<?php echo get_the_id(); ?>">
-                    <div class="card" style="height: 520px;">
+                    <div class="card" style="height: 500px;">
                       <img src="<?php the_post_thumbnail_url(); ?>" class="card-img-top" style="height: 220px; object-fit: cover;" alt="Card Image">
                         <div class="card-body">
                           <a href="<?php the_permalink(); ?>" class="text-decoration-none">
@@ -263,7 +263,7 @@ get_header();
                           </a>
 
                           <div class="bootcamp-info">
-                            <p id="date" style="font-weight: 300"><i class="fas fa-calendar-alt"></i><?php echo $date; ?></p>
+                            <!-- <p id="date" style="font-weight: 300"><i class="fas fa-calendar-alt"></i><?php echo $date; ?></p> -->
                             <p id="duration" style="font-weight: 300"><i class="fas fa-hourglass-start"></i><?php echo $duration; ?></p>
                             <p id="time" style="font-weight: 300"><i class="far fa-clock"></i><?php echo $time; ?></p>
                             <p id="location" style="font-weight: 300"><i class="fas fa-map-pin"></i><?php echo $location; ?></p>
@@ -362,7 +362,6 @@ get_header();
         </div>
       </div>
 </div>
-
 
     <div class="col-12 testimonial-container">
       <div class="col-12 testimonial-header">
