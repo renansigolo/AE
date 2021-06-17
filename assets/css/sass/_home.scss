@@ -19,7 +19,7 @@
       position: relative;
       height: 330px;
       .banner-bg-img{
-        border-bottom: 5px solid #ff7442;
+        border-bottom: 5px solid #e63552;
       }
     }
     .event-workshop{
@@ -47,7 +47,7 @@
       .ew-title{
         padding-left: 40px;
         h1{
-          color: #ff7442;
+          color: #e63552;
           font-weight: 700;
           font-size: 55px;
        }
@@ -68,7 +68,7 @@
             .event-info{
               padding-right: 25px;
               .event-date-author{
-                border-bottom: 1px solid #ff7442;
+                border-bottom: 1px solid #e63552;
                 overflow: hidden;
                 @extend %regular-text-white;
                 p{
@@ -99,7 +99,7 @@
                 a{
                   h4{
                     text-transform: uppercase;
-                    color: #ff7442;
+                    color: #e63552;
                   }
                   &:hover{
                     text-decoration: none;
@@ -114,7 +114,7 @@
           .event-btn{
             text-align: center;
             .btn-link-general{
-              background-color: #ff7442;
+              background-color: #e63552;
               color: rgb(255, 255, 255);
               font-weight: bold;
               font-size: 15px;
@@ -233,10 +233,8 @@
       }
     }
     .third-banner{
-      position: relative;
-      height: 330px;
       .banner-bg-img{
-        border-bottom: 5px solid #ff7442;
+        border-bottom: 5px solid #e63552;
       }
     }
     .bootcamps-container{
@@ -264,12 +262,12 @@
       .bootcamps-title{
         padding-left: 40px;
         h1{
-          color: #ff7442;
+          color: #e63552;
           font-weight: 700;
           font-size: 55px;
        }
        b,strong{
-         color: #ff7442;
+         color: #e63552;
        }
        @extend %regular-text-white;
        p{
@@ -285,6 +283,16 @@
           .bootcamp{
             margin-bottom: 20px;
             display: inline-block;
+
+            .card-title {
+              color: #e63552;
+              font-weight: 700;
+              text-transform: capitalize;
+
+              &:hover {
+                text-decoration: none;
+              }
+            }
             .bootcamp-img{
               position: relative;
               img{
@@ -293,36 +301,14 @@
                 object-fit: cover;
               }
             }
-            .bootcamp-title{
-              @extend %text-content-h1-6-12-600-15;
-              text-transform: uppercase;
-              min-height: 90px;
-              position: relative;
-              a{
-                h3{
-                  position: absolute;
-                  top: 0;
-                  left: 0;
-                  text-transform: uppercase;
-                  color: #ff7442;
-                  font-size: 20px;
-                }
-                &:hover{
-                  text-decoration: none;
-                  h3{
-                    color: #ec551f;
-                  }
-                }
-              }
-            }
             .bootcamp-info{
               padding-top: 10px;
-              border-top: 2px solid #000;
+              border-top: 1px solid #575757;
               @extend %regular-text-white;
               p{
                 margin-bottom: 5px;
                 i{
-                  color: #ff7442;
+                  color: #e63552;
                   padding-right: 5px;
                   font-size: 15px;
                   width: 20px;
@@ -333,7 +319,7 @@
           .bootcamp-btn{
             text-align: center;
             .btn-link-general{
-              background-color: #ff7442;
+              background-color: #e63552;
               color: rgb(255, 255, 255);
               font-weight: bold;
               font-size: 15px;

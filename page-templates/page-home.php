@@ -49,7 +49,9 @@ get_header();
     $third_home_banner = get_field('home_third_banner');
     ?>
     <div class="col-12 first-banner">
-		<a href="https://academy-of-entrepreneurs.square.site/" target="blank"><div class="banner-bg-img" style="background-image:url(<?php echo $first_home_banner; ?>); background-size: cover; background-position: center; background-repeat: no-repeat;"></div></a>
+		<a href="https://academy-of-entrepreneurs.square.site/" target="blank">
+      <img class="banner-bg-img" src="<?php echo $first_home_banner; ?>" />
+    </a>
     </div>
     <div class="col-12 mt-5 event-workshop">
       <!-- <div class="light-orange-background"></div> -->
@@ -209,9 +211,11 @@ get_header();
         </div>
     </div>
 
-    <div class="col-12 third-banner">
-      <div class="banner-bg-img" style="background-image:url(<?php echo $third_home_banner; ?>); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
+    <div class="col-12 mt-3 third-banner">
+      <img src="<?php echo $third_home_banner; ?>" class="img-fluid" alt="Third Banner" />
     </div>
+
+    <hr />
 
     <div class="col-12 mt-5 bootcamps-container">
       <!-- <div class="light-orange-background"></div> -->
@@ -251,31 +255,27 @@ get_header();
                       $day = date('l', strtotime($date));
                   ?>
                   <div class="col-12 col-md-3 bootcamp" id ="<?php echo get_the_id(); ?>">
-                    <div class="card-like">
-                      <div class="bootcamp-img">
-                        <img src="<?php the_post_thumbnail_url(); ?>" alt="">
-                        <!-- <div class="btn_learnmore">
-                          <a href="<?php the_permalink(); ?>"><button class="btn-link-general">Learn More</button></a>
-                        </div> -->
-                      </div>
-                      <div class="bootcamp-title">
-                        <a href="<?php the_permalink(); ?>">
-                          <h3><?php echo the_title(); ?></h3>
-                        </a>
-                      </div>
-                      <div class="bootcamp-info">
-                        <p id="date"><i class="fas fa-calendar-alt"></i><?php echo $date; ?></p>
-                        <p id="duration"><i class="fas fa-hourglass-start"></i><?php echo $duration; ?></p>
-                        <p id="time"><i class="far fa-clock"></i><?php echo $time; ?></p>
-                        <p id="location"><i class="fas fa-map-pin"></i><?php echo $location; ?></p>
-                        <p id="price"><i class="fas fa-tag"></i><?php
-                        if($price != ""){
-                            echo $price;
-                        }else{
-                          echo "FREE";
-                        }
-                        ?></p>
-                      </div>
+                    <div class="card" style="height: 520px;">
+                      <img src="<?php the_post_thumbnail_url(); ?>" class="card-img-top" style="height: 220px; object-fit: cover;" alt="Card Image">
+                        <div class="card-body">
+                          <a href="<?php the_permalink(); ?>" class="text-decoration-none">
+                            <h5 class="card-title"><?php echo the_title(); ?></h5>
+                          </a>
+
+                          <div class="bootcamp-info">
+                            <p id="date" style="font-weight: 300"><i class="fas fa-calendar-alt"></i><?php echo $date; ?></p>
+                            <p id="duration" style="font-weight: 300"><i class="fas fa-hourglass-start"></i><?php echo $duration; ?></p>
+                            <p id="time" style="font-weight: 300"><i class="far fa-clock"></i><?php echo $time; ?></p>
+                            <p id="location" style="font-weight: 300"><i class="fas fa-map-pin"></i><?php echo $location; ?></p>
+                            <p id="price" style="font-weight: 300"><i class="fas fa-tag"></i><?php
+                            if($price != ""){
+                                echo $price;
+                            }else{
+                              echo "FREE";
+                            }
+                            ?></p>
+                          </div>
+                        </div>
                     </div>
                   </div>
                   <?php
@@ -283,7 +283,7 @@ get_header();
                   }
                   wp_reset_query();
                   ?>
-                  <div class="col-12 bootcamp-btn">
+                  <div class="col-12 mt-4 bootcamp-btn">
                     <?php
                     $link = get_field('bootcamp_see_all_button');
                     if( $link ):
