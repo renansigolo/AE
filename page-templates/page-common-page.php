@@ -24,14 +24,14 @@ $numberColumn = get_field('number_of_column');
     <div class="col-12 common-content">
       <div class="row">
       <?php if($numberColumn == 'one') {?>
-        <div class="col-12 content" data-aos="fade-up">
+        <div class="col-12 content">
           <?php echo get_field('first_column_content');?>
         </div>
       <?php }else {?>
-        <div class="col-12 col-md-6 content first-column" data-aos="fade-right">
+        <div class="col-12 col-md-6 content first-column">
           <?php echo get_field('first_column_content');?>
         </div>
-        <div class="col-12 col-md-6 content second-column" data-aos="fade-left">
+        <div class="col-12 col-md-6 content second-column">
           <?php echo get_field('second_column_content');?>
         </div>
       <?php } ?>

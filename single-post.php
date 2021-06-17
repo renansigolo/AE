@@ -17,7 +17,7 @@ $next = get_next_post();
 <div class="single-page-post">
   <div class="col-12 offset-md-2 col-md-8 single-post">
     <div class="row">
-      <div class="col-12 post-content" data-aos="zoom-out">
+      <div class="col-12 post-content">
         <div class="back-btn">
           <a href="<?php echo home_url().'\blog'; ?>">BACK</a>
         </div>
@@ -33,7 +33,7 @@ $next = get_next_post();
         <p><?php echo the_content(); ?></p>
         </div>
       </div>
-      <div class="col-12 post-tags" data-aos="fade-right">
+      <div class="col-12 post-tags">
         <i class="fas fa-tags"></i>
           <?php
           foreach( $post_tags as $tag ) {
@@ -45,7 +45,7 @@ $next = get_next_post();
       </div>
       <div class="col-12 post-next-prev">
         <div class="row">
-          <div class="col-6 col-md-5 offset-md-1 previous-nav" data-aos="fade-right">
+          <div class="col-6 col-md-5 offset-md-1 previous-nav">
             <?php
             if(get_previous_post()){
             ?>
@@ -63,7 +63,7 @@ $next = get_next_post();
             }
             ?>
           </div>
-          <div class="col-6 col-md-5 next-nav" data-aos="fade-left">
+          <div class="col-6 col-md-5 next-nav">
             <?php
             if(get_next_post()){
             ?>
@@ -84,7 +84,7 @@ $next = get_next_post();
         </div>
 
       </div>
-      <div class="col-12 author-info" data-aos="fade-up">
+      <div class="col-12 author-info">
         <div class="row">
           <div class="col-12 col-md-10 author-desc">
             <div class="author-name">
@@ -98,7 +98,7 @@ $next = get_next_post();
       </div>
       <div class="col-12 related-post">
         <div class="row">
-          <div class="col-12 related-title" data-aos="zoom-in">
+          <div class="col-12 related-title">
             <p><?php echo get_field('single_page_other_posts_label',18);?></p>
           </div>
           <?php
@@ -113,7 +113,7 @@ $next = get_next_post();
             if( $my_query->have_posts() ) {
             while ($my_query->have_posts()) : $my_query->the_post();
           ?>
-          <div class="col-12 col-md-4 r-post" data-aos="fade-up">
+          <div class="col-12 col-md-4 r-post">
             <div class="row">
               <div class="col-12 r-post-img">
                 <img src="<?php the_post_thumbnail_url(); ?>" alt="">

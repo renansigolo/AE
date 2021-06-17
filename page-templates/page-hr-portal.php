@@ -21,10 +21,10 @@ get_header();
   <div class="col-12 offset-md-2 col-md-8 hr-portal-container">
     <div class="col-12 hr-portal-content">
       <div class="row">
-        <div class="col-12 content" data-aos="fade-up">
+        <div class="col-12 content">
           <?php echo get_field('first_content');?>
         </div>
-        <div class="col-12 content-links content-policies" data-aos="fade-right">
+        <div class="col-12 content-links content-policies">
           <div class="col-12 header-title">
             <h1><?php echo get_field('first_label');?></h1>
           </div>
@@ -42,7 +42,7 @@ get_header();
             </div>
           </div>
         </div>
-        <div class="col-12 content-links content-forms" data-aos="fade-left">
+        <div class="col-12 content-links content-forms">
           <div class="col-12 header-title">
             <h1><?php echo get_field('second_label');?></h1>
           </div>

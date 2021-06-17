@@ -51,10 +51,10 @@ get_header();
             ?>
             <div class="col-12 blog">
               <div class="row">
-                <div class="col-12 col-md-7 blog-img" data-aos="fade-right">
+                <div class="col-12 col-md-7 blog-img">
                   <img src="<?php the_post_thumbnail_url(); ?>" alt="">
                 </div>
-                <div class="col-12 col-md-5 blog-info" data-aos="fade-left">
+                <div class="col-12 col-md-5 blog-info">
                   <div class="blog-date-author">
                     <p><?php echo $date; ?> </p>
 					
@@ -91,7 +91,7 @@ get_header();
           </div>
         </div>
 
-        <div class="col-12 col-md-3 search-popular" data-aos="fade-up">
+        <div class="col-12 col-md-3 search-popular">
           <div class="row">
             <div class="col-12 col-md-12 search-form">
               <form class="" action="<?php echo home_url() . '/blog'?>" method="get">

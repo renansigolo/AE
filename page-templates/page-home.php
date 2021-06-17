@@ -59,11 +59,11 @@ get_header();
     </div>
     <div class="col-12 event-workshop">
       <!-- <div class="light-orange-background"></div> -->
-      <div class="col-12 first-title" data-aos="fade-right">
+      <div class="col-12 first-title">
         <h1><?php echo get_field('first_section_label_vertical');?></h1>
       </div>
         <div class="row">
-          <div class="col-12 ew-title" data-aos="fade-right">
+          <div class="col-12 ew-title">
             <h1><?php echo get_field('first_section_label_horizontal');?></h1>
           </div>
           <div class="col-12  ew-body">
@@ -106,7 +106,7 @@ get_header();
                       $price = 'Free';
                     }
                   ?>
-                  <div class="col-12 col-md-6 event" data-aos="fade-up">
+                  <div class="col-12 col-md-6 event">
                     <div class="card-like-no-padding">
                       <div class="row">
                         <div class="col-12 col-md-6 event-img">
@@ -154,18 +154,18 @@ get_header();
 
     <div class="col-12 second-banner">
       <div class="coral-background"></div>
-      <div class="col-12 hashtag-container" data-aos="zoom-in">
+      <div class="col-12 hashtag-container">
         <h1><?php echo get_field('hashtag_text'); ?></h1>
       </div>
     </div>
 
     <div class="col-12 study-courses">
       <div class="light-coral-background"></div>
-      <div class="col-12 first-title" data-aos="fade-right">
+      <div class="col-12 first-title">
         <h1><?php echo get_field('courses_first_label_vertical');?></h1>
       </div>
       <div class="row">
-        <div class="col-12 courses-title" data-aos="fade-right">
+        <div class="col-12 courses-title">
           <h1><?php echo get_field('courses_first_label');?></h1>
           <p id="course_first_desc"><?php echo get_field('courses_first_desc');?></p>
         </div>
@@ -182,7 +182,7 @@ get_header();
                     $content = get_post_field('post_content', $pagePostID);
                     $img_url = wp_get_attachment_url( get_post_thumbnail_id($pagePostID) );
                   ?>
-                    <div class="col-12 col-md-6 courses" data-aos="fade-up">
+                    <div class="col-12 col-md-6 courses">
                       <div class="card-like">
                         <div class="row">
                           <div class="col-12 col-md-6 courses-img">
@@ -221,11 +221,11 @@ get_header();
 
     <div class="col-12 bootcamps-container">
       <!-- <div class="light-orange-background"></div> -->
-      <div class="col-12 first-title" data-aos="fade-right">
+      <div class="col-12 first-title">
         <h1><?php echo get_field('bootcamp_first_label_vertical');?></h1>
       </div>
       <div class="row">
-        <div class="col-12 bootcamps-title" data-aos="fade-right">
+        <div class="col-12 bootcamps-title">
           <h1><?php echo get_field('bootcamp_first_label');?></h1>
           <p id="bootcamp_first_desc"><?php echo get_field('bootcamp_first_desc');?></p>
         </div>
@@ -256,7 +256,7 @@ get_header();
                       $price = get_field('bootcamp_structure_cost');
                       $day = date('l', strtotime($date));
                   ?>
-                  <div class="col-12 col-md-3 bootcamp" id ="<?php echo get_the_id(); ?>" data-aos="fade-up">
+                  <div class="col-12 col-md-3 bootcamp" id ="<?php echo get_the_id(); ?>">
                     <div class="card-like">
                       <div class="bootcamp-img">
                         <img src="<?php the_post_thumbnail_url(); ?>" alt="">
@@ -269,7 +269,7 @@ get_header();
                           <h3><?php echo the_title(); ?></h3>
                         </a>
                       </div>
-                      <div class="bootcamp-info" data-aos="fade-right">
+                      <div class="bootcamp-info">
                         <p id="date"><i class="fas fa-calendar-alt"></i><?php echo $date; ?></p>
                         <p id="duration"><i class="fas fa-hourglass-start"></i><?php echo $duration; ?></p>
                         <p id="time"><i class="far fa-clock"></i><?php echo $time; ?></p>
@@ -308,7 +308,7 @@ get_header();
     </div>
     <div class="col-12 video-list-container">
       <div class="gray-background"></div>
-      <div class="col-12 first-title" data-aos="fade-right">
+      <div class="col-12 first-title">
         <h1><?php echo get_field('second_section_label_vertical');?></h1>
       </div>
       <div class="row">
@@ -323,7 +323,7 @@ get_header();
         $videos = new WP_Query( $args3 );
         while ( $videos->have_posts() ) : $videos->the_post();
         ?>
-        <div class="col-12 col-md-5 video-items" data-aos="fade-left">
+        <div class="col-12 col-md-5 video-items">
           <div class="video-frame">
             <?php echo get_field('video_link'); ?>
           </div>
@@ -355,10 +355,10 @@ get_header();
   ?>
       <div class="col-12 about-us-container">
         <div class="row">
-          <div class="col-12 col-md-6 about-img" data-aos="fade-down-right">
+          <div class="col-12 col-md-6 about-img">
             <img src="<?php echo $about_featured_url; ?>" alt="">
           </div>
-          <div class="col-12 col-md-6 about-info" data-aos="fade-down-left">
+          <div class="col-12 col-md-6 about-info">
             <h1><?php echo $about_title; ?></h1>
             <p><?php echo $about_content; ?></p>
             <div class="about-us-btn">
@@ -370,7 +370,7 @@ get_header();
 </div>
 
 
-    <div class="col-12 testimonial-container" data-aos="zoom-out">
+    <div class="col-12 testimonial-container">
       <div class="col-12 testimonial-header">
         <h1><?php echo get_field('testimonial_label'); ?></h1>
       </div>

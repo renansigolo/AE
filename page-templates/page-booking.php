@@ -23,7 +23,7 @@ $numberColumn = get_field('number_of_column');
   <div class="col-12 offset-md-2 col-md-8 common-container">
     <div class="col-12 common-content">
       <div class="row">
-        <div class="col-12 content" data-aos="fade-up">
+        <div class="col-12 content">
           <?php echo get_field('booking_form');?>
         </div>
       </div>

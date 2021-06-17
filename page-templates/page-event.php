@@ -16,7 +16,7 @@ $selected_events = $_SESSION['set_which_event'];
     </div>
     <div class="col-12 offset-md-1 col-md-10 event-container">
       <div class="row">
-        <div class="col-12 event-title-header" data-aos="fade-right">
+        <div class="col-12 event-title-header">
           <h1>EVENTS</h1>
         </div>
         <?php
@@ -45,7 +45,7 @@ $selected_events = $_SESSION['set_which_event'];
           <?php
           }else {
           ?>
-          <div class="col-12 current-previous-btn" data-aos="fade-right">
+          <div class="col-12 current-previous-btn">
             <p>
             <form class="" action="<?php echo home_url().'\events'; ?>" method="get">
               <input type="submit" id="current" name="btn_current" value="CURRENT EVENTS">
@@ -125,10 +125,10 @@ $selected_events = $_SESSION['set_which_event'];
             ?>
             <div class="col-12 col-md-6 event-box">
               <div class="row">
-                <div class="col-12 col-md-6 event-img" data-aos="fade-right">
+                <div class="col-12 col-md-6 event-img">
                   <img src="<?php the_post_thumbnail_url(); ?>" alt="">
                 </div>
-                <div class="col-12 col-md-6 event-info" data-aos="fade-left">
+                <div class="col-12 col-md-6 event-info">
                   <div class="event-date-author">
                     <p id="date"><?php echo $date; ?></p>
                     <p id="price"><?php echo $price; ?> </p>
@@ -204,10 +204,10 @@ $selected_events = $_SESSION['set_which_event'];
             ?>
             <div class="col-12 col-md-6 event-box">
               <div class="row">
-                <div class="col-12 col-md-6 event-img" data-aos="fade-right">
+                <div class="col-12 col-md-6 event-img">
                   <img src="<?php the_post_thumbnail_url(); ?>" alt="">
                 </div>
-                <div class="col-12 col-md-6 event-info" data-aos="fade-left">
+                <div class="col-12 col-md-6 event-info">
                   <div class="event-date-author">
                     <p id="date"><?php echo $date; ?></p>
                     <p id="price"><?php echo $price; ?> </p>

@@ -17,7 +17,7 @@ $pagePostID = get_field('study_course_page',$term->taxonomy . '_' . $term->term_
 <div class="single-page-diploma">
   <div class="col-12 offset-md-2 col-md-8 single-diploma">
     <div class="row">
-      <div class="col-12 post-content" data-aos="zoom-out">
+      <div class="col-12 post-content">
         <div class="back-btn">
           <a href="<?php echo get_permalink($pagePostID); ?>">BACK</a>
           <!-- <?php
@@ -45,7 +45,7 @@ $pagePostID = get_field('study_course_page',$term->taxonomy . '_' . $term->term_
           <p><?php echo get_field('second_content_text_editor'); ?></p>
         </div>
       </div>
-      <div class="col-12 post-tags" data-aos="fade-right">
+      <div class="col-12 post-tags">
         <i class="fas fa-tags"></i>
           <?php
           foreach( $post_tags as $tag ) {
@@ -57,7 +57,7 @@ $pagePostID = get_field('study_course_page',$term->taxonomy . '_' . $term->term_
       </div>
       <div class="col-12 post-next-prev">
         <div class="row">
-          <div class="col-6 col-md-5 offset-md-1 previous-nav" data-aos="fade-right">
+          <div class="col-6 col-md-5 offset-md-1 previous-nav">
             <?php
             if(get_previous_post()){
             ?>
@@ -77,7 +77,7 @@ $pagePostID = get_field('study_course_page',$term->taxonomy . '_' . $term->term_
             }
             ?>
           </div>
-          <div class="col-6 col-md-5 next-nav" data-aos="fade-left">
+          <div class="col-6 col-md-5 next-nav">
             <?php
             if(get_next_post()){
             ?>
@@ -100,9 +100,9 @@ $pagePostID = get_field('study_course_page',$term->taxonomy . '_' . $term->term_
         </div>
 
       </div>
-      <div class="col-12 author-info" data-aos="fade-up">
+      <div class="col-12 author-info">
         <div class="row">
-          <div class="col-12 col-md-10 author-desc" data-aos="zoom-in">
+          <div class="col-12 col-md-10 author-desc">
             <div class="author-name">
               <h5><?php echo $author; ?></h5>
             </div>
@@ -114,7 +114,7 @@ $pagePostID = get_field('study_course_page',$term->taxonomy . '_' . $term->term_
       </div>
       <div class="col-12 related-post">
         <div class="row">
-          <div class="col-12 related-title" data-aos="zoom-in">
+          <div class="col-12 related-title">
             <p>
              <?php echo 'Other '. $term->name. ' Units';?>
               <!-- <?php
@@ -147,7 +147,7 @@ $pagePostID = get_field('study_course_page',$term->taxonomy . '_' . $term->term_
               if( $my_query->have_posts() ) {
               while ($my_query->have_posts()) : $my_query->the_post();
             ?>
-            <div class="col-12 col-md-4 r-post" data-aos="fade-up">
+            <div class="col-12 col-md-4 r-post">
               <div class="row">
                 <div class="col-12 r-post-img">
                   <a href="<?php echo the_permalink(); ?>">

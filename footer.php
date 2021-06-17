@@ -1,6 +1,6 @@
 <footer>
   <div class="footer-body">
-    <div class="partners-icon-body" data-aos="fade-up">
+    <div class="partners-icon-body">
       <!-- <div class="partners-1">
         <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Footer Partners Icon 1") ) : ?>
         <?php endif;?>
@@ -21,7 +21,7 @@
       </div>
         <div class="col-12">
           <div class="row">
-            <div class="col-12 col-md-12 col-lg-6 offset-lg-3" data-aos="fade-up" >
+            <div class="col-12 col-md-12 col-lg-6 offset-lg-3" >
               <p class="apply-now-text"><?php echo get_field('footer_apply_now_text',2); ?></p>
               <a href="<?php echo get_field('footer_apply_now_button_link',2); ?>"><button class="btn-link-general">APPLY NOW</button></a>
             </div>
@@ -32,7 +32,7 @@
       <div class="footer-menus">
         <div class="col-12 col-md-12 col-lg-10 offset-lg-1">
           <div class="row ">
-            <div class="col-12 col-lg-3 col-md col-sm-6 footer-icon-social" data-aos="zoom-out">
+            <div class="col-12 col-lg-3 col-md col-sm-6 footer-icon-social">
               <div class="website-icon">
                 <?php $custom_logo_id = get_theme_mod( 'custom_logo' );
                 $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );?>
@@ -48,7 +48,7 @@
                 <?php echo do_shortcode( '[chat style=4   s4_text_color=#ffffff  s4_background_color=#212121  ]' ); ?>
               </div>
             </div>
-            <div class="col-6 col-lg-4 col-md-4 col-sm-6 footer-menu-1" data-aos="zoom-out">
+            <div class="col-6 col-lg-4 col-md-4 col-sm-6 footer-menu-1">
               <div class="footer-menu-header">
                 <p>PROGRAMS WE DELIVER</p>
                 <hr>
@@ -75,7 +75,7 @@
                 <?php wp_nav_menu( array( 'theme_location' => 'footer-menu-3' ) ); ?>
               </div>
             </div> -->
-            <div class="col-6 col-lg-4 col-md-4 col-sm-6 footer-menu-4" data-aos="zoom-out">
+            <div class="col-6 col-lg-4 col-md-4 col-sm-6 footer-menu-4">
               <div class="footer-menu-header">
                 <p>ABOUT US</p>
                 <hr>

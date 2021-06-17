@@ -24,10 +24,10 @@ get_header();
 
     <div class="col-12 company-info">
       <div class="row">
-        <div class="col-12 col-md-6 c-info-img" data-aos="fade-right">
+        <div class="col-12 col-md-6 c-info-img">
           <img src="<?php echo get_field('company_info_image'); ?>" alt="">
         </div>
-        <div class="col-12 col-md-6 c-info-desc" data-aos="fade-left">
+        <div class="col-12 col-md-6 c-info-desc">
           <p><?php echo get_field('company_info'); ?></p>
           <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Social Icon") ) : ?>
           <?php endif;?>
@@ -35,12 +35,12 @@ get_header();
       </div>
     </div>
 
-    <div class="col-12 handbook-collapse-container" data-aos="fade-up">
+    <div class="col-12 handbook-collapse-container">
       <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Student Handbook Collapse") ) : ?>
       <?php endif;?>
     </div>
 
-    <div class="col-12 handbook-forms-container" data-aos="fade-up">
+    <div class="col-12 handbook-forms-container">
       <div class="col-12 header-title">
         <h1><?php echo get_field('forms_link_label');?></h1>
       </div>

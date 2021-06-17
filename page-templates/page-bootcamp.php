@@ -17,7 +17,7 @@ get_header();
   <div class="col-12 offset-md-1 col-md-10 bootcamp-container">
     <div class="col-12 bootcamp-list-container">
       <div class="row">
-        <div class="col-12 bootcamp-list-title" data-aos="fade-right">
+        <div class="col-12 bootcamp-list-title">
           <h1><?php echo get_field('bootcamp_list_title'); ?></h1>
         </div>
         <div class="col-12 bootcamp-body">
@@ -41,7 +41,7 @@ get_header();
                   $price = get_field('bootcamp_structure_cost');
                   $day = date('l', strtotime($date));
               ?>
-              <div class="col-12 col-md-4 bootcamp"data-aos="fade-up">
+              <div class="col-12 col-md-4 bootcamp">
                   <div class="bootcamp-img">
                     <img src="<?php the_post_thumbnail_url(); ?>" alt="">
                     <div class="btn_learnmore">
@@ -51,7 +51,7 @@ get_header();
                   <div class="bootcamp-title">
                     <h3><?php echo the_title(); ?></h3>
                   </div>
-                  <div class="bootcamp-info" data-aos="fade-right">
+                  <div class="bootcamp-info">
                     <p id="date"><i class="fas fa-calendar-alt"></i><?php echo $date; ?></p>
                     <p id="duration"><i class="fas fa-hourglass-start"></i><?php echo $duration; ?></p>
                     <p id="time"><i class="far fa-clock"></i><?php echo $time; ?></p>

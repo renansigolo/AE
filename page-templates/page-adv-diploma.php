@@ -20,7 +20,7 @@ get_header();
   <div class="col-12 offset-md-1 col-md-10 ad-container">
     <div class="col-12 diploma-studies">
       <div class="row">
-        <div class="col-12 col-md-7 studies-title" data-aos="fade-right">
+        <div class="col-12 col-md-7 studies-title">
           <h1><?php echo get_field('ad_second_page_header'); ?></h1>
         </div>
         <div class="col-12 listing-studies">
@@ -46,7 +46,7 @@ get_header();
               while ( $studies->have_posts() ) : $studies->the_post();
                   //inside the loop
               ?>
-              <div class="study-title"  data-aos="zoom-in">
+              <div class="study-title" >
                 <p id="<?php echo get_the_id(); ?>"><?php echo the_title(); ?></p>
               </div>
               <?php
@@ -64,17 +64,17 @@ get_header();
             ?>
             <div class="col-12 offset-md-1 col-md-10 study-content" id="<?php echo get_the_id(); ?>">
               <div class="row">
-                <div class="col-12 col-md-3 study-img" data-aos="fade-right">
+                <div class="col-12 col-md-3 study-img">
                   <?php echo the_post_thumbnail();?>
                 </div>
-                <div class="col-12 col-md-3 study-labels" data-aos="fade-right">
+                <div class="col-12 col-md-3 study-labels">
                   <hr>
                   <a href="<?php echo the_permalink(); ?>">
                   <h3><?php the_title(); ?></h3>
                   </a>
                   <p><?php the_content(); ?></p>
                 </div>
-                <div class="col-12 col-md-6 study-description" data-aos="fade-left">
+                <div class="col-12 col-md-6 study-description">
                   <hr>
                   <p><?php echo $content2; ?></p>
                 </div>
@@ -94,15 +94,15 @@ get_header();
     <div class="col-12 diploma-sched">
       <div class="gray-background"></div>
       <div class="row">
-        <div class="col-12 sched-title" data-aos="fade-right">
+        <div class="col-12 sched-title">
           <h1><?php echo get_field('ad_page_first_header'); ?></h1>
         </div>
-        <div class="col-12 col-md-5 sched-img" data-aos="fade-right">
+        <div class="col-12 col-md-5 sched-img">
           <img src="<?php echo get_field('ad_first_section_image'); ?>" alt="">
         </div>
         <div class="col-12 offset-md-1 col-md-6 schedules-details">
           <div class="row">
-            <div class="col-12 schedule-table" data-aos="fade-left">
+            <div class="col-12 schedule-table">
               <?php
               $table = get_field( 'ad_start_dates' );
               if ( $table ) {
@@ -143,7 +143,7 @@ get_header();
 
     <div class="col-12 application-details">
       <div class="row">
-        <div class="col-12 ready-title" data-aos="fade-right">
+        <div class="col-12 ready-title">
           <h1><?php echo get_field('ad_third_page_header'); ?></h1>
         </div>
         <div class="col-12 offset-md-1 col-md-10 applications-informations">
@@ -160,46 +160,46 @@ get_header();
                   <div class="row">
                     <div class="col-12 label-description">
                       <div class="row">
-                        <div class="col-12 col-md-4 info-label" data-aos="fade-right">
+                        <div class="col-12 col-md-4 info-label">
                           <h3><?php echo get_field('ad_info_1_label'); ?></h3>
                         </div>
-                        <div class="col-12 col-md-8 info-description" data-aos="fade-left">
+                        <div class="col-12 col-md-8 info-description">
                           <p><?php echo get_field('ad_info_1_description'); ?></p>
                         </div>
-                        <div class="col-12 col-md-4 info-label" data-aos="fade-right">
+                        <div class="col-12 col-md-4 info-label">
                           <h3><?php echo get_field('ad_info_2_label'); ?></h3>
                         </div>
-                        <div class="col-12 col-md-8 info-description" data-aos="fade-left">
+                        <div class="col-12 col-md-8 info-description">
                           <p><?php echo get_field('ad_info_2_description'); ?></p>
                         </div>
-                        <div class="col-12 col-md-4 info-label" data-aos="fade-right">
+                        <div class="col-12 col-md-4 info-label">
                           <h3><?php echo get_field('ad_info_3_label'); ?></h3>
                         </div>
-                        <div class="col-12 col-md-8 info-description" data-aos="fade-left">
+                        <div class="col-12 col-md-8 info-description">
                           <p><?php echo get_field('ad_info_3_description'); ?></p>
                         </div>
-                        <div class="col-12 col-md-4 info-label" data-aos="fade-right">
+                        <div class="col-12 col-md-4 info-label">
                           <h3><?php echo get_field('ad_info_4_label'); ?></h3>
                         </div>
-                        <div class="col-12 col-md-8 info-description" data-aos="fade-left">
+                        <div class="col-12 col-md-8 info-description">
                           <p><?php echo get_field('ad_info_4_description'); ?></p>
                         </div>
-                        <div class="col-12 col-md-4 info-label" data-aos="fade-right">
+                        <div class="col-12 col-md-4 info-label">
                           <h3><?php echo get_field('ad_info_5_label'); ?></h3>
                         </div>
-                        <div class="col-12 col-md-8 info-description" data-aos="fade-left">
+                        <div class="col-12 col-md-8 info-description">
                           <p><?php echo get_field('ad_info_5_description'); ?></p>
                         </div>
-                        <div class="col-12 col-md-4 info-label" data-aos="fade-right">
+                        <div class="col-12 col-md-4 info-label">
                           <h3><?php echo get_field('ad_info_6_label'); ?></h3>
                         </div>
-                        <div class="col-12 col-md-8 info-description" data-aos="fade-left">
+                        <div class="col-12 col-md-8 info-description">
                           <p><?php echo get_field('ad_info_6_description'); ?></p>
                         </div>
-                        <div class="col-12 col-md-4 info-label" data-aos="fade-right">
+                        <div class="col-12 col-md-4 info-label">
                           <h3><?php echo get_field('ad_info_7_label'); ?></h3>
                         </div>
-                        <div class="col-12 col-md-8 info-description" data-aos="fade-left">
+                        <div class="col-12 col-md-8 info-description">
                           <p><?php echo get_field('ad_info_7_description'); ?></p>
                         </div>
                       </div>
@@ -215,15 +215,15 @@ get_header();
 
     <div class="col-12 requirements-details">
       <div class="row">
-        <div class="col-12 requirements-title" data-aos="fade-right">
+        <div class="col-12 requirements-title">
           <h1><?php echo get_field('ad_fourth_page_header'); ?></h1>
         </div>
         <div class="col-12 offset-md-1 col-md-10 requirements-descriptions">
           <div class="row">
-            <div class="col-12 col-md-6 first-requirement-details" data-aos="fade-right">
+            <div class="col-12 col-md-6 first-requirement-details">
               <p><?php echo get_field('ad_requirements_1'); ?></p>
             </div>
-            <div class="col-12 col-md-6 second-requrement-details" data-aos="fade-left">
+            <div class="col-12 col-md-6 second-requrement-details">
               <p><?php echo get_field('ad_requirements_2'); ?></p>
             </div>
           </div>
@@ -233,12 +233,12 @@ get_header();
 
     <div class="col-12 apply-button-container">
       <div class="row">
-        <div class="col-12  apply-label" data-aos="fade-up">
+        <div class="col-12  apply-label">
           <a href="<?php echo get_field('ad_apply_now_link');?>">
             <button class="btn-link-general"><?php echo get_field('ad_apply_label'); ?></button>
           </a>
         </div>
-        <div class="col-12 apply-button" data-aos="fade-right">
+        <div class="col-12 apply-button">
           <a href="<?php echo get_field('ad_apply_button_link'); ?>"><p><?php echo get_field('ad_apply_button_label'); ?></p></a>
         </div>
       </div>

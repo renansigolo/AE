@@ -88,13 +88,13 @@
         <div class="row">
           <div class="col-12 offset-md-1 col-md-4 navigation">
             <div class="navigation-bar">
-              <div class="nav-logo" data-aos="fade-right">
+              <div class="nav-logo">
                 <a href="<?php echo home_url(); ?>">
                   <img src="<?php echo $image[0]; ?>" alt="">
                 </a>
               </div>
 
-              <div class="nav-list" data-aos="fade-right">
+              <div class="nav-list">
                 <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
               </div>
 
@@ -112,7 +112,7 @@
 <?php
 if($page_id == 2){
 ?>
-          <div class="col-12 offset-md-2 col-md-5 home-info-slider" data-aos="fade-left">
+          <div class="col-12 offset-md-2 col-md-5 home-info-slider">
             <div class="row">
 
                 <?php $args = array(
@@ -180,7 +180,7 @@ if($page_id == 2){
   $header_form_label = get_field('header_form_label', $page_id);
   $header_form_sublabel = get_field('header_form_sub_label', $page_id);
 ?>
-          <div class="col-12 offset-md-1 col-md-6 contact-page-header" data-aos="fade-left">
+          <div class="col-12 offset-md-1 col-md-6 contact-page-header">
             <div class="col-12 page-content">
               <div class="row">
                 <div class="col-12 col-md-12 form-header">
@@ -228,7 +228,7 @@ if($page_id == 2){
   $content = $content_post->post_content;
   $content = apply_filters('the_content', $content);
 ?>
-      <div class="col-12 offset-md-1 col-md-6 home-page-info" data-aos="fade-left">
+      <div class="col-12 offset-md-1 col-md-6 home-page-info">
         <div class="page-content">
           <h1><?php echo $page_title ?></h1>
           <div class="text-content">
@@ -341,7 +341,7 @@ if($page_id == 2){
   $lnameAuthor = get_the_author_meta('last_name', $authorid);
   $author = $fnameAuthor. ' ' . $lnameAuthor;
   ?>
-          <div class="col-12 offset-md-1 col-md-6 home-page-info" data-aos="fade-left">
+          <div class="col-12 offset-md-1 col-md-6 home-page-info">
             <div class="page-content">
               <div class="blog-date-author">
                 <p><?php echo $date; ?> | <?php echo $author; ?></p>
@@ -369,7 +369,7 @@ if($page_id == 2){
   $button_label = get_field('header_button_label', $page_id);
   $button_link = get_field('header_button_link', $page_id);
   ?>
-          <div class="col-12 offset-md-1 col-md-6 home-page-info" data-aos="fade-left">
+          <div class="col-12 offset-md-1 col-md-6 home-page-info">
             <div class="page-content">
               <h1><?php echo $page_title ?></h1>
               <div class="text-content">
