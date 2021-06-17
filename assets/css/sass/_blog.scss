@@ -1,0 +1,177 @@
+.page-blog-container{
+  position: relative;
+  overflow: hidden;
+  padding: 50px 10px;
+  .blog-container{
+    .blog-list{
+      .result-search{
+        @extend %text-content-h1-6-12-600-15;
+        span{
+          color: #ffffff;
+        }
+        margin-bottom: 20px;
+      }
+      .blog{
+        position: relative;
+        margin-bottom: 150px;
+        .blog-img{
+          img{
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+          }
+        }
+        .blog-info{
+          position: absolute;
+          width: 50%;
+          right: 5vw;
+          top: 20px;
+          padding: 10px;
+          background-color: #f2f2f2;
+          .blog-date-author{
+            @extend %regular-text-white;
+            p{
+              margin-bottom: 0px;
+              font-size: 10px;
+              text-transform: uppercase;
+            }
+          }
+        }
+        .blog-content{
+          color:#000;
+          @extend %text-content-h1-6-12-600-15;
+          border-top: 1px solid #ec4e68;
+          h4{
+            text-transform: uppercase;
+          }
+        }
+        .blog-read-nore{
+
+        }
+      }
+      .page-navigation{
+        .wp-pagenavi{
+          float: right;
+          span.current{
+            padding: 8px 15px;
+            color: #000;
+            border: 2px solid #ec4e68;
+            background-color: #ec4e68;
+          }
+          a.page{
+            padding: 8px 15px;
+            color: #000;
+            border: 2px solid #000;
+            &:hover{
+              border: 2px solid #ec4e68;
+              background-color: #ec4e68;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+
+    .search-popular{
+      position: relative;
+      .search-form{
+        form{
+          position:relative;
+          .search-blog{
+            width: 100%;
+            padding: 10px;
+          }
+          .btn-search{
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color:  #ec4e68;
+            padding: 10px;
+            border: 2px solid #ec4e68;
+            color: #fff;
+            &:hover{
+              background-color: #e63552;
+              color:#fff;
+            }
+          }
+        }
+      }
+      .popular-posts{
+        position: relative;
+        @extend %text-content-h1-6-12-600-15;
+        color: #ffffff;
+        .popular-post-list{
+          .wpp-list{
+            padding-left: 0;
+            li{
+              margin-bottom: 10px;
+              .wpp-post-title{
+                color:#000;
+                font-size: 12px;
+                font-weight: 600;
+                &:hover{
+                  color: #ec4e68;
+                  text-decoration: none;
+                }
+                display: block;
+              }
+              hr{
+                border-top: 2px solid #ec4e68;
+                width: 10%;
+                display: inline-block;
+                margin: 2px;
+              }
+              .post-stats{
+                .wpp-date{
+
+                }
+              }
+            }
+          }
+        }
+        .small-polygon{
+          position: absolute;
+          display: inline-block;
+          right: -15vw;
+          bottom: 0;
+          z-index: -1;
+          img{
+            width: 65%;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+
+  .right-rectangle{
+    position: absolute;
+    right: 0;
+    height: 100%;
+    img{
+      width: auto;
+      height: 95%;
+    }
+  }
+
+  .left-rectangle{
+    position: absolute;
+    left: 10px;
+    height: 100%;
+    img{
+      width: auto;
+      height: 95%;
+    }
+  }
+
+  .big-polygon{
+    position: absolute;
+    left: 2vw;
+    bottom: 7vw;
+    z-index: -1;
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+}

@@ -1,0 +1,386 @@
+.header-body{
+  padding: 20px;
+  position: relative;
+  .home-header-background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+.login-portal {
+  color: rgb(255, 255, 255);
+  float: right;
+  a, a:hover, span{
+    font-weight: 700;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    line-height: 1.067;
+    cursor:pointer;
+  }
+}
+
+.navigation{
+  .navigation-bar{
+    .nav-logo{
+      margin-bottom: 30px;
+      img{
+        width: 80%;
+      }
+    }
+    .nav-list{
+      @extend %menu-ul-li-a;
+      .menu-header-menu-container{
+        .menu{
+              a{
+                background-color: transparent;
+              }
+          li{
+            a{
+            	padding:5px 20px;
+            }
+          }
+          li.menu-item-has-children{
+            &:hover{
+    				      background-color: transparent;
+    			   }
+            a{
+              pointer-events: none;
+            }
+            ul{
+              li{
+                a{
+                  pointer-events: auto;
+                }
+              }
+            }
+            &.current-menu-item{
+              a{
+                background-color: transparent;
+              }
+            }
+          }
+          li.current-menu-item{
+            a{
+              background-color: #ec4e68;
+            }
+          }
+        }
+      }
+    }
+    .mobile-nav-menu.sticky{
+      position: fixed;
+      display: block !important;
+    }
+    .mobile-nav-menu{
+      color: #ffffff;
+      font-size: 20px;
+      position: absolute;
+      right: 30px;
+      z-index: 99;
+      top: 30px;
+      background-color: rgba(132, 132, 132, 0.58);
+      padding: 10px 20px;
+      #burger_menu{
+        color: #ffffff;
+        font-size: 20px;
+      }
+      .menu_list{
+        position: absolute;
+        right: 60px;
+        top: 0;
+        ul{
+          padding-left: 0px;
+          list-style: none;
+          padding: 15px;
+          width: 300px;
+          background-color: rgba(45, 45, 45, 0.97);
+          z-index: 99;
+          position: relative;
+          li{
+            line-height: 2;
+            a{
+              font-weight: 700;
+              color: rgb(255, 255, 255);
+              text-transform: uppercase;
+              font-size: 12px;
+            }
+            &:hover{
+              background-color: #ec4e68;
+            }
+            ul{
+              width: 200px;
+              padding-left: 20px;
+              background-color: transparent;
+              li{
+                a{
+                  font-weight: initial;
+                }
+              }
+            }
+          }
+          li.menu-item-has-children{
+            &:hover{
+                  background-color: transparent;
+             }
+             a{
+               pointer-events: none;
+             }
+             ul{
+               li{
+                 a{
+                   pointer-events: auto;
+                 }
+               }
+             }
+            &.current-menu-item{
+              a{
+                background-color: transparent;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.home-info-slider{
+  @extend %home-header-design;
+  .row{
+    @extend %home-header-from-bottom;
+    bottom: -40%;
+    left: -15%;
+    .info-slider-body{
+
+    }
+    .info-slider-body-list{
+      h1{
+        @extend %bold-uppercase-45;
+        color: #ffffff;
+        font-size: 40px;
+      }
+      .header-info-text{
+        h1{
+          color: #ffffff;
+        }
+        @extend %text-content-h1-6-12-600-15;
+        p{
+          width: 80%
+        }
+      }
+      a{
+        .btn-link-general{
+          font-weight: bold;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  .info-slider-navigation{
+    position: absolute;
+    right: 0;
+    top: 10vw;
+    ul{
+      list-style: none;
+      li{
+        margin-bottom: 10px;
+        font-size: 10px;
+        font-weight: 700;
+        padding: 5px 7px;
+        border: 1px solid #ec4e68;
+        cursor: pointer;
+        &:hover{
+          background-color: #ec4e68;
+          border: 1px solid #ffffff;
+        }
+      }
+      li.active{
+        background-color: #ec4e68;
+        border: 1px solid #ffffff;
+      }
+    }
+  }
+}
+
+.contact-page-header{
+  color: #ffffff;
+  .page-content{
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.25);
+    .form-header{
+      h1{
+        @extend %bold-uppercase-45;
+      }
+      .form-sub-header{
+        @extend %text-content-h1-6-12-600-15;
+      }
+    }
+    .form-fields#form-id-471{
+      div.wpforms-container-full{
+        position: relative;
+        .wpforms-form{
+          .wpforms-field-label,
+          input[type=text],
+          input[type=number],
+          input[type=email],
+          ul{
+            display: inline-block;
+          }
+
+          input[type=text],
+          input[type=number],
+          input[type=email]{
+            position: absolute;
+            right: 0;
+            width: 100%;
+            height: auto;
+            padding: 10px 10px;
+          }
+
+          .wpforms-field-label, .wpforms-field-label-inline{
+            color: #ffffff;
+            font-size: 11px;
+            font-weight: 600;
+            line-height: 2;
+            margin-bottom: 0;
+            padding: 10px 10px;
+          }
+          #wpforms-174-field_6-container .wpforms-field-label{
+            width: 50%;
+          }
+          #wpforms-174-field_7{
+            margin-left: 10px;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+    .sched-and-info{
+      @extend %text-content-h1-6-12-600-15;
+      hr{
+        border: 1px solid #ec4e68;
+      }
+      .social-icons{
+        display: inline-block;
+        margin-left: 5px;
+        h3{
+          display: none;
+        }
+        a{
+          img{
+            width: 15px;
+            height: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.home-page-info{
+  @extend %home-header-design;
+  .page-content{
+    @extend %home-header-from-bottom;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.25);
+    h1{
+      @extend %bold-uppercase-45;
+    }
+    .blog-date-author{
+      @extend %regular-text-white;
+      p{
+        margin-bottom: 0px;
+        font-size: 10px;
+        text-transform: uppercase;
+        color: #fff;
+      }
+    }
+    .text-content{
+      @extend %text-content-h1-6-12-600-15;
+      p{
+        width: 80%;
+
+        strong{
+          font-weight: 600;
+        }
+      }
+    }
+    .search-event-form{
+      form{
+        width: 100%;
+        .txtSearch{
+          padding-left: 0;
+          padding-right: 2px;
+          input{
+            padding: 10px;
+            height: 36px;
+            font-size: 10px;
+            width: 100%;
+            border:none;
+            color: #777979;
+          }
+        }
+        .txtDateEvent{
+          padding-left: 2px;
+          padding-right: 2px;
+          input{
+            padding: 10px;
+            height: 36px;
+            font-size: 10px;
+            width: 100%;
+            border: none;
+            color: #777979;
+          }
+        }
+        .btn_btnSearch{
+          padding-left: 2px;
+          padding-right: 0px;
+          input{
+            width: 100%
+          }
+        }
+      }
+    }
+
+    .mentor-list{
+      overflow-y: scroll;
+      height: 230px;
+      @extend %text-content-h1-6-12-600-15;
+      .mentor{
+        margin-bottom: 15px;
+        .mentor-img{
+          position: relative;
+          img{
+            width: 100%;
+            object-fit: cover;
+            height: 100px;
+          }
+          .double-rectangle{
+            position: absolute;
+            bottom: 30px;
+            left: 0;
+            img{
+              width: auto;
+              height: 45px;
+            }
+          }
+        }
+        .mentor-info{
+          p{
+            font-size: 11px;
+            line-height: 1;
+          }
+          h4{
+            text-transform: uppercase;
+          }
+          .content{
+            font-weight:600;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,125 @@
+.page-about-container{
+  overflow: hidden;
+  padding: 50px 10px;
+  position: relative;
+  .about-info-1{
+    position: relative;
+    .info-video{
+      iframe{
+        width: 100%;
+      }
+    }
+    .info-desc{
+      .info-desc-text{
+        @extend %all-headers-text-bold;
+        @extend %regular-text-white;
+        p{
+          font-weight: unset;
+        }
+      }
+    }
+    .small-polygon{
+      position: absolute;
+      right: -10vw;
+      bottom: 0;
+      z-index: -1;
+      img{
+        width: 65%;
+        height: auto;
+      }
+    }
+  }
+  .about-info-2{
+    position: relative;
+    margin-bottom: 100px;
+    .banner-header-hashtag{
+      text-align: center;
+      color: #ec4e68;
+      padding: 0 10%;
+      h4,h1{
+        font-weight: 900;
+        padding: 20px 20px;
+      }
+    }
+    .info-2-image{
+    }
+    .info-2-desc{
+      @extend %list-with-check;
+      ul{
+        font-weight: unset;
+      }
+    }
+    .big-polygon{
+      position: absolute;
+      left: -12vw;
+      bottom: -12vw;
+      z-index: -1;
+      img{
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  .about-info-3{
+    .info-3-image{
+      position: relative;
+      .image-container{
+        padding: 10px;
+        img{
+          width: 100%;
+        }
+      }
+      .fade-rectangle{
+        position: absolute;
+        bottom: 0;
+        right: 8px;
+        img{
+          width: 30px;
+        }
+      }
+    }
+    .info-3-desc{
+      .i3-desc-1{
+        @extend %all-headers-text-bold;
+        @extend %regular-text-white;
+        p{
+          font-weight: unset;
+        }
+      }
+      .i3-desc-2{
+        @extend %all-headers-text-bold;
+        @extend %regular-text-white;
+        p{
+          font-weight: unset;
+        }
+      }
+      .i3-desc-3{
+        @extend %all-headers-text-bold;
+        @extend %list-with-check;
+        ul{
+          font-weight: unset;
+        }
+      }
+    }
+  }
+
+  .right-rectangle{
+    position: absolute;
+    right: 0;
+    height: 100%;
+    img{
+      width: auto;
+      height: 95%;
+    }
+  }
+
+  .left-rectangle{
+    position: absolute;
+    left: 10px;
+    height: 100%;
+    img{
+      width: auto;
+      height: 75%;
+    }
+  }
+}
