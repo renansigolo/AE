@@ -607,9 +607,10 @@ div.wpforms-container-full .wpforms-form button[type=submit]:focus {
 }
 .page-home-container .home-container .first-banner {
   position: relative;
-  height: 330px;
+  height: 360px;
 }
 .page-home-container .home-container .first-banner .banner-bg-img {
+  object-fit: cover;
   border-bottom: 5px solid #e63552;
 }
 .page-home-container .home-container .event-workshop {
@@ -942,14 +943,13 @@ div.wpforms-container-full .wpforms-form button[type=submit]:focus {
   height: 350px;
 }
 .page-home-container .home-container .about-us-new-body .about-us-container .about-info h1 {
-  font-weight: 700;
+  font-weight: 600;
   color: #fff;
 }
 .page-home-container .home-container .about-us-new-body .about-us-container .about-info h3 {
   color: #fff;
 }
 .page-home-container .home-container .about-us-new-body .about-us-container .about-info p {
-  font-size: 11px;
   font-weight: 600;
   line-height: 2;
   color: #fff;
@@ -3425,7 +3425,7 @@ html .single-page-diploma {
 
 .single-page-diploma .single-diploma .post-next-prev .next-nav .next-title p, .single-page-diploma .single-diploma .post-next-prev .previous-nav .previous-title p, .page-bootcamp-container .bootcamp-container .bootcamp-list-container .bootcamp-body .bootcamp .bootcamp-info p, .page-event-container .event-container-body .event-container .current-events .event-box .event-info .event-location-time p, .page-event-container .event-container-body .event-container .previous-events .event-box .event-info .event-location-time p,
 .page-event-container .event-container-body .event-container .current-events .event-box .event-info .event-date-author p, .page-event-container .event-container-body .event-container .previous-events .event-box .event-info .event-date-author p, .single-page-post .single-post .post-next-prev .next-nav .next-title p, .single-page-post .single-post .post-next-prev .previous-nav .previous-title p, .page-blog-container .blog-container .blog-list .blog .blog-info .blog-date-author p,
-.page-about-container .about-info-3 .info-3-desc .i3-desc-1 p, .page-home-container .home-container .about-us-container .about-info p, .page-home-container .home-container .bootcamps-container .bootcamps-body .bootcamp-container .bootcamp .bootcamp-info p, .page-home-container .home-container .bootcamps-container .bootcamps-title p, .page-home-container .home-container .study-courses .courses-body .courses-container .courses .courses-info .courses-content p,
+.page-about-container .about-info-3 .info-3-desc .i3-desc-1 p, .page-home-container .home-container .about-us-container, .page-home-container .home-container .bootcamps-container .bootcamps-body .bootcamp-container .bootcamp .bootcamp-info p, .page-home-container .home-container .bootcamps-container .bootcamps-title p, .page-home-container .home-container .study-courses .courses-body .courses-container .courses .courses-info .courses-content p,
 .page-home-container .home-container .study-courses .courses-title p, .page-home-container .home-container .event-workshop .ew-body .events-container .event .event-info .event-location-time p, .page-home-container .home-container .event-workshop .ew-body .events-container .event .event-info .event-date-author p, .home-page-info .page-content .blog-date-author p {
   font-size: 14px;
 }

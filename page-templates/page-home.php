@@ -349,11 +349,11 @@ get_header();
   ?>
       <div class="col-12 about-us-container">
         <div class="row">
+          <div class="col-12 text-center text-white mb-3"><h1 class="font-weight-bolder"><?php echo $about_title; ?></h1></div>
           <div class="col-12 col-md-6 about-img">
-            <img src="<?php echo $about_featured_url; ?>" alt="">
+            <img src="<?php echo $about_featured_url; ?>" class="rounded" alt="">
           </div>
           <div class="col-12 col-md-6 about-info">
-            <h1><?php echo $about_title; ?></h1>
             <p><?php echo $about_content; ?></p>
             <div class="about-us-btn">
               <a href="<?php echo home_url().'/about'; ?>"><button class="btn-link-general">LEARN MORE</button></a>

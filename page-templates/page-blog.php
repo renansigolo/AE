@@ -51,7 +51,6 @@ get_header();
                 <div class="col-12 col-md-5 blog-info">
                   <div class="blog-date-author">
                     <p><?php echo $date; ?> </p>
-					
                   </div>
                   <div class="blog-content">
 					    <?php the_field('authors_name'); ?>

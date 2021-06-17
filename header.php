@@ -81,7 +81,7 @@
         <div class="row">
           <div class="col-12 col-md-12">
             <div class="login-portal">
-              <h4>LOGIN: <span id="lp_link"><a href="<?php echo get_field('header_login_link',2); ?>" target="_blank"><?php echo get_field('header_login_label',2); ?></a></span></h4>
+              <h6><span id="lp_link"><a href="<?php echo get_field('header_login_link',2); ?>" class="badge badge-pill badge-dark" target="_blank"><?php echo get_field('header_login_label',2); ?></a></span></h6>
             </div>
           </div>
         </div>
