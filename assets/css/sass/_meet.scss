@@ -3,26 +3,6 @@
   padding: 50px 10px;
   overflow: hidden;
 
-  .right-rectangle{
-    position: absolute;
-    right: 10px;
-    height: 100%;
-    img{
-      width: auto;
-      height: 50%;
-    }
-  }
-  .left-rectangle{
-    position: absolute;
-    left: 10px;
-    bottom: 5vw;
-    height: 40%;
-    img{
-      width: auto;
-      height: 100%;
-    }
-  }
-
   .left-polygon{
     position: absolute;
     left: 4vw;
@@ -43,15 +23,6 @@
       .row{
         .ml-profile-video{
           position: relative;
-          .double-rectangle{
-            position: absolute;
-            bottom: 30px;
-            left: 0;
-            img{
-              width: auto;
-              height: 45px;
-            }
-          }
           img{
             width: 100%;
             object-fit: cover;

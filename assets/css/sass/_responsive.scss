@@ -27,12 +27,7 @@
 
   //CSS
     html{
-      header,footer{
-          max-width: 1400px;
-          margin-left: auto;
-          margin-right: auto;
-      }
-      .page-home-container,
+      // .page-home-container,
       .page-about-container,
       .page-blog-container,
       .page-event-container,
@@ -608,12 +603,6 @@
 }
 @media (min-width: 320px) and (max-width: 767px) {
 //Header
-  .right-rectangle{
-    display: none;
-  }
-  .left-rectangle{
-    display: none;
-  }
   .header-body{
     padding: 20px 10px 10vw;
     .navigation{
@@ -686,16 +675,6 @@
 }
  //homepage
  .page-home-container{
-   .right-rectangle{
-     img{
-       height: 70%;
-     }
-   }
-   .left-rectangle{
-     img{
-      height: 70%;
-     }
-   }
    .home-container {
      .counting-numbers-container {
        .counting-item-container{
@@ -835,7 +814,7 @@
    }
  }
 
- //footer
+// Footer
 footer{
   .footer-body{
     .partners-icon-body{
@@ -873,31 +852,11 @@ footer{
  //about
  .page-about-container{
     padding: 30px 10px;
-   .right-rectangle{
-     img{
-       height: 50%;
-     }
-   }
-   .left-rectangle{
-     img{
-         height: 50%;
-     }
-   }
  }
 
  //diploma
  .page-adv-diploma-container{
     padding: 30px 10px;
-   .right-rectangle{
-     img{
-       height: 50%;
-     }
-   }
-   .left-rectangle{
-     img{
-         height: 50%;
-     }
-   }
    .ad-container {
      .diploma-studies{
        .studies-title{
@@ -970,16 +929,6 @@ footer{
  .page-event-container{
    .event-container-body{
     padding: 30px 10px;
-     .right-rectangle{
-       img{
-         height: 50%;
-       }
-     }
-     .left-rectangle{
-       img{
-           height: 50%;
-       }
-     }
    }
 
    .interests-form-container{
@@ -995,16 +944,6 @@ footer{
  //bootcamp
  .page-bootcamp-container{
     padding: 30px 10px;
-   .right-rectangle{
-     img{
-       height: 50%;
-     }
-   }
-   .left-rectangle{
-     img{
-         height: 50%;
-     }
-   }
 
    .bootcamp-container {
      .bootcamp-list-container {
@@ -1038,16 +977,7 @@ footer{
 
   .single-page-bootcamp{
     padding: 30px 10px;
-    .right-rectangle{
-      img{
-        height: 50%;
-      }
-    }
-    .left-rectangle{
-      img{
-          height: 50%;
-      }
-    }
+
     .bootcamp-structure{
       .bootcamp-structure-title{
         h1{
@@ -1067,16 +997,6 @@ footer{
 //blogs
   .page-blog-container{
     padding: 30px 10px;
-    .right-rectangle{
-      img{
-        height: 50%;
-      }
-    }
-    .left-rectangle{
-      img{
-          height: 50%;
-      }
-    }
 
       .blog-container{
         .blog-list{
@@ -1143,16 +1063,6 @@ footer{
 
   //document page
   .page-handbook-container{
-    .right-rectangle{
-      img{
-        height: 350vw;
-      }
-    }
-    .left-rectangle{
-      img{
-        height: 350vw;
-      }
-    }
     .handbook-container{
       .company-info{
         .c-info-desc{
@@ -1163,9 +1073,6 @@ footer{
   }
 
   .page-meet-container{
-    .left-rectangle,.right-rectangle{
-      display: none;
-    }
     .meet-container{
       overflow-y: unset;
       height: auto;
@@ -1173,9 +1080,6 @@ footer{
   }
 
   .page-hr-portal-container{
-    .left-rectangle,.right-rectangle{
-      display: none;
-    }
     .hr-portal-container {
       .hr-portal-content {
         .content{

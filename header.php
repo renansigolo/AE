@@ -277,9 +277,6 @@ if($page_id == 2){
 //                     <div class="row">
 //                       <div class="col-12 col-md-3 mentor-img">
 //                         <img src="<?php the_post_thumbnail_url();?>" alt="">
-//                         <div class="double-rectangle">
-//                           <img src="<?php echo home_url() . '/wp-content/uploads/2019/01/double-rectangle.png'; ?>" alt="">
-//                         </div>
 //                       </div>
 //                       <div class="col-12 col-md-9 mentor-info">
 //                         <h4 id="name"><?php the_title(); ?></h4>

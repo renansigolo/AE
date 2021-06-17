@@ -29,13 +29,6 @@ get_header();
         <img src="<?php echo home_url().'/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="">
       </div>
     </div>
-
-    <div class="right-rectangle">
-      <img src="<?php echo home_url().'/wp-content/uploads/2020/04/Elements-up.png'; ?>" alt="">
-    </div>
-    <div class="left-rectangle">
-      <img src="<?php echo home_url().'/wp-content/uploads/2020/04/Elements-down.png'; ?>" alt="">
-    </div>
   </div>
 
 

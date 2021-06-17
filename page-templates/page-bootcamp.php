@@ -5,12 +5,6 @@
 get_header();
 ?>
 <div class="page-bootcamp-container">
-  <div class="right-rectangle">
-    <img src="<?php echo home_url() . '/wp-content/uploads/2020/04/home-right-line.png'; ?>" alt="">
-  </div>
-  <div class="left-rectangle">
-    <img src="<?php echo home_url() . '/wp-content/uploads/2020/04/home-left-line.png'; ?>" alt="">
-  </div>
   <div class="small-polygon">
     <img src="<?php echo home_url() . '/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="">
   </div>
@@ -72,9 +66,6 @@ get_header();
               ?>
               <div class="col-12 col-md-4 next-term-img">
                 <img src="<?php echo get_field('list_next_term_image'); ?>" alt="">
-                <div class="fade-rectangle">
-                  <img src="<?php echo home_url() . '/wp-content/uploads/2020/04/about-mid-rectangle.png'; ?>" alt="">
-                </div>
               </div>
               <div class="col-12 col-md-4 next-term-title">
                 <div class="term-title">

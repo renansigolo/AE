@@ -14,11 +14,6 @@
     $footer_bg = get_field('footer_apply_now_background_image',2);
     ?>
     <div class="apply-now-body" style="background-image:url(<?php echo $footer_bg; ?>); background-size: cover; background-position: center; background-repeat: no-repeat;">
-      <div class="background-transparency">
-        <div class="float-rectangle">
-          <img src="<?php echo home_url() . '/wp-content/uploads/2020/04/footer-Rectangle.png'; ?>" alt="">
-        </div>
-      </div>
         <div class="col-12">
           <div class="row">
             <div class="col-12 col-md-12 col-lg-6 offset-lg-3" >
@@ -100,11 +95,6 @@
     </div>
   </div>
 </footer>
-<script>
-  AOS.init({
-    duration: 1200,
-  });
-</script>
 <?php wp_footer(); ?>
 </body>
 </html>

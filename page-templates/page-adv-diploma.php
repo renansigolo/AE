@@ -5,12 +5,6 @@
 get_header();
 ?>
 <div class="page-adv-diploma-container">
-  <div class="right-rectangle">
-    <img src="<?php echo home_url() . '/wp-content/uploads/2020/04/adv-diploma-right-line.png'; ?>" alt="">
-  </div>
-  <div class="left-rectangle">
-    <img src="<?php echo home_url() . '/wp-content/uploads/2020/04/adv-diploma-line-left.png'; ?>" alt="">
-  </div>
   <div class="small-polygon">
     <img src="<?php echo home_url() . '/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="">
   </div>
@@ -94,7 +88,7 @@ get_header();
     <div class="col-12 diploma-sched">
       <div class="gray-background"></div>
       <div class="row">
-        <div class="col-12 sched-title">
+        <div class="col-12 pt-4 sched-title">
           <h1><?php echo get_field('ad_page_first_header'); ?></h1>
         </div>
         <div class="col-12 col-md-5 sched-img">
@@ -150,12 +144,6 @@ get_header();
           <div class="row">
             <div class="col-12 informations-body">
               <div class="row">
-                <!-- <div class="col-12 col-md-0 info-img">
-                  <img src="<?php echo get_field('ad_info_image'); ?>" alt="">
-                  <div class="fade-rectangle">
-                    <img src="<?php echo home_url() . '/wp-content/uploads/2020/04/about-mid-rectangle.png'; ?>" alt="">
-                  </div>
-                </div> -->
                 <div class="col-12 col-md-12 info-labels-description">
                   <div class="row">
                     <div class="col-12 label-description">

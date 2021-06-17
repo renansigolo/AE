@@ -8,12 +8,6 @@ $selected_events = $_SESSION['set_which_event'];
 ?>
 <div class="page-event-container">
   <div class="col-12 event-container-body">
-    <div class="right-rectangle">
-      <img src="<?php echo home_url() . '/wp-content/uploads/2020/04/event-line-right.png'; ?>" alt="">
-    </div>
-    <div class="left-rectangle">
-      <img src="<?php echo home_url() . '/wp-content/uploads/2020/04/event-line-left.png'; ?>" alt="">
-    </div>
     <div class="col-12 offset-md-1 col-md-10 event-container">
       <div class="row">
         <div class="col-12 event-title-header">

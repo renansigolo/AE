@@ -5,25 +5,7 @@
   .event-container-body{
     position: relative;
     overflow: hidden;
-    .right-rectangle{
-      position: absolute;
-      right: 0;
-      height: 100%;
-      img{
-        width: auto;
-        height: 100%;
-      }
-    }
 
-    .left-rectangle{
-      position: absolute;
-      left: 10px;
-      height: 70%;
-      img{
-        width: auto;
-        height: 100%;
-      }
-    }
     .event-container{
       .result-search{
         @extend %text-content-h1-6-12-600-15;

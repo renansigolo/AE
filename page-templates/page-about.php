@@ -6,12 +6,6 @@ get_header();
 
 ?>
 <div class="page-about-container">
-  <div class="right-rectangle">
-    <img src="<?php echo home_url() . '/wp-content/uploads/2020/04/Rectangle-16-about-right.png'; ?>" alt="">
-  </div>
-  <div class="left-rectangle">
-    <img src="<?php echo home_url() . '/wp-content/uploads/2020/04/Rectangle-16-about-left.png'; ?>" alt="">
-  </div>
   <div class="col-12 offset-md-2 col-md-8 about-info-1">
     <div class="row">
       <div class="col-12 col-md-6 info-video">
@@ -53,9 +47,6 @@ get_header();
       <div class="col-12 col-md-6 info-3-image">
         <div class="image-container">
           <img src="<?php echo get_field('about_info_3_image'); ?>" alt="">
-        </div>
-        <div class="fade-rectangle">
-          <img src="<?php echo home_url() . '/wp-content/uploads/2020/04/about-mid-rectangle.png'; ?>" alt="">
         </div>
       </div>
       <div class="col-12 col-md-6 info-3-desc">

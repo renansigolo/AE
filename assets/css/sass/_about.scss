@@ -69,14 +69,6 @@
           width: 100%;
         }
       }
-      .fade-rectangle{
-        position: absolute;
-        bottom: 0;
-        right: 8px;
-        img{
-          width: 30px;
-        }
-      }
     }
     .info-3-desc{
       .i3-desc-1{
@@ -100,26 +92,6 @@
           font-weight: unset;
         }
       }
-    }
-  }
-
-  .right-rectangle{
-    position: absolute;
-    right: 0;
-    height: 100%;
-    img{
-      width: auto;
-      height: 95%;
-    }
-  }
-
-  .left-rectangle{
-    position: absolute;
-    left: 10px;
-    height: 100%;
-    img{
-      width: auto;
-      height: 75%;
     }
   }
 }

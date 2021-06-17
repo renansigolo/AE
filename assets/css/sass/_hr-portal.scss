@@ -2,25 +2,6 @@
   position: relative;
   overflow: hidden;
   padding: 50px 10px;
-  .right-rectangle{
-    position: absolute;
-    right: 0;
-    height: 100%;
-    img{
-      width: auto;
-      height: 75%;
-    }
-  }
-
-  .left-rectangle{
-    position: absolute;
-    left: 10px;
-    height: 100%;
-    img{
-      width: auto;
-      height: 60%;
-    }
-  }
 
   .big-polygon{
     position: absolute;

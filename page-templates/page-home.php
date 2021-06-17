@@ -5,12 +5,6 @@
 get_header();
 ?>
 <div class="page-home-container">
-  <div class="right-rectangle">
-    <img src="<?php echo home_url() . '/wp-content/uploads/2020/04/bootcamp-right-line.png'; ?>" alt="">
-  </div>
-  <div class="left-rectangle">
-    <img src="<?php echo home_url() . '/wp-content/uploads/2020/04/bootcamp-left-line.png'; ?>" alt="">
-  </div>
   <div class="small-polygon">
     <img src="<?php echo home_url() . '/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="">
   </div>
@@ -57,7 +51,7 @@ get_header();
     <div class="col-12 first-banner">
 		<a href="https://academy-of-entrepreneurs.square.site/" target="blank"><div class="banner-bg-img" style="background-image:url(<?php echo $first_home_banner; ?>); background-size: cover; background-position: center; background-repeat: no-repeat;"></div></a>
     </div>
-    <div class="col-12 event-workshop">
+    <div class="col-12 mt-5 event-workshop">
       <!-- <div class="light-orange-background"></div> -->
       <div class="col-12 first-title">
         <h1><?php echo get_field('first_section_label_vertical');?></h1>
@@ -159,7 +153,7 @@ get_header();
       </div>
     </div>
 
-    <div class="col-12 study-courses">
+    <div class="col-12 pt-5 study-courses">
       <div class="light-coral-background"></div>
       <div class="col-12 first-title">
         <h1><?php echo get_field('courses_first_label_vertical');?></h1>
@@ -219,7 +213,7 @@ get_header();
       <div class="banner-bg-img" style="background-image:url(<?php echo $third_home_banner; ?>); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
     </div>
 
-    <div class="col-12 bootcamps-container">
+    <div class="col-12 mt-5 bootcamps-container">
       <!-- <div class="light-orange-background"></div> -->
       <div class="col-12 first-title">
         <h1><?php echo get_field('bootcamp_first_label_vertical');?></h1>
@@ -392,9 +386,6 @@ get_header();
                 <img src="<?php  the_post_thumbnail_url(); ?>" alt="">
                 <div class="country">
                     <p><?php //the_title(); ?></p>
-                </div>
-                <div class="fade-rectangle">
-                  <img src="<?php echo home_url() . '/wp-content/uploads/2020/04/about-mid-rectangle.png'; ?>" alt="">
                 </div>
               </div>
               <div class="col-12 col-md-6 testimony-info">

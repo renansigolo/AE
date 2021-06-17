@@ -4,12 +4,6 @@ get_header();
 the_post();
 ?>
 <div class="single-page-bootcamp">
-  <div class="right-rectangle">
-    <img src="<?php echo home_url() . '/wp-content/uploads/2020/04/bootcamp-right-line.png'; ?>" alt="">
-  </div>
-  <div class="left-rectangle">
-    <img src="<?php echo home_url() . '/wp-content/uploads/2020/04/bootcamp-left-line.png'; ?>" alt="">
-  </div>
   <div class="single-polygon">
     <img src="<?php echo home_url() . '/wp-content/uploads/2020/04/single-polygon.png'; ?>" alt="">
   </div>

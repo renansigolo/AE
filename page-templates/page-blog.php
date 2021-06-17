@@ -5,12 +5,6 @@
 get_header();
 ?>
 <div class="page-blog-container">
-  <div class="right-rectangle">
-    <img src="<?php echo home_url() . '/wp-content/uploads/2020/04/blog-right-line.png'; ?>" alt="">
-  </div>
-  <div class="left-rectangle">
-    <img src="<?php echo home_url() . '/wp-content/uploads/2020/04/blog-left-line.png'; ?>" alt="">
-  </div>
   <div class="big-polygon">
     <img src="<?php echo home_url() . '/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="">
   </div>

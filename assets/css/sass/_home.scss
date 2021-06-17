@@ -3,28 +3,6 @@
   padding: 10px 0px 0px 0px;
   overflow: hidden;
 
-  .right-rectangle{
-    position: absolute;
-    right: 0;
-    height: 25%;
-    z-index: 1;
-    img{
-      width: auto;
-      height: 100%;
-    }
-  }
-
-  .left-rectangle{
-    position: absolute;
-    left: 10px;
-    height: 25%;
-    z-index: 1;
-    img{
-      width: auto;
-      height: 100%;
-    }
-  }
-
   .small-polygon{
     position: absolute;
     right: 0vw;
@@ -510,15 +488,6 @@
               width: 70%;
               height: 300px;
               object-fit:cover;
-            }
-            .fade-rectangle{
-              position: absolute;
-              bottom: 0;
-              right: 7vw;
-              img{
-                width: 30px;
-                height: auto;
-              }
             }
             .country{
               p{

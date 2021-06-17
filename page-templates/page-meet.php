@@ -5,12 +5,6 @@
 get_header();
 ?>
 <div class="page-meet-container">
-  <div class="right-rectangle">
-    <img src="<?php echo home_url().'/wp-content/uploads/2020/04/Elements-up.png'; ?>" alt="">
-  </div>
-  <div class="left-rectangle">
-    <img src="<?php echo home_url().'/wp-content/uploads/2020/04/Elements-down.png'; ?>" alt="">
-  </div>
   <div class="left-polygon">
     <img src="<?php echo home_url().'/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="">
   </div>
@@ -40,9 +34,6 @@ get_header();
           <div class="row">
             <div class="col-12 ml-profile-video">
               <?php echo the_post_thumbnail();?>
-              <div class="double-rectangle">
-                <img src="<?php echo home_url() . '/wp-content/uploads/2020/04/double-rectangle.png'; ?>" alt="">
-              </div>
             </div>
             <div class=" col-12 ml-profile-desc">
               <a href="<?php echo home_url() . '/booking'; ?>">

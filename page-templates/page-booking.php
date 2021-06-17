@@ -7,12 +7,6 @@ get_header();
 $numberColumn = get_field('number_of_column');
 ?>
 <div class="page-booking-container">
-  <div class="right-rectangle">
-    <img src="<?php echo home_url() . '/wp-content/uploads/2020/04/event-line-left.png'; ?>" alt="">
-  </div>
-  <div class="left-rectangle">
-    <img src="<?php echo home_url() . '/wp-content/uploads/2020/04/event-line-left.png'; ?>" alt="">
-  </div>
   <div class="big-polygon">
     <img src="<?php echo home_url() . '/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="">
   </div>

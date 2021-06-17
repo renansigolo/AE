@@ -169,26 +169,6 @@ body{
 .acf-map img {
    max-width: inherit !important;
 }
-/* width */
-::-webkit-scrollbar {
-  width: 9px;
-	height: 9px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #ec4e68;
-  border-radius: 10px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #e63552;
-}
 
 /* EXTEND CLASSES */
 %header-title{
@@ -206,9 +186,6 @@ body{
       a{
         @extend %header-title;
       }
-			&:hover{
-				background-color: #ec4e68;
-			}
       ul{
         padding-left: 20px;
         li{
@@ -308,12 +285,6 @@ div.wpforms-container-full .wpforms-form button[type=submit]{
   }
 }
 
-.left-rectangle{
-	z-index: 1;
-}
-.right-rectangle{
-	z-index: 1;
-}
 .small-polygon{
 	z-index: 1 !important;
 }
