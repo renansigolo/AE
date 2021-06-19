@@ -300,11 +300,14 @@ get_header();
           </div>
         </div>
     </div>
-    <div class="col-12 video-list-container">
+    
+    <section class="video-list-container py-5">
       <div class="gray-background"></div>
-      <div class="col-12 first-title">
+      
+      <div class="first-title">
         <h1><?php echo get_field('second_section_label_vertical');?></h1>
       </div>
+      
       <div class="row">
         <div class="video-displays">
         <?php
@@ -317,7 +320,7 @@ get_header();
         $videos = new WP_Query( $args3 );
         while ( $videos->have_posts() ) : $videos->the_post();
         ?>
-        <div class="col-12 col-md-5 video-items">
+        <div class="col-10 col-md-5 video-items">
           <div class="video-frame">
             <?php echo get_field('video_link'); ?>
           </div>
@@ -335,7 +338,8 @@ get_header();
         ?>
                 </div>
       </div>
-    </div>
+    </section>
+
 </div>
 
 <div class="col-12 about-us-new-body">

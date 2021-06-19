@@ -335,28 +335,13 @@
     }
 
     .video-list-container{
-      background-color: #f2f2f2;
-      padding-bottom: 50px;
-      padding-top: 50px;
       position: relative;
       .first-title{
         h1{
+          position: relative;
           color: #000;
           font-weight: 700;
-          -webkit-transform: rotate(270deg);
-          position: absolute;
-          top: 10px;
-          right: 104%;
           white-space: nowrap;
-          -webkit-transform-origin: right top;
-          -moz-transform: rotate(270deg);
-          -moz-transform-origin: right top;
-          -ms-transform: rotate(270deg);
-          -ms-transform-origin: right top;
-          -o-transform: rotate(270deg);
-          -o-transform-origin: right top;
-          transform: rotate(270deg);
-          transform-origin: right top;
         }
       }
       .video-displays{
