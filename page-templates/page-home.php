@@ -163,7 +163,7 @@ get_header();
       <div class="row">
         <div class="col-12 courses-title">
           <h1><?php echo get_field('courses_first_label');?></h1>
-          <p id="course_first_desc"><?php echo get_field('courses_first_desc');?></p>
+          <p id="course-first-desc"><?php echo get_field('courses_first_desc');?></p>
         </div>
         <div class="col-12  courses-body">
           <div class="row">
@@ -225,7 +225,7 @@ get_header();
       <div class="row">
         <div class="col-12 bootcamps-title">
           <h1><?php echo get_field('bootcamp_first_label');?></h1>
-          <p id="bootcamp_first_desc"><?php echo get_field('bootcamp_first_desc');?></p>
+          <p id="bootcamp-first-desc"><?php echo get_field('bootcamp-first-desc');?></p>
         </div>
         <div class="col-12  bootcamps-body">
           <div class="row">
@@ -409,8 +409,8 @@ get_header();
           ?>
         </div>
         <div class="testimonial_navigation">
-          <i class="fas fa-chevron-left" id="tm_left"></i>
-          <i class="fas fa-chevron-right" id="tm_right"></i>
+          <i class="fas fa-chevron-left" id="tm-left"></i>
+          <i class="fas fa-chevron-right" id="tm-right"></i>
         </div>
       </div>
     </div>

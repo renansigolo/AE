@@ -1,7 +1,7 @@
 <?php
-function ae_scripts() {
+function load_libs() {
 	// Style Libs
-	// wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/assets/css/bootstrap/bootstrap.min.css');
+	// wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . 'node_modules/bootstrap/scss/bootstrap');
 	// wp_enqueue_style( 'bootstrap-css', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css');
 	wp_enqueue_style( 'bootstrap-css', 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css');
 	wp_enqueue_style( 'bootstrap-fa', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css');
@@ -14,7 +14,7 @@ function ae_scripts() {
 	wp_enqueue_script( 'mapjs', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBwbuq1wo486UUaBvb7z5UcnIyP2tXtuYE');
 }
 
-add_action( 'wp_enqueue_scripts', 'ae_scripts' );
+add_action( 'wp_enqueue_scripts', 'load_libs' );
 
 // function ae_google_fonts() {
 // 				wp_register_style('Montserrat', 'http://fonts.googleapis.com/css?family=Montserrat:100,200,400,600,700,800');

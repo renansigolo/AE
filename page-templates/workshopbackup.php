@@ -16,7 +16,7 @@
          <a href="<?php echo get_field('bootcamp_first_label_link'); ?>">
            <h1><?php echo get_field('bootcamp_first_label');?></h1>
          </a>
-         <p><?php echo get_field('bootcamp_first_desc');?></p>
+         <p><?php echo get_field('bootcamp-first-desc');?></p>
        </div>
        <?php
        $args = array(

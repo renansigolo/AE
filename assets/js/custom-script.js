@@ -1,7 +1,7 @@
 jQuery(document).ready(function ($) {
   //HEADER SCRIPT
   $('.navigation .mobile-nav-menu #menu_list').hide()
-  $('.navigation .mobile-nav-menu #burger_menu').click(function () {
+  $('.navigation .mobile-nav-menu #burger-menu').click(function () {
     $('.navigation #menu_list').toggle(100)
   })
 
@@ -245,19 +245,19 @@ jQuery(document).ready(function ($) {
   )
   var testinow = 0
   testimony.hide().first().show()
-  $('.testimonial_navigation #tm_left').click(function () {
+  $('.testimonial_navigation #tm-left').click(function () {
     testimony.eq(testinow).hide('fast')
     testinow = testinow + 1 < testimony.length ? testinow + 1 : 0
     testimony.eq(testinow).show('fast') // show next
   })
 
-  $('.testimonial_navigation #tm_right').click(function () {
+  $('.testimonial_navigation #tm-right').click(function () {
     testimony.eq(testinow).hide('fast')
     testinow = testinow > 0 ? testinow - 1 : testimony.length - 1
     testimony.eq(testinow).show('fast')
   })
 
-  $('.r-post-diploma_navigation #tm_left').click(function () {
+  $('.r-post-diploma_navigation #tm-left').click(function () {
     $('.r-post-slider').animate(
       {
         scrollLeft: '-=300px',
@@ -266,7 +266,7 @@ jQuery(document).ready(function ($) {
     )
   })
 
-  $('.r-post-diploma_navigation #tm_right').click(function () {
+  $('.r-post-diploma_navigation #tm-right').click(function () {
     $('.r-post-slider').animate(
       {
         scrollLeft: '+=300px',

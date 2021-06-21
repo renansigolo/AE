@@ -256,8 +256,8 @@
 					top: 50%;
 					position: absolute;
 
-					#tm_left,
-					#tm_right {
+					#tm-left,
+					#tm-right {
 						position: absolute;
 						cursor: pointer;
 
@@ -267,11 +267,11 @@
 						}
 					}
 
-					#tm_left {
+					#tm-left {
 						left: 0;
 					}
 
-					#tm_right {
+					#tm-right {
 						right: 0;
 					}
 				}

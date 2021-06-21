@@ -16,6 +16,9 @@
   "bugs": {
     "url": "https://github.com/Automattic/_s/issues"
   },
+  "dependencies": {
+    "bootstrap": "^4.6.0"
+  },
   "devDependencies": {
     "@wordpress/scripts": "^16.1.2",
     "browser-sync": "^2.26.14",
@@ -39,8 +42,9 @@
   "scripts": {
     "clean": "rm -rf node_modules package-lock.json",
     "clean:install": "npm run clean && npm i",
-    "watch": "sass sass/:./ --source-map --style expanded --indented -w",
-    "compile:css": "sass sass/:./ && stylelint *.css --fix || true && stylelint *.css --fix",
+    "build": "sass sass/:./ --source-map --style compressed",
+    "watch": "sass sass/:./ --source-map --style expanded -w",
+    "compile:css": "sass sass/:./ --style compressed && stylelint *.css --fix || true && stylelint *.css --fix",
     "compile:rtl": "rtlcss style.css style-rtl.css",
     "fix:scss": "wp-scripts lint-style sass/**/*.scss --fix",
     "lint:scss": "wp-scripts lint-style sass/**/*.scss",

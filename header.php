@@ -98,7 +98,7 @@
               </div>
 
               <div class="mobile-nav-menu">
-                <a href="javascript:void(0);" id="burger_menu" class="icon">
+                <a href="javascript:void(0);" id="burger-menu" class="icon">
                    <i class="fa fa-bars"></i>
                 </a>
                 <div id="menu_list" class="menu_list">

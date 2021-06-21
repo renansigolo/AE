@@ -166,8 +166,8 @@ $pagePostID = get_field('study_course_page',$term->taxonomy . '_' . $term->term_
             ?>
           </div>
           <div class="r-post-diploma_navigation">
-            <i class="fas fa-chevron-left" id="tm_left"></i>
-            <i class="fas fa-chevron-right" id="tm_right"></i>
+            <i class="fas fa-chevron-left" id="tm-left"></i>
+            <i class="fas fa-chevron-right" id="tm-right"></i>
           </div>
         </div>
       </div>
