@@ -1,6 +1,6 @@
 <?php
 /*
-    Template Name: Student Support Page
+	Template Name: Student Support Page
 */
 get_header();
 ?>

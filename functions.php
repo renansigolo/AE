@@ -29,12 +29,12 @@ add_theme_support('widgets');
 
 function register_my_menu() {
 	register_nav_menus(
-    array(
-      'header-menu' => __( 'Header Menu' ),
-      'footer-menu-1' => __( 'Footer Menu 1' ),
-      'footer-menu-2' => __( 'Footer Menu 2' ),
-      'footer-menu-3' => __( 'Footer Menu 3' ),
-      'footer-menu-4' => __( 'Footer Menu 4' ),
+		array(
+			'header-menu' => __( 'Header Menu' ),
+			'footer-menu-1' => __( 'Footer Menu 1' ),
+			'footer-menu-2' => __( 'Footer Menu 2' ),
+			'footer-menu-3' => __( 'Footer Menu 3' ),
+			'footer-menu-4' => __( 'Footer Menu 4' ),
 			'forms-menu-1' => __( 'Forms Menu 1' ),
 			'forms-menu-2' => __( 'Forms Menu 2' ),
 			'forms-menu-3' => __( 'Forms Menu 3' ),
@@ -44,13 +44,13 @@ function register_my_menu() {
 			'hr-forms-menu-1' => __( 'HR Forms Menu 1' ),
 			'hr-forms-menu-2' => __( 'HR Forms Menu 2' ),
 			'hr-forms-menu-3' => __( 'HR Forms Menu 3' )
-    )
-  );
+		)
+	);
 }
 add_action( 'init', 'register_my_menu' );
 
 function home_header_posts() {
-  $args = array(
+	$args = array(
 		'label' => 'Home Header',
 			'public' => true,
 			'show_ui' => true,
@@ -63,19 +63,19 @@ function home_header_posts() {
 					'editor',
 					'author',)
 	);
-  register_post_type( 'home_header', $args );
+	register_post_type( 'home_header', $args );
 }
 add_action( 'init', 'home_header_posts' );
 
 if ( function_exists('register_sidebar') ) {
-	  register_sidebar(array(
-	    'name' => 'Footer Partners Icon 1',
+		register_sidebar(array(
+			'name' => 'Footer Partners Icon 1',
 			'id' => 'footer-partners-1-icon',
-	    'before_widget' => '<div class="partners_icons">',
-	    'after_widget' => '</div>',
-	    'before_title' => '<h3>',
-	    'after_title' => '</h3>',
-	  )
+			'before_widget' => '<div class="partners_icons">',
+			'after_widget' => '</div>',
+			'before_title' => '<h3>',
+			'after_title' => '</h3>',
+		)
 		);
 
 		register_sidebar(array(

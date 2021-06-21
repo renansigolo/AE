@@ -1,6 +1,6 @@
 <?php
 /*
-    Template Name: Book a Coffee Page
+	Template Name: Book a Coffee Page
 */
 get_header();
 ?>
