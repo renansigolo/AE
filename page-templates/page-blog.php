@@ -86,15 +86,15 @@ get_header();
 
 				<div class="col-12 col-md-3 search-popular">
 					<div class="row">
-						<div class="col-12 col-md-12 search-form">
-							<form class="" action="<?php echo home_url() . '/blog'?>" method="get">
+						<div class="col-12 search-form">
+							<form action="<?php echo home_url() . '/blog'?>" method="get">
 								<input class="search-blog" type="text" name="txtBlogSearch" placeholder="Search Here">
 								<button type="submit" class="btn-search">
 									<i class="fas fa-search"></i>
 								</button>
 							</form>
 						</div>
-						<div class="col-12 col-md-12 popular-posts">
+						<div class="col-12 popular-posts mt-3">
 							<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Popular Post Blog") ) : ?>
 							<?php endif;?>
 

@@ -93,7 +93,7 @@ get_header();
 					<div class="col-12 col-md-5 bootcamp-structure-info">
 						<div class="sub-label">
 							<p id="structure-sub-label"><?php echo get_field('bootcamp_structure_sub_label'); ?></p>
-							<hr>
+							<hr />
 						</div>
 						<?php
 						$duration = get_field('bootcamp_structure_duration');

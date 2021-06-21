@@ -23,7 +23,7 @@ $next = get_next_post();
 				</div>
 				<div class="blog-date-author">
 					<p><?php echo $date; ?> | <?php echo $author; ?></p>
-					<hr>
+					<hr />
 				</div>
 				<br />
 				<div class="blog-title">

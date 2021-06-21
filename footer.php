@@ -46,7 +46,7 @@
 						<div class="col-6 col-lg-4 col-md-4 col-sm-6 footer-menu-1">
 							<div class="footer-menu-header">
 								<p>PROGRAMS WE DELIVER</p>
-								<hr>
+								<hr />
 							</div>
 							<div class="menu">
 								<?php wp_nav_menu( array( 'theme_location' => 'footer-menu-1' ) ); ?>
@@ -55,7 +55,7 @@
 						<!-- <div class="col-6 col-lg-2 col-md col-sm-6 footer-menu-2">
 							<div class="footer-menu-header">
 								<p>ABOUT US</p>
-								<hr>
+								<hr />
 							</div>
 							<div class="menu">
 								<?php wp_nav_menu( array( 'theme_location' => 'footer-menu-4' ) ); ?>
@@ -64,7 +64,7 @@
 						<div class="col-6 col-lg-2 col-md col-sm-6 footer-menu-3">
 							<div class="footer-menu-header">
 								<p>AUSTRALIA</p>
-								<hr>
+								<hr />
 							</div>
 							<div class="menu">
 								<?php wp_nav_menu( array( 'theme_location' => 'footer-menu-3' ) ); ?>
@@ -73,7 +73,7 @@
 						<div class="col-6 col-lg-4 col-md-4 col-sm-6 footer-menu-4">
 							<div class="footer-menu-header">
 								<p>ABOUT US</p>
-								<hr>
+								<hr />
 							</div>
 							<div class="menu">
 								<?php wp_nav_menu( array( 'theme_location' => 'footer-menu-2' ) ); ?>

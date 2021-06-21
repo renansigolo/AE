@@ -242,6 +242,7 @@ $selected_events = $_SESSION['set_which_event'];
 		</div>
 </div>
 </div>
+
 <?php
 get_footer();
 ?>

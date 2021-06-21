@@ -32,7 +32,7 @@ $pagePostID = get_field('study_course_page',$term->taxonomy . '_' . $term->term_
 				</div>
 				<div class="blog-date-author">
 					<p><?php echo $date; ?> | <?php echo $author; ?></p>
-					<hr>
+					<hr />
 				</div>
 				<div class="blog-title">
 					<h4><?php the_title(); ?></h4>

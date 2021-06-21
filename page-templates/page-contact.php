@@ -10,7 +10,7 @@ get_header();
 			<div class="row">
 				<div class="col-12 col-md-4 location-description">
 					<h3><?php echo get_field('location_label'); ?></h3>
-					<hr>
+					<hr />
 					<p><?php echo get_field('location_address'); ?></p>
 				</div>
 				<div class="col-12 col-md-8 location-map">

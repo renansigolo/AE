@@ -636,6 +636,7 @@ div.wpforms-container-full .wpforms-form button[type=submit]:focus {
 }
 .navigation .navigation-bar .nav-list .menu-header-menu-container .menu li.current-menu-item a {
   background-color: #ec4e68;
+  font-weight: 800;
 }
 .navigation .navigation-bar .mobile-nav-menu.sticky {
   position: fixed;
@@ -903,6 +904,7 @@ div.wpforms-container-full .wpforms-form button[type=submit]:focus {
 }
 .page-home-container .home-container .event-workshop {
   position: relative;
+  min-height: 50vh;
 }
 .page-home-container .home-container .event-workshop .first-title h1 {
   color: #000;
@@ -1576,24 +1578,32 @@ div.wpforms-container-full .wpforms-form button[type=submit]:focus {
 .page-blog-container .blog-container .blog-list .blog .blog-content h4 {
   text-transform: uppercase;
 }
+.page-blog-container .blog-container .blog-list .page-navigation {
+  display: flex;
+  justify-content: center;
+}
 .page-blog-container .blog-container .blog-list .page-navigation .wp-pagenavi {
   float: right;
 }
 .page-blog-container .blog-container .blog-list .page-navigation .wp-pagenavi span.current {
   padding: 8px 15px;
-  color: #000;
-  border: 2px solid #ec4e68;
+  color: #fff;
+  border: 1px solid #ec4e68;
   background-color: #ec4e68;
 }
 .page-blog-container .blog-container .blog-list .page-navigation .wp-pagenavi a.page {
   padding: 8px 15px;
   color: #000;
-  border: 2px solid #000;
+  border: 1px solid #000;
 }
 .page-blog-container .blog-container .blog-list .page-navigation .wp-pagenavi a.page:hover {
-  border: 2px solid #ec4e68;
+  border: 1px solid #ec4e68;
   background-color: #ec4e68;
   text-decoration: none;
+}
+.page-blog-container .blog-container .blog-list .page-navigation .wp-pagenavi .extend {
+  padding: 8px 12px;
+  border: none;
 }
 .page-blog-container .blog-container .search-popular {
   position: relative;
@@ -1604,6 +1614,7 @@ div.wpforms-container-full .wpforms-form button[type=submit]:focus {
 .page-blog-container .blog-container .search-popular .search-form form .search-blog {
   width: 100%;
   padding: 10px;
+  margin-left: 1px;
 }
 .page-blog-container .blog-container .search-popular .search-form form .btn-search {
   position: absolute;
@@ -2211,14 +2222,12 @@ div.wpforms-container-full .wpforms-form button[type=submit]:focus {
 }
 
 .page-adv-diploma-container {
-  position: relative;
-  padding: 50px 0;
   overflow: hidden;
 }
 .page-adv-diploma-container .big-polygon {
   position: absolute;
   right: 2vw;
-  bottom: 5vw;
+  bottom: -700px;
   z-index: -1;
 }
 .page-adv-diploma-container .big-polygon img {
@@ -3120,7 +3129,6 @@ html .page-blog-container,
 html .page-event-container,
 html .page-contact-container,
 html .page-bootcamp-container,
-html .page-adv-diploma-container,
 html .page-handbook-container,
 html .single-page-bootcamp,
 html .single-page-post,
@@ -3579,9 +3587,6 @@ html .single-page-diploma {
     padding: 30px 10px;
   }
 
-  .page-adv-diploma-container {
-    padding: 30px 10px;
-  }
   .page-adv-diploma-container .ad-container .diploma-studies .studies-title h1 {
     font-size: 25px;
   }

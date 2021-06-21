@@ -210,7 +210,7 @@ jQuery( function( $ ) {
 
 	$(
 		'.page-blog-container .blog-container .search-popular .popular-posts .popular-post-list .wpp-list li .wpp-post-title'
-	).after( '<hr>' );
+	).after( '<hr />' );
 	$(
 		'.page-blog-container .blog-container .search-popular .popular-posts .popular-post-list .wpp-list li .wpp-meta .wpp-date'
 	).each( function() {

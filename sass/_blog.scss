@@ -67,27 +67,34 @@
 			}
 
 			.page-navigation {
+				display: flex;
+				justify-content: center;
 
 				.wp-pagenavi {
 					float: right;
 
 					span.current {
 						padding: 8px 15px;
-						color: #000;
-						border: 2px solid #ec4e68;
+						color: #fff;
+						border: 1px solid #ec4e68;
 						background-color: #ec4e68;
 					}
 
 					a.page {
 						padding: 8px 15px;
 						color: #000;
-						border: 2px solid #000;
+						border: 1px solid #000;
 
 						&:hover {
-							border: 2px solid #ec4e68;
+							border: 1px solid #ec4e68;
 							background-color: #ec4e68;
 							text-decoration: none;
 						}
+					}
+
+					.extend {
+						padding: 8px 12px;
+						border: none;
 					}
 				}
 			}
@@ -104,6 +111,7 @@
 					.search-blog {
 						width: 100%;
 						padding: 10px;
+						margin-left: 1px;
 					}
 
 					.btn-search {
