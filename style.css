@@ -22,6 +22,12 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
+:root {
+  --pink-dark: #ec4e68;
+  --pink-light: #e635521a;
+  --gray-light: #f2f2f2;
+}
+
 @font-face {
   font-family: Zing;
   src: url(assets/fonts/ZingScriptRustSBDemo-Base.otf);
@@ -131,26 +137,6 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.gray-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 132.6%;
-  margin-left: -16.3%;
-  height: 100%;
-  background-color: #f2f2f2;
-}
-
-.coral-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 132.6%;
-  margin-left: -16.3%;
-  height: 100%;
-  background-color: #ec4e68;
-}
-
 .light-orange-background {
   position: absolute;
   top: 0;
@@ -159,16 +145,6 @@ body {
   margin-left: -16.3%;
   height: 100%;
   background-color: rgba(255, 116, 66, 0.1);
-}
-
-.light-coral-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 132.6%;
-  margin-left: -16.3%;
-  height: 100%;
-  background-color: rgba(230, 53, 82, 0.1);
 }
 
 .banner-bg-img {
@@ -904,16 +880,17 @@ div.wpforms-container-full .wpforms-form button[type=submit]:focus {
 }
 .page-home-container .home-container .event-workshop {
   position: relative;
-  min-height: 50vh;
+  min-height: 200px;
 }
 .page-home-container .home-container .event-workshop .first-title h1 {
   color: #000;
   font-weight: 700;
-  -webkit-transform: rotate(270deg);
+  font-size: 2rem;
   position: absolute;
   top: 10px;
   right: 104%;
   white-space: nowrap;
+  -webkit-transform: rotate(270deg);
   -webkit-transform-origin: right top;
   -moz-transform: rotate(270deg);
   -moz-transform-origin: right top;
@@ -1005,6 +982,7 @@ div.wpforms-container-full .wpforms-form button[type=submit]:focus {
   border-bottom: 5px solid #e63552;
 }
 .page-home-container .home-container .study-courses {
+  background-color: var(--pink-light);
   position: relative;
 }
 .page-home-container .home-container .study-courses .first-title h1 {
@@ -1171,7 +1149,7 @@ div.wpforms-container-full .wpforms-form button[type=submit]:focus {
   background-color: #ec551f;
 }
 .page-home-container .home-container .video-list-container {
-  position: relative;
+  background-color: var(--gray-light);
 }
 .page-home-container .home-container .video-list-container .first-title h1 {
   position: relative;
@@ -1205,11 +1183,7 @@ div.wpforms-container-full .wpforms-form button[type=submit]:focus {
   margin-top: 10px;
 }
 .page-home-container .home-container .about-us-new-body {
-  padding-top: 10px;
-  padding-bottom: 20px;
-}
-.page-home-container .home-container .about-us-new-body .about-us-container {
-  padding: 25px;
+  background-color: var(--pink-dark);
 }
 .page-home-container .home-container .about-us-new-body .about-us-container .about-img {
   position: relative;
@@ -1374,17 +1348,6 @@ div.wpforms-container-full .wpforms-form button[type=submit]:focus {
   font-weight: 600;
   color: #000;
   font-size: 23px;
-}
-.page-home-container .homepage-video-container {
-  margin-bottom: -5px;
-  margin-top: -5px;
-}
-.page-home-container .homepage-video-container #video-bg {
-  width: 100%;
-}
-.page-home-container .homepage-video-container .homepage-video iframe {
-  width: 100%;
-  height: 500px;
 }
 
 .page-about-container {

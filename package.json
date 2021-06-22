@@ -16,9 +16,6 @@
   "bugs": {
     "url": "https://github.com/Automattic/_s/issues"
   },
-  "dependencies": {
-    "bootstrap": "^4.6.0"
-  },
   "devDependencies": {
     "@wordpress/scripts": "^16.1.2",
     "browser-sync": "^2.26.14",
@@ -44,6 +41,7 @@
     "clean:install": "npm run clean && npm i",
     "build": "sass sass/:./ --source-map --style compressed",
     "watch": "sass sass/:./ --source-map --style expanded -w",
+    "start": "npm run watch",
     "compile:css": "sass sass/:./ --style compressed && stylelint *.css --fix || true && stylelint *.css --fix",
     "compile:rtl": "rtlcss style.css style-rtl.css",
     "fix:scss": "wp-scripts lint-style sass/**/*.scss --fix",

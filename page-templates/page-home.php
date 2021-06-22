@@ -4,13 +4,27 @@
 */
 get_header();
 ?>
+
+<?php
+		$first_home_banner = get_field('home_first_banner');
+		$second_home_banner = get_field('home_second_banner');
+		$third_home_banner = get_field('home_third_banner');
+
+		// Section - About Us
+		$about_title = get_the_title( 6 );
+		$about_post = get_post(6);
+		$about_content = $about_post->post_content;
+		$about_content = apply_filters('the_content', $about_content);
+		$about_featured_url = wp_get_attachment_url( get_post_thumbnail_id(6 ) );
+		?>
+
 <div class="page-home-container">
 	<div class="small-polygon">
 		<img src="<?php echo home_url() . '/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="">
 	</div>
-	<div class="offset-md-1 col-md-10 home-container">
-	<div class="background-img">
-		<div class="col-12 counting-numbers-container" id="start_count">
+
+	<div class="home-container">
+		<section class="container counting-numbers-container" id="start_count">
 			<div class="row">
 				<?php
 				$args5 = array(
@@ -42,18 +56,15 @@ get_header();
 				wp_reset_postdata();
 				?>
 			</div>
-		</div>
-		<?php
-		$first_home_banner = get_field('home_first_banner');
-		$second_home_banner = get_field('home_second_banner');
-		$third_home_banner = get_field('home_third_banner');
-		?>
-		<div class="col-12 first-banner">
-		<a href="https://academy-of-entrepreneurs.square.site/" target="blank">
-			<img class="banner-bg-img" src="<?php echo $first_home_banner; ?>" />
-		</a>
-		</div>
-		<div class="col-12 mt-5 event-workshop">
+		</section>
+		
+		<section class="first-banner">
+			<a href="https://academy-of-entrepreneurs.square.site/" target="blank">
+				<img class="banner-bg-img" src="<?php echo $first_home_banner; ?>" />
+			</a>
+		</section>
+		
+		<section class="container mt-5 event-workshop">
 			<!-- <div class="light-orange-background"></div> -->
 			<div class="col-12 first-title">
 				<h1><?php echo get_field('first_section_label_vertical');?></h1>
@@ -146,78 +157,75 @@ get_header();
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 
-		<div class="col-12 second-banner">
-			<div class="coral-background"></div>
+		<section class="container second-banner">
 			<div class="col-12 hashtag-container">
 				<h1><?php echo get_field('hashtag_text'); ?></h1>
 			</div>
-		</div>
+		</section>
 
-		<div class="col-12 pt-5 study-courses">
-			<div class="light-coral-background"></div>
-			<div class="col-12 first-title">
-				<h1><?php echo get_field('courses_first_label_vertical');?></h1>
-			</div>
-			<div class="row">
-				<div class="col-12 courses-title">
-					<h1><?php echo get_field('courses_first_label');?></h1>
-					<p id="course-first-desc"><?php echo get_field('courses_first_desc');?></p>
+		<section class="pt-5 study-courses">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 first-title">
+						<h1><?php echo get_field('courses_first_label_vertical');?></h1>
+					</div>
 				</div>
-				<div class="col-12  courses-body">
-					<div class="row">
-						<div class="col-12 courses-container">
-							<div class="row">
-									<?php
-									$terms = get_terms('study_course', array('order' => 'DESC','hide_empty' => 0, 'parent' =>0));
-									foreach ( $terms as $term ) {
-										$termid = $term->term_id;
-										$termname = $term->name;
-										$pagePostID = get_field('study_course_page',$term->taxonomy . '_' . $term->term_id);
-										$content = get_post_field('post_content', $pagePostID);
-										$img_url = wp_get_attachment_url( get_post_thumbnail_id($pagePostID) );
-									?>
-										<div class="col-12 col-md-6 courses">
-											<div class="card-like">
-												<div class="row">
-													<div class="col-12 col-md-6 courses-img">
-														<img src="<?php echo $img_url; ?>" alt="">
-													</div>
-													<div class="col-12 col-md-6 courses-info">
-														<!-- <div class="courses-date-author">
-														</div> -->
-														<div class="courses-content">
-															<h3><?php echo $termname ?></h3>
-															<p><?php echo substr($content, 0, 100).""; ?></p>
-															<div class="courses-read-more">
-																<a href="<?php echo get_permalink($pagePostID); ?>"><button class="btn-link-general">LEARN MORE</button></a>
+				<div class="row">
+					<div class="col-12 courses-title">
+						<h1><?php echo get_field('courses_first_label');?></h1>
+						<p id="course-first-desc"><?php echo get_field('courses_first_desc');?></p>
+					</div>
+					<div class="col-12 courses-body">
+						<div class="row">
+							<div class="col-12 courses-container">
+								<div class="row">
+										<?php
+										$terms = get_terms('study_course', array('order' => 'DESC','hide_empty' => 0, 'parent' =>0));
+										foreach ( $terms as $term ) {
+											$termid = $term->term_id;
+											$termname = $term->name;
+											$pagePostID = get_field('study_course_page',$term->taxonomy . '_' . $term->term_id);
+											$content = get_post_field('post_content', $pagePostID);
+											$img_url = wp_get_attachment_url( get_post_thumbnail_id($pagePostID) );
+										?>
+											<div class="col-12 col-md-6 courses">
+												<div class="card-like">
+													<div class="row">
+														<div class="col-12 col-md-6 courses-img">
+															<img src="<?php echo $img_url; ?>" alt="">
+														</div>
+														<div class="col-12 col-md-6 courses-info">
+															<div class="courses-content">
+																<h3><?php echo $termname ?></h3>
+																<p><?php echo substr($content, 0, 100).""; ?></p>
+																<div class="courses-read-more">
+																	<a href="<?php echo get_permalink($pagePostID); ?>"><button class="btn-link-general">LEARN MORE</button></a>
+																</div>
 															</div>
 														</div>
-												</div>
+													</div>
 												</div>
 											</div>
+										<?php
+										}
+										?>
 									</div>
-									<?php
-									}
-									?>
-									<!-- <div class="col-12 courses-btn">
-										<a href="<?php echo get_permalink($pagePostID); ?>"><button class="btn-link-general"><?php echo get_field('events_button_label'); ?></button></a>
-									</div> -->
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-		</div>
+			</div>
+		</section>
 
-		<div class="col-12 mt-3 third-banner">
+		<section class="container mt-3 third-banner">
 			<img src="<?php echo $third_home_banner; ?>" class="img-fluid" alt="Third Banner" />
-		</div>
+		</section>
 
 		<hr />
 
-		<div class="col-12 mt-5 bootcamps-container">
+		<section class="container mt-5 bootcamps-container">
 			<!-- <div class="light-orange-background"></div> -->
 			<div class="col-12 first-title">
 				<h1><?php echo get_field('bootcamp_first_label_vertical');?></h1>
@@ -299,75 +307,66 @@ get_header();
 						</div>
 					</div>
 				</div>
-		</div>
+		</section>
 		
-		<section class="video-list-container py-5">
-			<div class="gray-background"></div>
-			
-			<div class="first-title">
-				<h1><?php echo get_field('second_section_label_vertical');?></h1>
-			</div>
-			
-			<div class="row">
-				<div class="video-displays">
-				<?php
-				$args3 = array(
-					'post_type' => 'videos',
-					'post_status'    => 'publish',
-					'orderby' => 'rand'
-				);
+		<section class="py-5 video-list-container">
+			<div class="container">
+				<div class="first-title">
+					<h1><?php echo get_field('second_section_label_vertical');?></h1>
+				</div>
+				
+				<div class="row">
+					<div class="video-displays">
+					<?php
+					$args3 = array(
+						'post_type' => 'videos',
+						'post_status'    => 'publish',
+						'orderby' => 'rand'
+					);
 
-				$videos = new WP_Query( $args3 );
-				while ( $videos->have_posts() ) : $videos->the_post();
-				?>
-				<div class="col-10 col-md-5 video-items">
-					<div class="video-frame">
-						<?php echo get_field('video_link'); ?>
+					$videos = new WP_Query( $args3 );
+					while ( $videos->have_posts() ) : $videos->the_post();
+					?>
+					<div class="col-10 col-md-5 video-items">
+						<div class="video-frame">
+							<?php echo get_field('video_link'); ?>
+						</div>
+						<div class="video-info">
+							<h3><?php echo the_title(); ?></h3>
+							<p><?php echo get_field('video_description'); ?></p>
+						</div>
 					</div>
-					<div class="video-info">
-						<h3><?php echo the_title(); ?></h3>
-						<p><?php echo get_field('video_description'); ?></p>
+					<?php
+					endwhile;
+
+					// Reset Post Data
+					wp_reset_postdata();
+					?>
 					</div>
 				</div>
-				<?php
-						// the_content();
-				endwhile;
-
-				// Reset Post Data
-				wp_reset_postdata();
-				?>
-								</div>
 			</div>
 		</section>
 
-</div>
-
-<div class="col-12 about-us-new-body">
-	<div class="coral-background"></div>
-	<?php
-	$about_title = get_the_title( 6 );
-	$about_post = get_post(6);
-	$about_content = $about_post->post_content;
-	$about_content = apply_filters('the_content', $about_content);
-	$about_featured_url = wp_get_attachment_url( get_post_thumbnail_id(6 ) );
-	?>
-			<div class="col-12 about-us-container">
-				<div class="row">
-					<div class="col-12 text-center text-white mb-3"><h1 class="font-weight-bolder"><?php echo $about_title; ?></h1></div>
-					<div class="col-12 col-md-6 about-img">
-						<img src="<?php echo $about_featured_url; ?>" class="rounded" alt="">
-					</div>
-					<div class="col-12 col-md-6 about-info">
-						<p><?php echo $about_content; ?></p>
-						<div class="about-us-btn">
-							<a href="<?php echo home_url().'/about'; ?>"><button class="btn-link-general">LEARN MORE</button></a>
+		<section class="py-5 about-us-new-body">
+			<div class="container">
+				<div class="col-12 about-us-container">
+					<div class="row">
+						<div class="col-12 text-center text-white mb-3"><h1 class="font-weight-bolder"><?php echo $about_title; ?></h1></div>
+						<div class="col-12 col-md-6 about-img">
+							<img src="<?php echo $about_featured_url; ?>" class="rounded" alt="">
+						</div>
+						<div class="col-12 col-md-6 about-info">
+							<p><?php echo $about_content; ?></p>
+							<div class="about-us-btn">
+								<a href="<?php echo home_url().'/about'; ?>"><button class="btn-link-general">LEARN MORE</button></a>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-</div>
+		</section>
 
-		<div class="col-12 testimonial-container">
+		<section class="container testimonial-container">
 			<div class="col-12 testimonial-header">
 				<h1><?php echo get_field('testimonial_label'); ?></h1>
 			</div>
@@ -413,15 +412,8 @@ get_header();
 					<i class="fas fa-chevron-right" id="tm-right"></i>
 				</div>
 			</div>
-		</div>
+		</section>
 	</div>
-
-	<!-- <div class="homepage-video-container">
-		<img id="video-bg" src="<?php echo home_url().'/wp-content/uploads/2019/01/home-bg-video.png'; ?>" alt="">
-		<div class="homepage-video">
-			<?php echo get_field('home_page_video'); ?>
-		</div>
-	</div> -->
 </div>
 <?php
 get_footer();

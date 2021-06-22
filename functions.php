@@ -137,7 +137,7 @@ function my_acf_google_map_api( $api ){
 add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
 
 //FILTER
-function filter_cars_by_taxonomies( $post_type, $which ) {
+function filter_partners_by_taxonomies( $post_type, $which ) {
 
 	// Apply this only on a specific post type
 	if ( 'partners' !== $post_type )
@@ -171,4 +171,4 @@ function filter_cars_by_taxonomies( $post_type, $which ) {
 	}
 
 }
-add_action( 'restrict_manage_posts', 'filter_cars_by_taxonomies' , 10, 2);
+add_action( 'restrict_manage_posts', 'filter_partners_by_taxonomies' , 10, 2);
