@@ -151,7 +151,7 @@ get_header();
 					<div class="row">
 						<div class="col-12 informations-body">
 							<div class="row">
-								<div class="col-12 col-md-12 info-labels-description">
+								<div class="col-12 info-labels-description">
 									<div class="row">
 										<div class="col-12 label-description">
 											<div class="row">

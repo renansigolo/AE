@@ -18,10 +18,10 @@
 			}
 
 			.blog {
-				position: relative;
-				margin-bottom: 150px;
+				margin-bottom: 32px;
 
 				.blog-img {
+					width: 100%;
 
 					img {
 						width: 100%;
@@ -31,11 +31,6 @@
 				}
 
 				.blog-info {
-					position: absolute;
-					width: 50%;
-					right: 5vw;
-					top: 20px;
-					padding: 10px;
 					background-color: #f2f2f2;
 
 					.blog-date-author {

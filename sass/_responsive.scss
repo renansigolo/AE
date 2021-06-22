@@ -32,25 +32,25 @@
 	}
 }
 
-@media (min-width: 1400px) {
+// @media (min-width: 1400px) {
 
-	//CSS
-	html {
-		// .page-home-container,
-		.page-about-container,
-		.page-blog-container,
-		.page-event-container,
-		.page-contact-container,
-		.page-bootcamp-container,
-		.page-handbook-container,
-		.single-page-bootcamp,
-		.single-page-diploma, {
-			max-width: 1400px;
-			margin-left: auto;
-			margin-right: auto;
-		}
-	}
-}
+// 	//CSS
+// 	html {
+// 		// .page-home-container,
+// 		.page-about-container,
+// 		.page-blog-container,
+// 		.page-event-container,
+// 		.page-contact-container,
+// 		.page-bootcamp-container,
+// 		.page-handbook-container,
+// 		.single-page-bootcamp,
+// 		.single-page-diploma, {
+// 			max-width: 1400px;
+// 			margin-left: auto;
+// 			margin-right: auto;
+// 		}
+// 	}
+// }
 
 /*
   ##Device = Laptops, Desktops
@@ -377,7 +377,6 @@
 						top: unset;
 
 						.blog-read-more {
-							text-align: center;
 
 							a {
 
@@ -789,15 +788,10 @@
 @media (min-width: 320px) and (max-width: 767px) {
 	//Header
 	.header-body {
-		padding: 20px 10px 10vw;
 
 		.navigation {
 
 			.navigation-bar {
-
-				.nav-logo{
-
-				}
 
 				.nav-list {
 					display: none;

@@ -71,25 +71,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 body {
   font-family: Montserrat !important;
-  background-color: #fff !important;
-}
-
-.page-home-container,
-.page-event-container,
-.page-meet-container,
-.page-about-container,
-.page-contact-container,
-.page-bootcamp-container,
-.page-hr-portal-container,
-.page-adv-diploma-container,
-.page-blog-container,
-.single-page-diploma,
-.single-page-bootcamp,
-.page-partner-container,
-.page-common-container,
-.page-booking-container,
-.page-handbook-container {
-  background-color: #fff !important;
 }
 
 .row::before,
@@ -1505,8 +1486,10 @@ div.wpforms-container-full .wpforms-form button[type=submit]:focus {
   color: #fff;
 }
 .page-blog-container .blog-container .blog-list .blog {
-  position: relative;
-  margin-bottom: 150px;
+  margin-bottom: 32px;
+}
+.page-blog-container .blog-container .blog-list .blog .blog-img {
+  width: 100%;
 }
 .page-blog-container .blog-container .blog-list .blog .blog-img img {
   width: 100%;
@@ -1514,11 +1497,6 @@ div.wpforms-container-full .wpforms-form button[type=submit]:focus {
   object-fit: cover;
 }
 .page-blog-container .blog-container .blog-list .blog .blog-info {
-  position: absolute;
-  width: 50%;
-  right: 5vw;
-  top: 20px;
-  padding: 10px;
   background-color: #f2f2f2;
 }
 .page-blog-container .blog-container .blog-list .blog .blog-info .blog-date-author p {
@@ -3072,20 +3050,6 @@ footer .footer-body .footer-nav-body .footer-copyright .copy-text .copyright .te
     bottom: -15% !important;
   }
 }
-@media (min-width: 1400px) {
-  html .page-about-container,
-html .page-blog-container,
-html .page-event-container,
-html .page-contact-container,
-html .page-bootcamp-container,
-html .page-handbook-container,
-html .single-page-bootcamp,
-html .single-page-diploma {
-    max-width: 1400px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
 /*
   ##Device = Laptops, Desktops
   ##Screen = B/w 1025px to 1280px
@@ -3227,9 +3191,6 @@ html .single-page-diploma {
     width: unset;
     right: unset;
     top: unset;
-  }
-  .page-blog-container .blog-container .blog-list .blog .blog-info .blog-read-more {
-    text-align: center;
   }
   .page-blog-container .blog-container .blog-list .blog .blog-info .blog-read-more a .btn-link-general {
     width: 250px;
@@ -3391,9 +3352,6 @@ html .single-page-diploma {
   }
 }
 @media (min-width: 320px) and (max-width: 767px) {
-  .header-body {
-    padding: 20px 10px 10vw;
-  }
   .header-body .navigation .navigation-bar .nav-list {
     display: none;
   }

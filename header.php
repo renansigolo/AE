@@ -57,28 +57,25 @@
 
 			 $homeslider = new WP_Query( $args );
 
-			 if( $homeslider->have_posts() ) {
+			 if( $homeslider->have_posts() ) :
 			 ?>
 			 <?php
-					 while( $homeslider->have_posts() ) {
+						while( $homeslider->have_posts() ) :
 						 $homeslider_id = get_the_id();
 						 $homeslider->the_post();
 						 $homeBackground = get_field('header_background');
 			 ?>
 			 <div class="home-header-background" style="background-image: url('<?php echo $homeBackground; ?>'); background-repeat: no-repeat; background-position: center; background-size: cover;"> </div>
-			 <?php
-			 }
-		 }
-		 wp_reset_query();
-		 ?>
-		<?php }else{ ?>
+			 <?php endwhile; endif; wp_reset_query(); ?>
+		<?php } else { ?>
 			 <div class="header-body" style="background-image: url('<?php echo $page_featured_url; ?>'); background-repeat: no-repeat; background-position: center; background-size: cover;">
 				<div class="background-transparency"></div>
 		<?php } ?>
 
-			<div class="col-12">
+<div class="row">
+<div class="col-12">
 				<div class="row">
-					<div class="col-12 col-md-12">
+					<div class="col-12">
 						<div class="login-portal">
 							<h6><span id="lp_link"><a href="<?php echo get_field('header_login_link',2); ?>" class="badge badge-pill badge-dark" target="_blank"><?php echo get_field('header_login_label',2); ?></a></span></h6>
 						</div>
@@ -108,12 +105,9 @@
 
 						</div>
 					</div>
-<?php
-if($page_id == 2){
-?>
+					<?php if($page_id == 2){ ?>
 					<div class="col-12 offset-md-2 col-md-5 home-info-slider">
 						<div class="row">
-
 								<?php $args = array(
 										'post_type' => 'home_header',
 										'posts_per_page' => -1,
@@ -125,9 +119,9 @@ if($page_id == 2){
 
 									if( $homeslider->have_posts() ) {
 									?>
-									<div class="col-12 col-md-12 info-slider-body">
+									<div class="col-12 info-slider-body">
 									<?php
-											while( $homeslider->have_posts() ) {
+											while( $homeslider->have_posts() ) :
 												$homeslider_id = get_the_id();
 												$homeslider->the_post();
 												$home_header = get_field('home_header_label');
@@ -141,28 +135,25 @@ if($page_id == 2){
 												<p><?php echo $content; ?></p>
 											</div>
 											<?php
-												if($home_header_btn_label != '' && $home_header_btn_link != ''){
+												if($home_header_btn_label != '' && $home_header_btn_link != '') {
 													echo '<a href="'.$home_header_btn_link.'"><button class="btn-link-general">'.$home_header_btn_label.'</button></a>';
 												}
 											?>
 										</div>
 
-										<?php
-											}
-										?>
+										<?php endwhile; ?>
 									</div>
 						</div>
 						<div class="info-slider-navigation">
 							<ul class="info-slider-navigation-list">
-							<?php
-							$number = 1;
-								while( $homeslider->have_posts() ) {
-									$homeslider->the_post();
-									$homeslider_id = get_the_id();
-									echo '<li id="'.$homeslider_id.'">'.sprintf('%02s', $number).'</li>';
-									$number ++;
-								}
-							?>
+							<?php $number = 1;
+										while( $homeslider->have_posts() ) {
+											$homeslider->the_post();
+											$homeslider_id = get_the_id();
+											echo '<li id="'.$homeslider_id.'">'.sprintf('%02s', $number).'</li>';
+											$number ++;
+										}
+								?>
 							</ul>
 						</div>
 						<?php
@@ -171,18 +162,18 @@ if($page_id == 2){
 						?>
 					</div>
 
-<?php
-}else if ($page_id == 20 || $page_id == 482 || $page_id == 471){
-	$content_post = get_post($page_id);
-	$content = $content_post->post_content;
-	$content = apply_filters('the_content', $content);
-	$header_form_label = get_field('header_form_label', $page_id);
-	$header_form_sublabel = get_field('header_form_sub_label', $page_id);
-?>
+					<?php
+					} else if ($page_id == 20 || $page_id == 482 || $page_id == 471){
+						$content_post = get_post($page_id);
+						$content = $content_post->post_content;
+						$content = apply_filters('the_content', $content);
+						$header_form_label = get_field('header_form_label', $page_id);
+						$header_form_sublabel = get_field('header_form_sub_label', $page_id);
+					?>
 					<div class="col-12 offset-md-1 col-md-6 contact-page-header">
 						<div class="col-12 page-content">
 							<div class="row">
-								<div class="col-12 col-md-12 form-header">
+								<div class="col-12 form-header">
 									<h1><?php echo $header_form_label; ?></h1>
 									<div class="form-sub-header">
 										<p><?php echo $header_form_sublabel; ?></p>
@@ -209,145 +200,55 @@ if($page_id == 2){
 							</div>
 						</div>
 					</div>
-<?php
-}else if ($page_id == 16){
-//   if (!session_id()) {
-		session_start();
 
-		if ( isset ($_GET['btn_current']) ) {
-			$txtSelected = $_GET['btn_current'];
-			$_SESSION['set_which_event'] = $txtSelected;
-		}else{
-			$_SESSION['set_which_event'] = 'CURRENT EVENTS';
-		}
+				<?php
+					}else if ($page_id == 16){
+							session_start();
 
-//   }
-	$content_post = get_post($page_id);
-	$page_title = get_the_title( $page_id );
-	$content = $content_post->post_content;
-	$content = apply_filters('the_content', $content);
-?>
+							if ( isset ($_GET['btn_current']) ) {
+								$txtSelected = $_GET['btn_current'];
+								$_SESSION['set_which_event'] = $txtSelected;
+							}else{
+								$_SESSION['set_which_event'] = 'CURRENT EVENTS';
+							}
+
+						$content_post = get_post($page_id);
+						$page_title = get_the_title( $page_id );
+						$content = $content_post->post_content;
+						$content = apply_filters('the_content', $content);
+					?>
 			<div class="col-12 offset-md-1 col-md-6 home-page-info">
 				<div class="page-content">
 					<h1><?php echo $page_title ?></h1>
 					<div class="text-content">
 						<p><?php echo $content; ?></p>
 					</div>
-					<!-- <div class="search-event-form">
-						<form class="" action="<?php echo home_url() . '/event'?>" method="get">
-							<div class="col-12 form-search">
-								<div class="row">
-									<div class="col-12 col-md-6 txtSearch">
-										<input type="text" name="txtSearchEvent" value="" placeholder="SEARCH EVENTS">
-									</div>
-									<div class="col-12 col-md-3 txtDateEvent">
-										<input type="date" name="dateSearchEvent" value="">
-									</div>
-									<div class="col-12 col-md-3 btn_btnSearch">
-										<input type="submit" class="btn-link-general" name="btn_srchEvent" value="FIND EVENTS">
-									</div>
-								</div>
-							</div>
-						</form>
-					</div> -->
 				</div>
 			</div>
-<?php
-// }else if ($page_id == 381 ){
-//   $content_post = get_post($page_id);
-//   $page_title = get_the_title( $page_id );
-//
-//   $args = array(
-//     'post_type' => 'mentors',
-//     'post_status'    => 'publish',
-//   );
-//   ?>
-<!-- //           <div class="col-12 offset-md-1 col-md-6 home-page-info">
-//             <div class="page-content">
-//               <h1><?php echo $page_title ?></h1>
-//               <div class="col-12 mentor-list">
-//                 <div class="row">
-//                   <?php
-//                   $mentor = new WP_Query( $args );
-//                   while ( $mentor->have_posts() ) : $mentor->the_post();
-//                       //inside the loop
-//                   ?>
-//                   <div class="col-12 mentor">
-//                     <div class="row">
-//                       <div class="col-12 col-md-3 mentor-img">
-//                         <img src="<?php the_post_thumbnail_url();?>" alt="">
-//                       </div>
-//                       <div class="col-12 col-md-9 mentor-info">
-//                         <h4 id="name"><?php the_title(); ?></h4>
-//                         <p id="content"><?php echo get_field('content'); ?></p>
-//                         <p id="mentor_in"><?php echo get_field('mentor_in:'); ?></p>
-//                         <p id="contact_info"><?php echo get_field('contact_information'); ?></p>
-//                       </div>
-//                     </div>
-//                   </div>
-//                   <?php
-//                       // the_content();
-//                   endwhile;
-//
-//                   // Reset Post Data
-//                   wp_reset_postdata();
-//                   ?>
-//                 </div>
-//               </div>
-//             </div>
-//           </div> -->
-<?php
-// }else if ($page_id == 395){
-//   $content_post = get_post($page_id);
-//   $page_title = get_the_title( $page_id );
-//   $content = $content_post->post_content;
-//   $content = apply_filters('the_content', $content);
+</div>
 
-	?>
-	<!-- <style media="screen">
-		.juicer-feed h1.referral{
-			display: none;
-		}
-	</style>
-					<div class="col-12 offset-md-1 col-md-6 home-page-info">
-						<div class="page-content">
-							<h1><?php echo $page_title ?></h1>
-							<div class="col-12 mentor-list">
-								<div class="row">
-									<div class="col-12 mentor">
-											<p id="content"><?php echo $content; ?></p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div> -->
-?>
-
-<?php
-}else if (is_singular('post')) {
-	$content_post = get_post($page_id);
-	$page_title = get_the_title( $page_id );
-	$content = $content_post->post_content;
-	$content = apply_filters('the_content', $content);
-	$button_label = get_field('header_button_label', $page_id);
-	$button_link = get_field('header_button_link', $page_id);
-	$date = get_the_date('F j, Y', $page_id);
-	$authorid = get_post_field( 'post_author', $post_id );
-	$fnameAuthor = get_the_author_meta('first_name', $authorid);
-	$lnameAuthor = get_the_author_meta('last_name', $authorid);
-	$author = $fnameAuthor. ' ' . $lnameAuthor;
-	?>
+			<?php } else if (is_singular('post')) {
+				$content_post = get_post($page_id);
+				$page_title = get_the_title( $page_id );
+				$content = $content_post->post_content;
+				$content = apply_filters('the_content', $content);
+				$button_label = get_field('header_button_label', $page_id);
+				$button_link = get_field('header_button_link', $page_id);
+				$date = get_the_date('F j, Y', $page_id);
+				$authorid = get_post_field( 'post_author', $post_id );
+				$fnameAuthor = get_the_author_meta('first_name', $authorid);
+				$lnameAuthor = get_the_author_meta('last_name', $authorid);
+				$author = $fnameAuthor. ' ' . $lnameAuthor;
+				?>
 					<div class="col-12 offset-md-1 col-md-6 home-page-info">
 						<div class="page-content">
 							<div class="blog-date-author">
 								<p><?php echo $date; ?> | <?php echo $author; ?></p>
 					
 					<?php the_field('authors_name'); ?>
-					
 							</div>
 							<div class="text-content">
 								<h3><?php echo $page_title ?></h3>
-								<p><?php //echo substr($content, 0, 200)."..."; ?></p>
 							</div>
 							<?php
 								if($button_label != '' && $button_link != ''){
@@ -356,15 +257,15 @@ if($page_id == 2){
 							?>
 						</div>
 					</div>
-<?php
-}else{
-	$content_post = get_post($page_id);
-	$page_title = get_the_title( $page_id );
-	$content = $content_post->post_content;
-	$content = apply_filters('the_content', $content);
-	$button_label = get_field('header_button_label', $page_id);
-	$button_link = get_field('header_button_link', $page_id);
-	?>
+				<?php
+				}else{
+					$content_post = get_post($page_id);
+					$page_title = get_the_title( $page_id );
+					$content = $content_post->post_content;
+					$content = apply_filters('the_content', $content);
+					$button_label = get_field('header_button_label', $page_id);
+					$button_link = get_field('header_button_link', $page_id);
+					?>
 					<div class="col-12 offset-md-1 col-md-6 home-page-info">
 						<div class="page-content">
 							<h1><?php echo $page_title ?></h1>
@@ -378,11 +279,11 @@ if($page_id == 2){
 							?>
 						</div>
 					</div>
-<?php
-}
+		<?php
+		}
 
-if($page_id != 2){
-	?>
+		if($page_id != 2){
+		?>
 	<style media="screen">
 		footer .footer-body .partners-icon-body{
 			display: none;

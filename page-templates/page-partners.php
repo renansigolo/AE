@@ -96,7 +96,7 @@ if ( isset ($_GET['country']) ) {
 							while( $partner->have_posts() ) {
 								$partner->the_post();
 						?>
-						<div class="col-12 col-md-12 partner-content">
+						<div class="col-12 partner-content">
 							<p class="content-title"><h4><?php echo the_title(); ?></h4></p>
 							<p class="content-text"><?php echo the_content(); ?></p>
 						</div>

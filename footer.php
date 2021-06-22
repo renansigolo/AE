@@ -16,7 +16,7 @@
 		<div class="apply-now-body" style="background-image:url(<?php echo $footer_bg; ?>); background-size: cover; background-position: center; background-repeat: no-repeat;">
 				<div class="col-12">
 					<div class="row">
-						<div class="col-12 col-md-12 col-lg-6 offset-lg-3" >
+						<div class="col-12 col-lg-6 offset-lg-3" >
 							<p class="apply-now-text"><?php echo get_field('footer_apply_now_text',2); ?></p>
 							<a href="<?php echo get_field('footer_apply_now_button_link',2); ?>"><button class="btn-link-general">APPLY NOW</button></a>
 						</div>
@@ -25,7 +25,7 @@
 		</div>
 		<div class="footer-nav-body">
 			<div class="footer-menus">
-				<div class="col-12 col-md-12 col-lg-10 offset-lg-1">
+				<div class="col-12 col-lg-10 offset-lg-1">
 					<div class="row ">
 						<div class="col-12 col-lg-3 col-md col-sm-6 footer-icon-social">
 							<div class="website-icon">
