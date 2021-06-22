@@ -37,16 +37,16 @@ get_header();
 							?>
 							<div class="col-12 col-md-4 bootcamp">
 									<div class="bootcamp-img">
-										<img src="<?php the_post_thumbnail_url(); ?>" alt="">
+										<img src="<?php the_post_thumbnail_url(); ?>" class="mb-3" alt="Bootcamp Post Image">
 										<div class="btn_learnmore">
 											<a href="<?php the_permalink(); ?>"><button class="btn-link-general">Learn More</button></a>
 										</div>
 									</div>
 									<div class="bootcamp-title">
-										<h3><?php echo the_title(); ?></h3>
+										<h4><?php echo the_title(); ?></h4>
 									</div>
 									<div class="bootcamp-info">
-										<p id="date"><i class="fas fa-calendar-alt"></i><?php echo $date; ?></p>
+										<!-- <p id="date"><i class="fas fa-calendar-alt"></i><?php echo $date; ?></p> -->
 										<p id="duration"><i class="fas fa-hourglass-start"></i><?php echo $duration; ?></p>
 										<p id="time"><i class="far fa-clock"></i><?php echo $time; ?></p>
 										<p id="location"><i class="fas fa-map-pin"></i><?php echo $location; ?></p>

@@ -15,12 +15,12 @@ $next = get_next_post();
 
 ?>
 <div class="single-page-post">
-	<div class="col-12 offset-md-2 col-md-8 single-post">
-		<div class="row">
-			<div class="col-12 post-content">
+	<div class="single-post">
+			<div class="container post-content">
 				<div class="back-btn">
-					<a href="<?php echo home_url().'\blog'; ?>">BACK</a>
+					<a href="<?php echo home_url().'\blog'; ?>">< BACK</a>
 				</div>
+				<br />
 				<div class="blog-date-author">
 					<p><?php echo $date; ?> | <?php echo $author; ?></p>
 					<hr />
@@ -30,10 +30,11 @@ $next = get_next_post();
 					<h4><?php the_title(); ?></h4>
 				</div>
 				<div class="text-content">
-				<p><?php echo the_content(); ?></p>
+					<p><?php echo the_content(); ?></p>
 				</div>
 			</div>
-			<div class="col-12 post-tags">
+			<div class="post-tags">
+				<div class="container d-flex">
 				<i class="fas fa-tags"></i>
 					<?php
 					foreach( $post_tags as $tag ) {
@@ -41,9 +42,9 @@ $next = get_next_post();
 						echo '<p class="tag">'.$tag->name.'</p>';
 						}
 					?>
-
+				</div>
 			</div>
-			<div class="col-12 post-next-prev">
+			<div class="post-next-prev">
 				<div class="row">
 					<div class="col-6 col-md-5 offset-md-1 previous-nav">
 						<?php
@@ -84,10 +85,10 @@ $next = get_next_post();
 				</div>
 
 			</div>
-			<div class="col-12 author-info">
+			<div class="author-info text-center">
 				<div class="row">
-					<div class="col-12 col-md-10 author-desc">
-						<div class="author-name">
+					<div class="col-12 author-desc">
+						<div class="author-name mt-3">
 							<h5><?php echo $author; ?></h5>
 						</div>
 						<div class="author-description">
@@ -96,41 +97,45 @@ $next = get_next_post();
 					</div>
 				</div>
 			</div>
-			<div class="col-12 related-post">
+			<div class="related-post">
 				<div class="row">
 					<div class="col-12 related-title">
-						<p><?php echo get_field('single_page_other_posts_label',18);?></p>
+						<h5 class="m-0 py-2"><?php echo get_field('single_page_other_posts_label',18);?></h5>
 					</div>
-					<?php
-						$args=array(
-							'tag__in' => $tag_id,
-							'post__not_in' => array($post_id),
-							'posts_per_page'=>3,
-							'orderby' => 'rand',
-							'order' => 'DESC'
-						);
-						$my_query = new WP_Query($args);
-						if( $my_query->have_posts() ) {
-						while ($my_query->have_posts()) : $my_query->the_post();
-					?>
-					<div class="col-12 col-md-4 r-post">
+
+					<div class="container py-5">
 						<div class="row">
-							<div class="col-12 r-post-img">
-								<img src="<?php the_post_thumbnail_url(); ?>" alt="">
-							</div>
-							<div class="col-12 r-post-title">
-								<a href="<?php echo the_permalink(); ?>"><?php echo the_title(); ?></a>
+						<?php
+							$args=array(
+								'tag__in' => $tag_id,
+								'post__not_in' => array($post_id),
+								'posts_per_page'=>3,
+								'orderby' => 'rand',
+								'order' => 'DESC'
+							);
+							$my_query = new WP_Query($args);
+							if( $my_query->have_posts() ) {
+							while ($my_query->have_posts()) : $my_query->the_post();
+						?>
+						<div class="col-12 col-md-4 r-post">
+							<div class="row">
+								<div class="col-12 r-post-img">
+									<img src="<?php the_post_thumbnail_url(); ?>" alt="">
+								</div>
+								<div class="col-12 r-post-title">
+									<a href="<?php echo the_permalink(); ?>"><?php echo the_title(); ?></a>
+								</div>
 							</div>
 						</div>
+						<?php
+							endwhile;
+							}
+							wp_reset_query();
+						?>
+						</div>
 					</div>
-					<?php
-						endwhile;
-						}
-						wp_reset_query();
-					?>
 				</div>
 			</div>
-		</div>
 	</div>
 </div>
 <?php

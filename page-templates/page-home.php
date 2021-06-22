@@ -90,7 +90,6 @@ get_header();
 									$args = array(
 										'post_type' => 'events_post_type',
 										'post_status'=>'publish',
-										'orderby' => 'rand',
 										'posts_per_page' => 2,
 										'meta_key' => 'event_date',
 										'meta_query' => $meta_query
@@ -236,7 +235,6 @@ get_header();
 										'post_type' => 'bootcamps',
 										'post_status' => 'publish',
 										'posts_per_page' => 4,
-										'orderby' => 'rand',
 										'order'    => 'ASC'
 									);
 
@@ -244,9 +242,8 @@ get_header();
 									if( $bootcamps->have_posts() ) {
 										while( $bootcamps->have_posts() ) {
 											$bootcamps->the_post();
-											// $date = get_field('bootcamp_start_date');
-											// $day = date('l', strtotime($date));
 											$content = get_the_content();
+											$link = get_field('header_button_link');
 											$date = get_field('bootcamp_start_date');
 											$duration = get_field('bootcamp_structure_duration');
 											$time = get_field('bootcamp_structure_time');
@@ -258,7 +255,7 @@ get_header();
 										<div class="card" style="height: 500px;">
 											<img src="<?php the_post_thumbnail_url(); ?>" class="card-img-top" style="height: 220px; object-fit: cover;" alt="Card Image">
 												<div class="card-body">
-													<a href="<?php the_permalink(); ?>" class="text-decoration-none">
+													<a href="<?php echo $link; ?>" class="text-decoration-none" target="_blank">
 														<h5 class="card-title"><?php echo the_title(); ?></h5>
 													</a>
 
@@ -312,8 +309,7 @@ get_header();
 					<?php
 					$args3 = array(
 						'post_type' => 'videos',
-						'post_status'    => 'publish',
-						'orderby' => 'rand'
+						'post_status'    => 'publish'
 					);
 
 					$videos = new WP_Query( $args3 );

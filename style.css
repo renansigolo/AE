@@ -26,6 +26,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   --pink-dark: #e63552;
   --pink: #ec4e68;
   --pink-light: #e635521a;
+  --orange: #ff7442;
   --orange-light: #ff74421a;
   --gray-light: #f2f2f2;
 }
@@ -82,7 +83,6 @@ body {
 .page-hr-portal-container,
 .page-adv-diploma-container,
 .page-blog-container,
-.single-page-post,
 .single-page-diploma,
 .single-page-bootcamp,
 .page-partner-container,
@@ -952,7 +952,7 @@ div.wpforms-container-full .wpforms-form button[type=submit]:focus {
   text-decoration: none;
 }
 .page-home-container .home-container .event-workshop .ew-body .events-container .event .event-info .event-content a:hover h4 {
-  color: #ec551f;
+  color: var(--pink-dark);
 }
 .page-home-container .home-container .event-workshop .ew-body .events-container .event-btn {
   text-align: center;
@@ -964,7 +964,7 @@ div.wpforms-container-full .wpforms-form button[type=submit]:focus {
   font-size: 15px;
 }
 .page-home-container .home-container .event-workshop .ew-body .events-container .event-btn .btn-link-general:hover {
-  background-color: #ec551f;
+  background-color: var(--pink);
 }
 .page-home-container .home-container .second-banner {
   position: relative;
@@ -1138,7 +1138,7 @@ div.wpforms-container-full .wpforms-form button[type=submit]:focus {
   width: 230px;
 }
 .page-home-container .home-container .bootcamps-container .bootcamps-body .bootcamp-container .bootcamp-btn .btn-link-general:hover {
-  background-color: #ec551f;
+  background-color: var(--pink);
 }
 .page-home-container .home-container .video-list-container {
   background-color: var(--gray-light);
@@ -1634,19 +1634,20 @@ div.wpforms-container-full .wpforms-form button[type=submit]:focus {
 
 .single-page-post {
   position: relative;
-  padding: 50px 10px;
   overflow: hidden;
   background-color: #f6f6f6;
 }
 .single-page-post .single-post {
-  background-color: #fff;
-  padding: 35px;
   font-size: 13px;
   font-weight: 600;
 }
 .single-page-post .single-post .post-content {
-  padding-bottom: 25px;
+  padding-top: 24px;
+  padding-bottom: 24px;
   border-bottom: 1px solid #000;
+}
+.single-page-post .single-post .post-content a {
+  color: var(--pink-dark);
 }
 .single-page-post .single-post .post-content .back-btn a {
   color: #000;
@@ -1680,7 +1681,6 @@ div.wpforms-container-full .wpforms-form button[type=submit]:focus {
 }
 .single-page-post .single-post .post-tags {
   padding: 20px 15px;
-  display: inline-flex;
 }
 .single-page-post .single-post .post-tags i {
   padding: 5px 10px 10px 0;
@@ -1691,6 +1691,7 @@ div.wpforms-container-full .wpforms-form button[type=submit]:focus {
 .single-page-post .single-post .post-tags .tag {
   padding: 5px;
   border: 1px solid #b9b9b9;
+  border-radius: 2px;
   text-transform: uppercase;
   margin-right: 10px;
 }
@@ -1742,7 +1743,6 @@ div.wpforms-container-full .wpforms-form button[type=submit]:focus {
   padding-left: 0;
 }
 .single-page-post .single-post .related-post {
-  padding: 20px 0;
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
 }
@@ -1751,12 +1751,9 @@ div.wpforms-container-full .wpforms-form button[type=submit]:focus {
 }
 .single-page-post .single-post .related-post .row .related-title {
   text-align: center;
+  color: #fff;
   background-color: #1a1a1a;
   padding: 5px;
-}
-.single-page-post .single-post .related-post .row .related-title p {
-  color: #fff;
-  font-size: 13px;
 }
 .single-page-post .single-post .related-post .row .r-post {
   padding: 15px;
@@ -1940,7 +1937,7 @@ div.wpforms-container-full .wpforms-form button[type=submit]:focus {
   margin-bottom: 25px;
 }
 .page-bootcamp-container .bootcamp-container .bootcamp-structure .bootcamp-structure-title h1 {
-  color: #ff7442;
+  color: var(--pink-dark);
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -1956,7 +1953,7 @@ div.wpforms-container-full .wpforms-form button[type=submit]:focus {
 }
 .page-bootcamp-container .bootcamp-container .bootcamp-structure .bootcamp-structure-info .sub-label hr {
   margin-top: 0;
-  border: 1px solid #ff7442;
+  border: 1px solid var(--pink-dark);
   width: 50%;
   float: left;
 }
@@ -1971,7 +1968,7 @@ div.wpforms-container-full .wpforms-form button[type=submit]:focus {
   display: inline-block;
 }
 .page-bootcamp-container .bootcamp-container .bootcamp-list-container .bootcamp-list-title h1 {
-  color: #ff7442;
+  color: var(--pink-dark);
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -1999,17 +1996,14 @@ div.wpforms-container-full .wpforms-form button[type=submit]:focus {
 }
 .page-bootcamp-container .bootcamp-container .bootcamp-list-container .bootcamp-body .bootcamp .bootcamp-img .btn_learnmore .btn-link-general {
   display: none;
-  background-color: #ff7442;
+  background-color: var(--pink-dark);
   color: white;
 }
 .page-bootcamp-container .bootcamp-container .bootcamp-list-container .bootcamp-body .bootcamp .bootcamp-img .btn_learnmore .btn-link-general:hover {
-  background-color: #ec551f;
+  background-color: var(--pink-light);
 }
 .page-bootcamp-container .bootcamp-container .bootcamp-list-container .bootcamp-body .bootcamp .bootcamp-img .btn_learnmore a:hover {
   text-decoration: none;
-}
-.page-bootcamp-container .bootcamp-container .bootcamp-list-container .bootcamp-body .bootcamp .bootcamp-img .btn_learnmore:hover {
-  background-color: rgba(151, 80, 38, 0.35);
 }
 .page-bootcamp-container .bootcamp-container .bootcamp-list-container .bootcamp-body .bootcamp .bootcamp-img .btn_learnmore:hover .btn-link-general {
   display: block;
@@ -2020,7 +2014,7 @@ div.wpforms-container-full .wpforms-form button[type=submit]:focus {
   position: relative;
 }
 .page-bootcamp-container .bootcamp-container .bootcamp-list-container .bootcamp-body .bootcamp .bootcamp-title h3 {
-  color: #ff7442;
+  color: var(--pink-dark);
 }
 .page-bootcamp-container .bootcamp-container .bootcamp-list-container .bootcamp-body .bootcamp .bootcamp-info {
   padding-top: 10px;
@@ -2030,7 +2024,7 @@ div.wpforms-container-full .wpforms-form button[type=submit]:focus {
   margin-bottom: 5px;
 }
 .page-bootcamp-container .bootcamp-container .bootcamp-list-container .bootcamp-body .bootcamp .bootcamp-info p i {
-  color: #ff7442;
+  color: var(--pink-dark);
   padding-right: 5px;
   font-size: 15px;
   width: 20px;
@@ -2048,7 +2042,7 @@ div.wpforms-container-full .wpforms-form button[type=submit]:focus {
 }
 .page-bootcamp-container .bootcamp-container .bootcamp-list-container .bootcamp-body .next-term-title .term-title {
   width: 60%;
-  border-top: 2px solid #ff7442;
+  border-top: 2px solid var(--pink-dark);
 }
 .page-bootcamp-container .bootcamp-container .bootcamp-list-container .bootcamp-body .next-term-other-info {
   display: none;
@@ -2056,7 +2050,7 @@ div.wpforms-container-full .wpforms-form button[type=submit]:focus {
 .page-bootcamp-container .bootcamp-container .bootcamp-list-container .bootcamp-body .next-term-other-info .info {
   padding-top: 25px;
   width: 80%;
-  border-top: 2px solid #ff7442;
+  border-top: 2px solid var(--pink-dark);
   color: #fff;
 }
 
@@ -2092,7 +2086,7 @@ div.wpforms-container-full .wpforms-form button[type=submit]:focus {
   margin-bottom: 25px;
 }
 .single-page-bootcamp .single-bootcamp-container .bootcamp-structure .bootcamp-structure-title h1 {
-  color: #ff7442;
+  color: var(--pink-dark);
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -2108,7 +2102,7 @@ div.wpforms-container-full .wpforms-form button[type=submit]:focus {
 }
 .single-page-bootcamp .single-bootcamp-container .bootcamp-structure .bootcamp-structure-info .sub-label hr {
   margin-top: 0;
-  border: 1px solid #ff7442;
+  border: 1px solid var(--pink-dark);
   width: 50%;
   float: left;
 }
@@ -2121,10 +2115,10 @@ div.wpforms-container-full .wpforms-form button[type=submit]:focus {
 .single-page-bootcamp .single-bootcamp-container .bootcamp-structure .bootcamp-structure-info h4 {
   width: 75%;
   display: inline-block;
-  color: #ff7442;
+  color: var(--pink-dark);
 }
 .single-page-bootcamp .bootcamp-learn-how .bootcamp-learn-title h1 {
-  color: #ff7442;
+  color: var(--pink-dark);
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -2142,24 +2136,24 @@ div.wpforms-container-full .wpforms-form button[type=submit]:focus {
   width: 80%;
 }
 .single-page-bootcamp .bootcamp-learn-how .bootcamp-learn-body hr#learn-how-line {
-  border: 2px solid #ff7442;
+  border: 2px solid var(--pink-dark);
   width: 100px;
 }
 .single-page-bootcamp .bootcamp-learn-how .bootcamp-learn-body .learn-how-second-header {
   text-align: center;
 }
 .single-page-bootcamp .bootcamp-learn-how .bootcamp-learn-body .learn-how-second-header h3 {
-  color: #ff7442;
+  color: var(--pink-dark);
   font-weight: 900;
   text-transform: uppercase;
 }
 .single-page-bootcamp .bootcamp-learn-how .bootcamp-learn-body .second-content .second-content-text {
   color: #000;
-  border-right: 2px solid #ff7442;
+  border-right: 2px solid var(--pink-dark);
 }
 .single-page-bootcamp .bootcamp-learn-how .bootcamp-learn-body .second-content .second-content-text b,
 .single-page-bootcamp .bootcamp-learn-how .bootcamp-learn-body .second-content .second-content-text strong {
-  color: #ff7442;
+  color: var(--pink-dark);
 }
 .single-page-bootcamp .bootcamp-learn-how .bootcamp-learn-body .second-content .second-content-text p {
   font-size: 16px;
@@ -2170,10 +2164,10 @@ div.wpforms-container-full .wpforms-form button[type=submit]:focus {
 }
 .single-page-bootcamp .bootcamp-learn-how .bootcamp-learn-body .second-content .second-content-sched b,
 .single-page-bootcamp .bootcamp-learn-how .bootcamp-learn-body .second-content .second-content-sched strong {
-  color: #ff7442;
+  color: var(--pink-dark);
 }
 .single-page-bootcamp .bootcamp-learn-how .bootcamp-learn-body .second-content .second-content-sched h4 {
-  color: #ff7442;
+  color: var(--pink-dark);
 }
 
 .page-adv-diploma-container {
@@ -3086,7 +3080,6 @@ html .page-contact-container,
 html .page-bootcamp-container,
 html .page-handbook-container,
 html .single-page-bootcamp,
-html .single-page-post,
 html .single-page-diploma {
     max-width: 1400px;
     margin-left: auto;

@@ -36,7 +36,7 @@
 			.bootcamp-structure-title {
 
 				h1 {
-					color: #ff7442;
+					color: var(--pink-dark);
 					font-weight: 900;
 					text-transform: uppercase;
 				}
@@ -61,7 +61,7 @@
 
 					hr {
 						margin-top: 0;
-						border: 1px solid #ff7442;
+						border: 1px solid var(--pink-dark);
 						width: 50%;
 						float: left;
 					}
@@ -86,7 +86,7 @@
 			.bootcamp-list-title {
 
 				h1 {
-					color: #ff7442;
+					color: var(--pink-dark);
 					font-weight: 900;
 					text-transform: uppercase;
 				}
@@ -117,24 +117,21 @@
 
 							.btn-link-general {
 								display: none;
-								background-color: #ff7442;
+								background-color: var(--pink-dark);
 								color: rgb(255, 255, 255);
 
 								&:hover {
-									background-color: #ec551f;
+									background-color: var(--pink-light);
 								}
 							}
 
 							a {
-
 								&:hover {
 									text-decoration: none;
 								}
 							}
 
 							&:hover {
-								background-color: rgba(151, 80, 38, 0.35);
-
 								.btn-link-general {
 									display: block;
 								}
@@ -153,7 +150,7 @@
 							// position: absolute;
 							// bottom: 0;
 							// left: 0;
-							color: #ff7442;
+							color: var(--pink-dark);
 						}
 					}
 
@@ -167,7 +164,7 @@
 							margin-bottom: 5px;
 
 							i {
-								color: #ff7442;
+								color: var(--pink-dark);
 								padding-right: 5px;
 								font-size: 15px;
 								width: 20px;
@@ -191,7 +188,7 @@
 
 					.term-title {
 						width: 60%;
-						border-top: 2px solid #ff7442;
+						border-top: 2px solid var(--pink-dark);
 
 						@extend %text-content-h1-6-12-600-15;
 					}
@@ -203,7 +200,7 @@
 					.info {
 						padding-top: 25px;
 						width: 80%;
-						border-top: 2px solid #ff7442;
+						border-top: 2px solid var(--pink-dark);
 						color: #fff;
 
 						@extend %text-content-h1-6-12-600-15;

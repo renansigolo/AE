@@ -1,18 +1,21 @@
 .single-page-post {
 	position: relative;
-	padding: 50px 10px;
+	// padding: 50px 10px;
 	overflow: hidden;
 	background-color: #f6f6f6;
 
 	.single-post {
-		background-color: #fff;
-		padding: 35px;
 		font-size: 13px;
 		font-weight: 600;
 
 		.post-content {
-			padding-bottom: 25px;
+			padding-top: 24px;
+			padding-bottom: 24px;
 			border-bottom: 1px solid #000;
+
+			a {
+				color: var(--pink-dark);
+			}
 
 			.back-btn {
 
@@ -67,7 +70,6 @@
 
 		.post-tags {
 			padding: 20px 15px;
-			display: inline-flex;
 
 			i {
 				padding: 5px 10px 10px 0;
@@ -80,6 +82,7 @@
 			.tag {
 				padding: 5px;
 				border: 1px solid #b9b9b9;
+				border-radius: 2px;
 				text-transform: uppercase;
 				margin-right: 10px;
 			}
@@ -170,7 +173,6 @@
 		}
 
 		.related-post {
-			padding: 20px 0;
 			border-top: 1px solid #000;
 			border-bottom: 1px solid #000;
 
@@ -179,13 +181,9 @@
 
 				.related-title {
 					text-align: center;
+					color: #fff;
 					background-color: #1a1a1a;
 					padding: 5px;
-
-					p {
-						color: #fff;
-						font-size: 13px;
-					}
 				}
 
 				.r-post {
