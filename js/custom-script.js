@@ -250,13 +250,13 @@ jQuery( function( $ ) {
 	);
 	let testinow = 0;
 	testimony.hide().first().show();
-	$( '.testimonial_navigation #tm-left' ).click( function() {
+	$( '.testimonial-navigation #tm-left' ).click( function() {
 		testimony.eq( testinow ).hide( 'fast' );
 		testinow = testinow + 1 < testimony.length ? testinow + 1 : 0;
 		testimony.eq( testinow ).show( 'fast' ); // show next
 	} );
 
-	$( '.testimonial_navigation #tm-right' ).click( function() {
+	$( '.testimonial-navigation #tm-right' ).click( function() {
 		testimony.eq( testinow ).hide( 'fast' );
 		testinow = testinow > 0 ? testinow - 1 : testimony.length - 1;
 		testimony.eq( testinow ).show( 'fast' );

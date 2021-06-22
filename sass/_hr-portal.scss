@@ -55,7 +55,7 @@
 				h4,
 				h5,
 				h6 {
-					color: #ec4e68;
+					color: var(--pink);
 				}
 
 				img {
@@ -71,7 +71,7 @@
 				.header-title {
 
 					h1 {
-						color: #ec4e68;
+						color: var(--pink);
 						font-weight: 900;
 					}
 				}

@@ -1,5 +1,5 @@
 .page-contact-container {
-	border-top: 2px solid #ec4e68;
+	border-top: 2px solid var(--pink);
 	overflow: hidden;
 	padding: 50px 0;
 	position: relative;
@@ -16,7 +16,7 @@
 				@extend %text-content-h1-6-12-600-15;
 
 				hr {
-					border: 1px solid #ec4e68;
+					border: 1px solid var(--pink);
 				}
 				color: #000;
 			}

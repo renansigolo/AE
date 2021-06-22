@@ -54,7 +54,7 @@
 					color: #000;
 
 					@extend %text-content-h1-6-12-600-15;
-					border-top: 1px solid #ec4e68;
+					border-top: 1px solid var(--pink);
 
 					h4 {
 						text-transform: uppercase;
@@ -76,8 +76,8 @@
 					span.current {
 						padding: 8px 15px;
 						color: #fff;
-						border: 1px solid #ec4e68;
-						background-color: #ec4e68;
+						border: 1px solid var(--pink);
+						background-color: var(--pink);
 					}
 
 					a.page {
@@ -86,8 +86,8 @@
 						border: 1px solid #000;
 
 						&:hover {
-							border: 1px solid #ec4e68;
-							background-color: #ec4e68;
+							border: 1px solid var(--pink);
+							background-color: var(--pink);
 							text-decoration: none;
 						}
 					}
@@ -118,13 +118,13 @@
 						position: absolute;
 						top: 0;
 						right: 0;
-						background-color: #ec4e68;
+						background-color: var(--pink);
 						padding: 10px;
-						border: 2px solid #ec4e68;
+						border: 2px solid var(--pink);
 						color: #fff;
 
 						&:hover {
-							background-color: #e63552;
+							background-color: var(--pink-dark);
 							color: #fff;
 						}
 					}
@@ -151,14 +151,14 @@
 								font-weight: 600;
 
 								&:hover {
-									color: #ec4e68;
+									color: var(--pink);
 									text-decoration: none;
 								}
 								display: block;
 							}
 
 							hr {
-								border-top: 2px solid #ec4e68;
+								border-top: 2px solid var(--pink);
 								width: 10%;
 								display: inline-block;
 								margin: 2px;

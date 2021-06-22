@@ -21,7 +21,7 @@
 
 					&:hover {
 						text-decoration: none;
-						color: #ec4e68;
+						color: var(--pink);
 					}
 				}
 			}
@@ -35,7 +35,7 @@
 
 				hr {
 					margin-top: 0;
-					border-bottom: 2px solid #ec4e68;
+					border-bottom: 2px solid var(--pink);
 					width: 30%;
 					float: left;
 					margin-bottom: 0;
@@ -46,7 +46,7 @@
 			.blog-title {
 
 				h4 {
-					color: #ec4e68;
+					color: var(--pink);
 					font-weight: 700;
 				}
 			}
@@ -54,7 +54,7 @@
 			.text-content {
 
 				blockquote {
-					border-left: 3px solid #ec4e68;
+					border-left: 3px solid var(--pink);
 					font-family: Zing;
 					font-weight: initial;
 				}
@@ -97,7 +97,7 @@
 				.previous-link {
 
 					a {
-						color: #ec4e68;
+						color: var(--pink);
 
 						&:hover {
 							color: #fff;
@@ -125,7 +125,7 @@
 				.next-link {
 
 					a {
-						color: #ec4e68;
+						color: var(--pink);
 
 						&:hover {
 							color: #fff;
@@ -207,7 +207,7 @@
 							font-size: 13px;
 
 							&:hover {
-								color: #ec4e68;
+								color: var(--pink);
 								text-decoration: none;
 							}
 						}

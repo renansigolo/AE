@@ -56,7 +56,7 @@ $selected_events = $_SESSION['set_which_event'];
 				?>
 				<style media="screen">
 					.current-previous-btn #current{
-						color: #ec4e68;
+						color: var(--pink);
 					}
 				</style>
 				<div class="col-12 current-events">
@@ -159,7 +159,7 @@ $selected_events = $_SESSION['set_which_event'];
 			<?php }else{ ?>
 				<style media="screen">
 					.current-previous-btn #previous{
-						color: #ec4e68;
+						color: var(--pink);
 					}
 				</style>
 				<div class="col-12 previous-events">

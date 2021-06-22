@@ -23,7 +23,7 @@
 			.event-title-header {
 
 				h1 {
-					color: #ec4e68;
+					color: var(--pink);
 					font-weight: 900;
 				}
 			}
@@ -41,7 +41,7 @@
 						font-weight: 600;
 
 						&:hover {
-							color: #ec4e68;
+							color: var(--pink);
 						}
 					}
 					display: inline-block;
@@ -70,7 +70,7 @@
 					.event-info {
 
 						.event-date-author {
-							border-bottom: 1px solid #ec4e68;
+							border-bottom: 1px solid var(--pink);
 							overflow: hidden;
 
 							@extend %regular-text-white;
@@ -91,7 +91,7 @@
 						}
 
 						.event-location-time {
-							// border-bottom: 1px solid #ec4e68;
+							// border-bottom: 1px solid var(--pink);
 							overflow: hidden;
 
 							@extend %regular-text-white;
@@ -134,9 +134,9 @@
 
 						span.current {
 							padding: 0 15px;
-							color: #ec4e68;
-							border: 2px solid #ec4e68;
-							background-color: #ec4e68;
+							color: var(--pink);
+							border: 2px solid var(--pink);
+							background-color: var(--pink);
 						}
 
 						a.page {
@@ -146,8 +146,8 @@
 							background-color: #d1d1d1;
 
 							&:hover {
-								border: 2px solid #ec4e68;
-								background-color: #ec4e68;
+								border: 2px solid var(--pink);
+								background-color: var(--pink);
 								text-decoration: none;
 							}
 						}
@@ -214,7 +214,7 @@
 	//         }
 	//
 	//         #wpforms-254-field_2-container{
-	//           border-right: 2px solid #ec4e68;
+	//           border-right: 2px solid var(--pink);
 	//         }
 	//       }
 	//     }

@@ -49,13 +49,13 @@
 					color: #000;
 
 					span {
-						color: #ec4e68;
+						color: var(--pink);
 					}
 				}
 
 				hr {
 					text-align: left;
-					border: 1px solid #ec4e68;
+					border: 1px solid var(--pink);
 					width: 50%;
 					display: inline-block;
 				}
@@ -116,7 +116,7 @@
 						&:hover {
 
 							&::before {
-								color: #ec4e68;
+								color: var(--pink);
 							}
 						}
 					}
@@ -141,7 +141,7 @@
 					b,
 					strong,
 					a {
-						color: #ec4e68;
+						color: var(--pink);
 					}
 
 					img {
@@ -159,7 +159,7 @@
 			.header-title {
 
 				h1 {
-					color: #ec4e68;
+					color: var(--pink);
 					font-weight: 900;
 				}
 			}

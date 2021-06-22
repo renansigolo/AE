@@ -20,7 +20,7 @@ get_header();
 
 <div class="page-home-container">
 	<div class="small-polygon">
-		<img src="<?php echo home_url() . '/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="">
+		<img src="<?php echo home_url() . '/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="Small Polygon">
 	</div>
 
 	<div class="home-container">
@@ -60,20 +60,21 @@ get_header();
 		
 		<section class="first-banner">
 			<a href="https://academy-of-entrepreneurs.square.site/" target="blank">
-				<img class="banner-bg-img" src="<?php echo $first_home_banner; ?>" />
+				<img class="banner-bg-img" src="<?php echo $first_home_banner; ?>" alt="First Banner" />
 			</a>
 		</section>
 		
 		<section class="container mt-5 event-workshop">
-			<!-- <div class="light-orange-background"></div> -->
-			<div class="col-12 first-title">
-				<h1><?php echo get_field('first_section_label_vertical');?></h1>
-			</div>
+				<div class="row">
+					<div class="col-12 first-title">
+						<h1><?php echo get_field('first_section_label_vertical');?></h1>
+					</div>
+				</div>
 				<div class="row">
 					<div class="col-12 ew-title">
 						<h1><?php echo get_field('first_section_label_horizontal');?></h1>
 					</div>
-					<div class="col-12  ew-body">
+					<div class="col-12 ew-body">
 						<div class="row">
 							<div class="col-12 events-container">
 								<div class="row">
@@ -102,7 +103,7 @@ get_header();
 										$date = get_field('event_date');
 										$price = get_field('event_price');
 										$content = get_the_content();
-					$preview = get_the_excerpt();
+										$preview = get_the_excerpt();
 										$timefrom = get_field('time_from');
 										$timeTo = get_field('time_to');
 										$sched = $timefrom .' - '.$timeTo.' AEST';
@@ -117,7 +118,7 @@ get_header();
 										<div class="card-like-no-padding">
 											<div class="row">
 												<div class="col-12 col-md-6 event-img">
-													<img src="<?php the_post_thumbnail_url(); ?>" alt="">
+													<img src="<?php the_post_thumbnail_url(); ?>" alt="Event Post Image">
 												</div>
 												<div class="col-12 col-md-6 event-info">
 													<div class="event-date-author">
@@ -130,15 +131,7 @@ get_header();
 													</div>
 													<div class="event-content">
 														<a href="<?php echo get_field('event_bright_link');  ?>" target="_blank"><h4><?php the_title(); ?></h4></a>
-														<p>
-								<?php
-									if (strlen($preview) <=90) {
-										echo $preview;
-									} else {
-										echo substr($preview, 0, 90) . '...';
-									}
-									?>
-							 </p>
+														<p><?php if (strlen($preview) <=90) { echo $preview; } else { echo substr($preview, 0, 90) . '...'; } ?></p>
 													</div>
 											</div>
 										</div>
@@ -194,7 +187,7 @@ get_header();
 												<div class="card-like">
 													<div class="row">
 														<div class="col-12 col-md-6 courses-img">
-															<img src="<?php echo $img_url; ?>" alt="">
+															<img src="<?php echo $img_url; ?>" alt="Course Image">
 														</div>
 														<div class="col-12 col-md-6 courses-info">
 															<div class="courses-content">
@@ -226,7 +219,6 @@ get_header();
 		<hr />
 
 		<section class="container mt-5 bootcamps-container">
-			<!-- <div class="light-orange-background"></div> -->
 			<div class="col-12 first-title">
 				<h1><?php echo get_field('bootcamp_first_label_vertical');?></h1>
 			</div>
@@ -353,7 +345,7 @@ get_header();
 					<div class="row">
 						<div class="col-12 text-center text-white mb-3"><h1 class="font-weight-bolder"><?php echo $about_title; ?></h1></div>
 						<div class="col-12 col-md-6 about-img">
-							<img src="<?php echo $about_featured_url; ?>" class="rounded" alt="">
+							<img src="<?php echo $about_featured_url; ?>" class="rounded" alt="About Us Image">
 						</div>
 						<div class="col-12 col-md-6 about-info">
 							<p><?php echo $about_content; ?></p>
@@ -385,7 +377,7 @@ get_header();
 					<div class="col-12 testimonials">
 						<div class="row">
 							<div class="col-12 col-md-6 testimony-img">
-								<img src="<?php  the_post_thumbnail_url(); ?>" alt="">
+								<img src="<?php  the_post_thumbnail_url(); ?>" alt="Testimony Image">
 								<div class="country">
 										<p><?php //the_title(); ?></p>
 								</div>
@@ -400,16 +392,15 @@ get_header();
 						</div>
 					</div>
 					<?php
-							// the_content();
 					endwhile;
 
 					// Reset Post Data
 					wp_reset_postdata();
 					?>
-				</div>
-				<div class="testimonial_navigation">
+				<div class="testimonial-navigation">
 					<i class="fas fa-chevron-left" id="tm-left"></i>
 					<i class="fas fa-chevron-right" id="tm-right"></i>
+				</div>
 				</div>
 			</div>
 		</section>

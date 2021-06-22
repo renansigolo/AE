@@ -35,7 +35,7 @@
 			.sched-title {
 
 				h1 {
-					color: #ec4e68;
+					color: var(--pink);
 					font-weight: 900;
 					text-transform: uppercase;
 				}
@@ -66,7 +66,7 @@
 								th {
 
 									#hr {
-										border-bottom: 2px solid #ec4e68;
+										border-bottom: 2px solid var(--pink);
 										width: 50%;
 										margin-bottom: 10px;
 									}
@@ -79,7 +79,7 @@
 							tr {
 
 								td {
-									color: #ec4e68;
+									color: var(--pink);
 									font-size: 17px;
 									font-weight: 900;
 								}
@@ -108,7 +108,7 @@
 			.studies-title {
 
 				h1 {
-					color: #ec4e68;
+					color: var(--pink);
 					font-weight: 900;
 					text-transform: uppercase;
 				}
@@ -141,14 +141,14 @@
 							cursor: pointer;
 
 							&:hover {
-								color: #ec4e68;
+								color: var(--pink);
 							}
 						}
 					}
 				}
 
 				.active {
-					color: #ec4e68 !important;
+					color: var(--pink) !important;
 				}
 
 				.study-content {
@@ -172,7 +172,7 @@
 					.study-labels {
 
 						hr {
-							border: 1px solid #ec4e68;
+							border: 1px solid var(--pink);
 							margin: 0;
 							margin-bottom: 15px;
 						}
@@ -209,7 +209,7 @@
 					.study-description {
 
 						hr {
-							border: 1px solid #ec4e68;
+							border: 1px solid var(--pink);
 							margin: 0;
 							margin-bottom: 15px;
 							width: 35%;
@@ -225,7 +225,7 @@
 			.ready-title {
 
 				h1 {
-					color: #ec4e68;
+					color: var(--pink);
 					font-weight: 900;
 					text-transform: uppercase;
 				}
@@ -268,7 +268,7 @@
 										text-decoration: underline;
 
 										&:hover {
-											color: #ec4e68;
+											color: var(--pink);
 										}
 									}
 								}
@@ -284,7 +284,7 @@
 			.requirements-title {
 
 				h1 {
-					color: #ec4e68;
+					color: var(--pink);
 					font-weight: 900;
 					text-transform: uppercase;
 				}
@@ -357,7 +357,7 @@
 						text-decoration: none;
 
 						p {
-							color: #ec4e68;
+							color: var(--pink);
 						}
 					}
 				}

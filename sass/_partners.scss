@@ -18,7 +18,7 @@
 		.partner-countries {
 
 			.list-continent {
-				border-top: 1px solid #ec4e68;
+				border-top: 1px solid var(--pink);
 				list-style: none;
 				padding-left: 0;
 
@@ -63,7 +63,7 @@
 							p {
 
 								&:hover {
-									color: #ec4e68;
+									color: var(--pink);
 									text-decoration: none;
 								}
 							}

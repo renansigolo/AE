@@ -23,7 +23,7 @@
 
 			.banner-bg-img {
 				object-fit: cover;
-				border-bottom: 5px solid #e63552;
+				border-bottom: 5px solid var(--pink-dark);
 			}
 		}
 
@@ -58,7 +58,7 @@
 				padding-left: 40px;
 
 				h1 {
-					color: #e63552;
+					color: var(--pink-dark);
 					font-weight: 700;
 					font-size: 55px;
 				}
@@ -86,7 +86,7 @@
 							padding-right: 25px;
 
 							.event-date-author {
-								border-bottom: 1px solid #e63552;
+								border-bottom: 1px solid var(--pink-dark);
 								overflow: hidden;
 
 								@extend %regular-text-white;
@@ -107,7 +107,7 @@
 							}
 
 							.event-location-time {
-								// border-bottom: 1px solid #ec4e68;
+								// border-bottom: 1px solid var(--pink);
 								overflow: hidden;
 
 								@extend %regular-text-white;
@@ -128,7 +128,7 @@
 
 									h4 {
 										text-transform: uppercase;
-										color: #e63552;
+										color: var(--pink-dark);
 									}
 
 									&:hover {
@@ -147,7 +147,7 @@
 						text-align: center;
 
 						.btn-link-general {
-							background-color: #e63552;
+							background-color: var(--pink-dark);
 							color: rgb(255, 255, 255);
 							font-weight: 700;
 							font-size: 15px;
@@ -166,7 +166,7 @@
 			height: 200px;
 
 			.banner-bg-img {
-				border-bottom: 5px solid #e63552;
+				border-bottom: 5px solid var(--pink-dark);
 			}
 		}
 
@@ -200,14 +200,14 @@
 				padding-left: 40px;
 
 				h1 {
-					color: #ec4e68;
+					color: var(--pink);
 					font-weight: 700;
 					font-size: 55px;
 				}
 
 				b,
 				strong {
-					color: #ec4e68;
+					color: var(--pink);
 				}
 
 				@extend %regular-text-white;
@@ -217,7 +217,7 @@
 
 					&:hover {
 						text-decoration: none;
-						color: #ec4e68;
+						color: var(--pink);
 					}
 				}
 
@@ -249,7 +249,7 @@
 						.courses-info {
 
 							.courses-date-author {
-								border-bottom: 1px solid #ec4e68;
+								border-bottom: 1px solid var(--pink);
 								overflow: hidden;
 								// @extend %regular-text-white;
 								// p{
@@ -295,7 +295,7 @@
 		.third-banner {
 
 			.banner-bg-img {
-				border-bottom: 5px solid #e63552;
+				border-bottom: 5px solid var(--pink-dark);
 			}
 		}
 
@@ -328,14 +328,14 @@
 				padding-left: 40px;
 
 				h1 {
-					color: #e63552;
+					color: var(--pink-dark);
 					font-weight: 700;
 					font-size: 55px;
 				}
 
 				b,
 				strong {
-					color: #e63552;
+					color: var(--pink-dark);
 				}
 
 				@extend %regular-text-white;
@@ -358,7 +358,7 @@
 						display: inline-block;
 
 						.card-title {
-							color: #e63552;
+							color: var(--pink-dark);
 							font-weight: 700;
 							text-transform: capitalize;
 
@@ -387,7 +387,7 @@
 								margin-bottom: 5px;
 
 								i {
-									color: #e63552;
+									color: var(--pink-dark);
 									padding-right: 5px;
 									font-size: 15px;
 									width: 20px;
@@ -400,7 +400,7 @@
 						text-align: center;
 
 						.btn-link-general {
-							background-color: #e63552;
+							background-color: var(--pink-dark);
 							color: rgb(255, 255, 255);
 							font-weight: 700;
 							font-size: 15px;
@@ -469,7 +469,7 @@
 		}
 
 		.about-us-new-body {
-			background-color: var(--pink-dark);
+			background-color: var(--pink);
 
 			.about-us-container {
 
@@ -509,7 +509,7 @@
 
 						.btn-link-general {
 							background-color: #fff;
-							color: #ec4e68;
+							color: var(--pink);
 							font-weight: 700;
 							font-size: 16px;
 
@@ -541,7 +541,7 @@
 				text-align: right;
 
 				h1 {
-					color: #ec4e68;
+					color: var(--pink);
 					font-weight: 700;
 					width: 60%;
 				}
@@ -630,10 +630,10 @@
 				}
 			}
 
-			.testimonial_navigation {
+			.testimonial-navigation {
 				color: #000;
 				font-size: 25px;
-				width: 100%;
+				width: 96%;
 				top: 50%;
 				position: absolute;
 
@@ -644,7 +644,7 @@
 
 					&:hover {
 						transition: all 0.1s ease-in-out;
-						transform: scale(2);
+						transform: scale(1.1);
 					}
 				}
 
@@ -676,7 +676,7 @@
 				.counting-item {
 
 					p {
-						color: #ec4e68;
+						color: var(--pink);
 						font-weight: 900;
 						font-size: 70px;
 					}

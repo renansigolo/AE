@@ -88,7 +88,7 @@
 					li.current-menu-item {
 
 						a {
-							background-color: #ec4e68;
+							background-color: var(--pink);
 							font-weight: 800;
 						}
 					}
@@ -140,7 +140,7 @@
 						}
 
 						&:hover {
-							background-color: #ec4e68;
+							background-color: var(--pink);
 						}
 
 						ul {
@@ -249,17 +249,17 @@
 				font-size: 10px;
 				font-weight: 700;
 				padding: 5px 7px;
-				border: 1px solid #ec4e68;
+				border: 1px solid var(--pink);
 				cursor: pointer;
 
 				&:hover {
-					background-color: #ec4e68;
+					background-color: var(--pink);
 					border: 1px solid #fff;
 				}
 			}
 
 			li.active {
-				background-color: #ec4e68;
+				background-color: var(--pink);
 				border: 1px solid #fff;
 			}
 		}
@@ -338,7 +338,7 @@
 			@extend %text-content-h1-6-12-600-15;
 
 			hr {
-				border: 1px solid #ec4e68;
+				border: 1px solid var(--pink);
 			}
 
 			.social-icons {
