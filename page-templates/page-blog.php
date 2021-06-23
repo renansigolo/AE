@@ -9,20 +9,11 @@ get_header();
 		<img src="<?php echo home_url() . '/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="">
 	</div>
 	
-	<div class="col-12 offset-md-2 col-md-9 blog-container">
+<div class="container">
+<div class="col-12 blog-container">
 		<div class="row">
-			<section class="col-12 col-md-9 blog-list">
+			<section class="col-12 col-lg-9 blog-list">
 					<?php
-					$txtBlogSearch = '';
-					if ( isset ($_GET['txtBlogSearch']) ) {
-						$txtBlogSearch = $_GET['txtBlogSearch'];
-						if ($txtBlogSearch != ''){
-							echo '<div class="col-12 result-search">';
-							echo '<h3>Result for: <span>'.$txtBlogSearch.'</span></h3>';
-							echo '</div>';
-						}
-					}
-
 					$args = array(
 						'post_type' => 'post',
 						's' => $txtBlogSearch,
@@ -31,58 +22,61 @@ get_header();
 						'posts_per_page' => 4,
 						'paged'          => get_query_var( 'paged' )
 					);
-
 					$blogs = new WP_Query( $args );
-					if( $blogs->have_posts() ) {
-					while( $blogs->have_posts() ) {
-						$blogs->the_post();
-						$date = get_the_date('F j, Y');
-						$content = get_the_content();
-						$preview = get_the_excerpt();
-						$fnameAuthor = get_the_author_meta('first_name');
-						$lnameAuthor = get_the_author_meta('last_name');
-						$author = $fnameAuthor. ' ' . $lnameAuthor;
-					?>
 
-					<div class="blog">
-							<div class="blog-img">
-								<img src="<?php the_post_thumbnail_url(); ?>" alt="Blog Article Image">
-							</div>
-							<div class="blog-info p-4">
+					if( $blogs->have_posts() ) :
+						echo '<div class="row">';
+						while( $blogs->have_posts() ) :
+							$blogs->the_post();
+							$date = get_the_date('F j, Y');
+							$content = get_the_content();
+							$preview = get_the_excerpt();
+							$fnameAuthor = get_the_author_meta('first_name');
+							$lnameAuthor = get_the_author_meta('last_name');
+							$author = $fnameAuthor. ' ' . $lnameAuthor;
+					?>
+					<div class="col-lg-6 d-flex align-items-stretch">
+						<div class="blog card">
+							<img src="<?php the_post_thumbnail_url(); ?>" class="card-img-top img-fluid" alt="Blog Article Image">
+							<div class="blog-info card-body">
 								<div class="blog-date-author">
 									<p><?php echo $date; ?> </p>
 								</div>
-								<div class="blog-content pt-1">
+								<div class="divider"></div>
+								<div class="blog-content">
 									<?php the_field('authors_name'); ?>
-									<h4 class="mt-2"><?php the_title(); ?></h4>
-									<p>
-										<?php
-										if (strlen($preview) <=200) {
-											echo $preview;
-										} else {
-											echo substr($preview, 0, 200) . '...';
-										}
-										?>
-									</p>
+									<h5 class="mt-2"><?php the_title(); ?></h5>
+									<p><?php if (strlen($preview) <=200) { echo $preview; } else { echo substr($preview, 0, 200) . '...'; } ?></p>
 								</div>
-								<div class="blog-read-more">
-									<a href="<?php the_permalink(); ?>"><button class="btn-link-general">Read More</button></a>
-								</div>
+								<a href="<?php the_permalink(); ?>"><button class="btn-link-general">Read More</button></a>
 							</div>
+						</div>
 					</div>
 					
 				<?php
-					}
+					endwhile;
 					echo '<div class="col-12 page-navigation">';
 					wp_pagenavi( array( 'query' => $blogs ) );
 					echo '</div>';
-				}
+					echo '</div>';
+				endif;
 				wp_reset_query();
 				?>
 			</section>
 
-			
-			<section class="col-12 col-md-3 search-popular">
+
+			<?php
+			$txtBlogSearch = '';
+			if ( isset ($_GET['txtBlogSearch']) ) {
+				$txtBlogSearch = $_GET['txtBlogSearch'];
+				if ($txtBlogSearch !== ''){
+					echo '<div class="col-12 result-search">';
+					echo '<h3>Result for: <span>'.$txtBlogSearch.'</span></h3>';
+					echo '</div>';
+				}
+			}
+			?>
+			<section class="col-12 col-lg-3 search-popular">
 				<div class="row">
 					<div class="col-12 search-form">
 						<form action="<?php echo home_url() . '/blog'?>" method="get">
@@ -104,6 +98,7 @@ get_header();
 
 		</div>
 	</div>
+</div>
 </div>
 <?php
 get_footer();

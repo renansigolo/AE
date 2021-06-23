@@ -124,7 +124,7 @@ $next = get_next_post();
 						<div class="col-12 col-md-4 r-post">
 						<a href="<?php echo the_permalink(); ?>" class="text-decoration-none">
 							<div class="row">
-								<div class="col-12 r-post-img">
+								<div class="col-12 mb-2 r-post-img">
 									<img src="<?php the_post_thumbnail_url(); ?>" alt="Related Image Thumbnail">
 								</div>
 								<div class="col-12 r-post-title">
