@@ -2,7 +2,7 @@
 	position: relative;
 
 	.row {
-		background-color: #00000040;
+		background-color: #00000018;
 	}
 
 	.home-header-background {
@@ -33,13 +33,19 @@
 
 .navigation {
 
+	@media screen and (max-width: 768px) {
+		padding: 60px 20px 200px;
+	}
+
+	padding: 20px 0 80px;
+
 	.navigation-bar {
 
 		.nav-logo {
 			margin-bottom: 30px;
 
 			img {
-				width: 80%;
+				width: 60%;
 			}
 		}
 
@@ -220,7 +226,7 @@
 				}
 
 				p {
-					width: 80%;
+					width: 96%;
 				}
 			}
 

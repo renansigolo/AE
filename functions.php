@@ -1,27 +1,15 @@
 <?php
 function load_libs() {
 	// Style Libs
-	// wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . 'node_modules/bootstrap/scss/bootstrap');
 	wp_enqueue_style( 'bootstrap-css', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css');
-	// wp_enqueue_style( 'bootstrap-css', 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css');
 	wp_enqueue_style( 'bootstrap-fa', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css');
 	wp_enqueue_style( 'stylesheet', get_template_directory_uri() . '/style.css' );
 	// Javascript Libs
-	// wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap/bootstrap.min.js', array('jquery'), '4.1.3', true );
 	wp_enqueue_script( 'bootstrap-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js', '', '5.0.2', true  );
-	// wp_enqueue_script( 'bootstrap-js', 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js', array('jquery'), '4.6.0', true  );
 	wp_enqueue_script( 'customjs', get_template_directory_uri() . '/js/custom-script.js');
 	wp_enqueue_script( 'mapjs', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBwbuq1wo486UUaBvb7z5UcnIyP2tXtuYE');
 }
-
 add_action( 'wp_enqueue_scripts', 'load_libs' );
-
-// function ae_google_fonts() {
-// 				wp_register_style('Montserrat', 'http://fonts.googleapis.com/css?family=Montserrat:100,200,400,600,700,800');
-// 				wp_enqueue_style( 'Montserrat');
-// 		}
-
-// add_action('wp_print_styles', 'ae_google_fonts');
 
 add_theme_support( 'custom-logo' );
 add_theme_support( 'post-thumbnails' );
@@ -123,7 +111,7 @@ if ( function_exists('register_sidebar') ) {
 			'before_title' => '<div class="container-title"><h3>',
 			'after_title' => '</h3><i class="fas fa-chevron-down"></i></div>',
 		)
-		);
+	);
 }
 
 function my_acf_google_map_api( $api ){
@@ -133,7 +121,6 @@ function my_acf_google_map_api( $api ){
 	return $api;
 
 }
-
 add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
 
 //FILTER

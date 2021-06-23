@@ -112,7 +112,7 @@
 
 									if( $homeslider->have_posts() ) {
 									?>
-									<div class="info-slider-body p-4">
+									<div class="info-slider-body p-5">
 									<?php
 											while( $homeslider->have_posts() ) :
 												$homeslider_id = get_the_id();
@@ -172,7 +172,7 @@
 										<p><?php echo $header_form_sublabel; ?></p>
 									</div>
 								</div>
-								<div class="col-12 col-md-8 form-fields" id='form-id-<?php echo $page_id; ?>'>
+								<div class="col-12 col-md-8 py-3 form-fields" id='form-id-<?php echo $page_id; ?>'>
 									<?php
 									if($page_id == 20):
 										echo do_shortcode( '[wpforms id="173"]' );
