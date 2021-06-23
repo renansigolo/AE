@@ -55,10 +55,6 @@
 						text-transform: uppercase;
 					}
 				}
-
-				.blog-read-nore{
-
-				}
 			}
 
 			.page-navigation {
@@ -83,6 +79,7 @@
 						&:hover {
 							border: 1px solid var(--pink);
 							background-color: var(--pink);
+							color: #fff;
 							text-decoration: none;
 						}
 					}
@@ -130,7 +127,6 @@
 				position: relative;
 
 				@extend %text-content-h1-6-12-600-15;
-				color: #fff;
 
 				.popular-post-list {
 
@@ -140,16 +136,15 @@
 						li {
 							margin-bottom: 10px;
 
-							.wpp-post-title {
-								color: #000;
-								font-size: 12px;
-								font-weight: 600;
+							&:hover {
 
-								&:hover {
+								a {
 									color: var(--pink);
-									text-decoration: none;
 								}
-								display: block;
+							}
+
+							a {
+								text-decoration: none;
 							}
 
 							hr {
@@ -159,11 +154,15 @@
 								margin: 2px;
 							}
 
+							.wpp-post-title {
+								color: #000;
+								font-size: 0.8rem;
+								font-weight: 600;
+								display: block;
+							}
+
 							.post-stats {
-
-								.wpp-date{
-
-								}
+								display: none;
 							}
 						}
 					}

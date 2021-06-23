@@ -9,34 +9,32 @@ $next = get_next_post(true,'','study_course');
 $category = array();
 $term = get_queried_object();
 $terms = get_the_terms( $post_id, 'study_course' );
+
+$fnameAuthor = get_the_author_meta('first_name');
+$lnameAuthor = get_the_author_meta('last_name');
+$author = $fnameAuthor. ' ' . $lnameAuthor;
+
 foreach($terms as $term) {
 	array_push($category,$term->term_id);
 }
+
 $pagePostID = get_field('study_course_page',$term->taxonomy . '_' . $term->term_id);
 ?>
 <div class="single-page-diploma">
-	<div class="col-12 offset-md-2 col-md-8 single-diploma">
+	<div class="col-12 offset-md-1 col-md-10 single-diploma">
 		<div class="row">
 			<div class="col-12 post-content">
 				<div class="back-btn">
-					<a href="<?php echo get_permalink($pagePostID); ?>">BACK</a>
-					<!-- <?php
-					if($category_id == 1): ?>
-					<a href="<?php echo home_url().'\diploma'; ?>">BACK</a>
-					<?php
-					elseif ($category_id == 35): ?>
-					<a href="<?php echo home_url().'\advanced-diploma'; ?>">BACK</a>
-					<?php
-					endif;
-					?> -->
+					<a href="<?php echo get_permalink($pagePostID); ?>"><i class="fas fa-chevron-left"></i> BACK</a>
 				</div>
 				<div class="blog-date-author">
 					<p><?php echo $date; ?> | <?php echo $author; ?></p>
-					<hr />
 				</div>
+				<br />
 				<div class="blog-title">
 					<h4><?php the_title(); ?></h4>
 				</div>
+				<div class="small-divider"></div>
 				<div class="text-content">
 					<div class="thumbnail-content">
 						<?php  the_post_thumbnail(); ?>
@@ -45,21 +43,11 @@ $pagePostID = get_field('study_course_page',$term->taxonomy . '_' . $term->term_
 					<p><?php echo get_field('second_content_text_editor'); ?></p>
 				</div>
 			</div>
-			<div class="col-12 post-tags">
-				<i class="fas fa-tags"></i>
-					<?php
-					foreach( $post_tags as $tag ) {
-						$tag_id[] = $tag->term_id;
-						echo '<p class="tag">'.$tag->name.'</p>';
-						}
-					?>
-
-			</div>
 			<div class="col-12 post-next-prev">
 				<div class="row">
 					<div class="col-6 col-md-5 offset-md-1 previous-nav">
 						<?php
-						if(get_previous_post()){
+							if(get_previous_post()) :
 						?>
 						<div class="previous-link">
 							<?php
@@ -67,42 +55,26 @@ $pagePostID = get_field('study_course_page',$term->taxonomy . '_' . $term->term_
 							?>
 						</div>
 						<div class="previous-title">
-							<?php
-							if (!empty( $previous )):
-									echo '<p>'.get_the_title($previous).'</p>';
-									endif;
-							?>
+							<?php if (!empty( $previous )) { echo '<p>'.get_the_title($previous).'</p>'; } ?>
 						</div>
-							<?php
-						}
-						?>
+							<?php endif; ?>
 					</div>
 					<div class="col-6 col-md-5 next-nav">
-						<?php
-						if(get_next_post()){
-						?>
+						<?php if(get_next_post()) : ?>
 						<div class="next-link">
-							<?php
-									echo '<p>'.next_post_link('%link', 'NEXT POST <i class="fas fa-arrow-right"></i>', TRUE,'','study_course').'</p>';
-							?>
+							<?php echo '<p>'.next_post_link('%link', 'NEXT POST <i class="fas fa-arrow-right"></i>', TRUE,'','study_course').'</p>'; ?>
 						</div>
 						<div class="next-title">
-							<?php
-							if (!empty( $next )):
-									echo '<p>'.get_the_title($next).'</p>';
-									endif;
-							?>
+							<?php if (!empty( $next )) { echo '<p>'.get_the_title($next).'</p>'; } ?>
 						</div>
-							<?php
-						}
-						?>
+							<?php endif; ?>
 					</div>
 				</div>
 
 			</div>
-			<div class="col-12 author-info">
-				<div class="row">
-					<div class="col-12 col-md-10 author-desc">
+			
+			<section class="col-12 author-info text-center pt-5">
+					<div class="author-desc">
 						<div class="author-name">
 							<h5><?php echo $author; ?></h5>
 						</div>
@@ -110,21 +82,12 @@ $pagePostID = get_field('study_course_page',$term->taxonomy . '_' . $term->term_
 							<p><?php echo the_author_description(); ?></p>
 						</div>
 					</div>
-				</div>
-			</div>
-			<div class="col-12 related-post">
+			</section>
+			
+			<section class="col-12 related-post">
 				<div class="row">
 					<div class="col-12 related-title">
-						<p>
-						 <?php echo 'Other '. $term->name. ' Units';?>
-							<!-- <?php
-						// if($category_id == 1):
-						// echo get_field('single_page_other_posts_label',8);
-						// elseif ($category_id == 35):
-						// echo get_field('single_page_other_posts_label',10);
-						// endif;
-						?> -->
-					</p>
+						<h5 class="text-white my-2"><?php echo 'Other '. $term->name. ' Units';?></h5>
 					</div>
 					<div class="r-post-slider">
 						<?php
@@ -144,24 +107,24 @@ $pagePostID = get_field('study_course_page',$term->taxonomy . '_' . $term->term_
 								)
 							);
 							$my_query = new WP_Query($args);
-							if( $my_query->have_posts() ) {
+							if( $my_query->have_posts() ) :
 							while ($my_query->have_posts()) : $my_query->the_post();
 						?>
 						<div class="col-12 col-md-4 r-post">
+						<a href="<?php echo the_permalink(); ?>" class="text-decoration-none">
 							<div class="row">
-								<div class="col-12 r-post-img">
-									<a href="<?php echo the_permalink(); ?>">
+								<div class="r-post-img mb-2">
 									<img src="<?php echo get_field('icon'); ?>" alt="">
-									</a>
 								</div>
-								<div class="col-12 r-post-title">
-									<a href="<?php echo the_permalink(); ?>"><?php echo the_title(); ?></a>
+								<div class="r-post-title">
+									<p class="text-decoration-none"><?php echo the_title(); ?></p>
 								</div>
 							</div>
+							</a>
 						</div>
 						<?php
 							endwhile;
-							}
+						endif;
 							wp_reset_query();
 						?>
 					</div>
@@ -170,10 +133,11 @@ $pagePostID = get_field('study_course_page',$term->taxonomy . '_' . $term->term_
 						<i class="fas fa-chevron-right" id="tm-right"></i>
 					</div>
 				</div>
-			</div>
+			</section>
 		</div>
 	</div>
 </div>
+
 <?php
 get_footer();
 ?>

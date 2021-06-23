@@ -88,15 +88,6 @@ body {
 	}
 }
 
-.background-transparency {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, 0.5);
-}
-
 .banner-bg-img {
 	position: absolute;
 	top: 0;
@@ -129,13 +120,6 @@ body {
 	max-width: inherit !important;
 }
 
-/* EXTEND CLASSES */
-%header-title {
-	font-weight: 700;
-	color: rgb(255, 255, 255);
-	text-transform: uppercase;
-	font-size: 12px;
-}
 %menu-ul-li-a {
 
 	ul {
@@ -146,8 +130,9 @@ body {
 			line-height: 2;
 
 			a {
-
-				@extend %header-title;
+				color: #fff;
+				font-weight: 700;
+				text-transform: uppercase;
 			}
 
 			ul {
@@ -163,25 +148,20 @@ body {
 		}
 	}
 }
-%horizontal-line {
-	border: 1px solid var(--pink);
-}
+
 %home-header-design {
 	color: #fff;
 	position: relative;
 	height: 25vw;
 }
+
 %home-header-from-bottom {
 	position: absolute;
 	bottom: 0;
 	left: 0;
 	width: 100%;
 }
-%bold-uppercase-45 {
-	font-weight: 700;
-	text-transform: uppercase;
-	font-size: 45px;
-}
+
 %all-headers-text-bold {
 
 	h1,
@@ -194,23 +174,22 @@ body {
 		font-weight: 700;
 	}
 }
+
 %regular-text-white {
 
 	p {
 		color: #000;
-		font-size: 12px;
 		font-weight: 700;
 		line-height: 2;
 	}
 }
+
 %text-content-h1-6-12-600-15 {
 
 	@extend %all-headers-text-bold;
 
 	p {
-		font-size: 12px;
 		font-weight: 600;
-		line-height: 1.5;
 	}
 
 	b,
@@ -218,6 +197,7 @@ body {
 		color: var(--pink);
 	}
 }
+
 %list-with-check {
 
 	ul {
@@ -256,8 +236,12 @@ div.wpforms-container-full .wpforms-form input[type="url"],
 div.wpforms-container-full .wpforms-form input[type="week"],
 div.wpforms-container-full .wpforms-form select,
 div.wpforms-container-full .wpforms-form textarea {
-	font-size: 11px !important;
+	font-size: 0.7rem !important;
 	border-radius: unset !important;
+}
+
+.wpforms-field-select-style-classic {
+	margin-left: 0 !important;
 }
 
 div.wpforms-container-full .wpforms-form button[type="submit"] {
@@ -287,4 +271,20 @@ div.wpforms-container-full .wpforms-form button[type="submit"] {
 
 .big-polygon {
 	z-index: 1 !important;
+}
+
+.small-divider {
+	margin-top: 0;
+	border-bottom: 1px solid var(--pink);
+	width: 30%;
+	float: left;
+	margin-bottom: 0;
+}
+
+.divider {
+	margin-top: 0;
+	border-bottom: 1px solid var(--pink);
+	width: 100%;
+	float: left;
+	margin-bottom: 0;
 }

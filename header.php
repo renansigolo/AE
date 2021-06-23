@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="AE Study Website">
 		<meta name="author" content="Renan Sigolo">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
@@ -35,11 +35,11 @@
 		$image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 		$page_featured_url = wp_get_attachment_url( get_post_thumbnail_id($page_id ) );
 
-		$pagebackground = get_field('page_background',2);
+		// $pagebackground = get_field('page_background',2);
 		?>
 
 	</head>
-<body style="background-image:url('<?php echo $pagebackground; ?>'); background-repeat: no-repeat; background-attachment:fixed; background-size: cover;">
+<body>
 		<!-- Google Tag Manager (noscript) -->
 		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MLQDHPD"
 		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -65,22 +65,15 @@
 						 $homeslider->the_post();
 						 $homeBackground = get_field('header_background');
 			 ?>
-			 <div class="home-header-background" style="background-image: url('<?php echo $homeBackground; ?>'); background-repeat: no-repeat; background-position: center; background-size: cover;"> </div>
+			 <div class="home-header-background" style="background-image: url('<?php echo $homeBackground; ?>'); background-repeat: no-repeat; background-position: center; background-size: cover;"></div>
 			 <?php endwhile; endif; wp_reset_query(); ?>
 		<?php } else { ?>
 			 <div class="header-body" style="background-image: url('<?php echo $page_featured_url; ?>'); background-repeat: no-repeat; background-position: center; background-size: cover;">
-				<div class="background-transparency"></div>
 		<?php } ?>
 
-<div class="row">
-<div class="col-12">
-				<div class="row">
-					<div class="col-12">
-						<div class="login-portal">
-							<h6><span id="lp_link"><a href="<?php echo get_field('header_login_link',2); ?>" class="badge badge-pill badge-dark" target="_blank"><?php echo get_field('header_login_label',2); ?></a></span></h6>
-						</div>
-					</div>
-				</div>
+		<div class="row">
+			<div class="col-12">
+				<h6 class="login-portal"><span id="lp_link"><a href="<?php echo get_field('header_login_link',2); ?>" class="badge rounded-pill bg-dark" target="_blank"><?php echo get_field('header_login_label',2); ?></a></span></h6>
 				<div class="row">
 					<div class="col-12 offset-md-1 col-md-4 navigation">
 						<div class="navigation-bar">
@@ -106,7 +99,7 @@
 						</div>
 					</div>
 					<?php if($page_id == 2){ ?>
-					<div class="col-12 offset-md-2 col-md-5 home-info-slider">
+					<div class="col-12 offset-md-1 col-md-5 home-info-slider">
 						<div class="row">
 								<?php $args = array(
 										'post_type' => 'home_header',
@@ -119,7 +112,7 @@
 
 									if( $homeslider->have_posts() ) {
 									?>
-									<div class="col-12 info-slider-body">
+									<div class="info-slider-body p-4">
 									<?php
 											while( $homeslider->have_posts() ) :
 												$homeslider_id = get_the_id();
@@ -145,7 +138,7 @@
 									</div>
 						</div>
 						<div class="info-slider-navigation">
-							<ul class="info-slider-navigation-list">
+							<ul class="d-none d-lg-block info-slider-navigation-list">
 							<?php $number = 1;
 										while( $homeslider->have_posts() ) {
 											$homeslider->the_post();
@@ -282,16 +275,14 @@
 		<?php
 		}
 
-		if($page_id != 2){
+		if($page_id != 2) {
 		?>
-	<style media="screen">
-		footer .footer-body .partners-icon-body{
-			display: none;
-		}
-	</style>
-	<?php
-}
-?>
+		<style media="screen">
+			footer .footer-body .partners-icon-body{
+				display: none;
+			}
+		</style>
+		<?php } ?>
 				</div>
 			</div>
 		</div>

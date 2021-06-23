@@ -1,6 +1,9 @@
 .header-body {
-	padding: 20px;
 	position: relative;
+
+	.row {
+		background-color: #00000040;
+	}
 
 	.home-header-background {
 		position: absolute;
@@ -8,12 +11,14 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
+		z-index: -99999;
 	}
 }
 
 .login-portal {
-	color: rgb(255, 255, 255);
-	float: right;
+	position: absolute;
+	top: 8px;
+	right: 8px;
 
 	a,
 	a:hover,
@@ -88,7 +93,7 @@
 					li.current-menu-item {
 
 						a {
-							background-color: var(--pink);
+							background-color: #ec4e68;
 							font-weight: 800;
 						}
 					}
@@ -123,24 +128,24 @@
 
 				ul {
 					list-style: none;
-					padding: 15px;
+					padding: 0 15px;
 					width: 300px;
 					background-color: rgba(45, 45, 45, 0.97);
 					z-index: 99;
 					position: relative;
 
 					li {
-						line-height: 2;
 
 						a {
 							font-weight: 700;
 							color: rgb(255, 255, 255);
 							text-transform: uppercase;
 							font-size: 12px;
+							text-decoration: none;
 						}
 
 						&:hover {
-							background-color: var(--pink);
+							background-color: #ec4e68;
 						}
 
 						ul {
@@ -200,17 +205,12 @@
 		bottom: -40%;
 		left: -15%;
 
-		.info-slider-body{
-
-		}
-
 		.info-slider-body-list {
 
 			h1 {
-
-				@extend %bold-uppercase-45;
 				color: #fff;
-				font-size: 40px;
+				font-weight: 700;
+				text-transform: uppercase;
 			}
 
 			.header-info-text {
@@ -218,8 +218,6 @@
 				h1 {
 					color: #fff;
 				}
-
-				@extend %text-content-h1-6-12-600-15;
 
 				p {
 					width: 80%;
@@ -249,17 +247,17 @@
 				font-size: 10px;
 				font-weight: 700;
 				padding: 5px 7px;
-				border: 1px solid var(--pink);
+				border: 1px solid #ec4e68;
 				cursor: pointer;
 
 				&:hover {
-					background-color: var(--pink);
+					background-color: #ec4e68;
 					border: 1px solid #fff;
 				}
 			}
 
 			li.active {
-				background-color: var(--pink);
+				background-color: #ec4e68;
 				border: 1px solid #fff;
 			}
 		}
@@ -271,13 +269,12 @@
 
 	.page-content {
 		padding: 20px;
-		background-color: rgba(0, 0, 0, 0.25);
 
 		.form-header {
 
 			h1 {
-
-				@extend %bold-uppercase-45;
+				font-weight: 700;
+				text-transform: uppercase;
 			}
 
 			.form-sub-header {
@@ -338,7 +335,7 @@
 			@extend %text-content-h1-6-12-600-15;
 
 			hr {
-				border: 1px solid var(--pink);
+				border: 1px solid #ec4e68;
 			}
 
 			.social-icons {
@@ -372,8 +369,8 @@
 		background-color: rgba(0, 0, 0, 0.25);
 
 		h1 {
-
-			@extend %bold-uppercase-45;
+			font-weight: 700;
+			text-transform: uppercase;
 		}
 
 		.blog-date-author {

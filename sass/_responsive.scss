@@ -32,26 +32,6 @@
 	}
 }
 
-// @media (min-width: 1400px) {
-
-// 	//CSS
-// 	html {
-// 		// .page-home-container,
-// 		.page-about-container,
-// 		.page-blog-container,
-// 		.page-event-container,
-// 		.page-contact-container,
-// 		.page-bootcamp-container,
-// 		.page-handbook-container,
-// 		.single-page-bootcamp,
-// 		.single-page-diploma, {
-// 			max-width: 1400px;
-// 			margin-left: auto;
-// 			margin-right: auto;
-// 		}
-// 	}
-// }
-
 /*
   ##Device = Laptops, Desktops
   ##Screen = B/w 1025px to 1280px
@@ -97,54 +77,26 @@
 		}
 	}
 
-	.page-home-container {
+	.page-home-container .home-container
+	.study-courses
+	.courses-body
+	.courses-container
+	.courses
+	.card-like
+	.courses-info
+	.courses-content
+	.courses-read-more {
 
-		.home-container {
+		a {
 
-			.study-courses {
-
-				.courses-body {
-
-					.courses-container {
-
-						.courses {
-
-							.card-like {
-
-								.courses-info {
-
-									.courses-content {
-
-										.courses-read-more {
-
-											a {
-
-												.btn-link-general {
-													width: 100%;
-												}
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-				}
+			.btn-link-general {
+				width: 100%;
 			}
 
-			.bootcamps-container {
-
-				.bootcamps-body {
-
-					.bootcamp-container {
-
-						.bootcamp {
-							width: 50%;
-							max-width: 50%;
-							flex: 50%;
-						}
-					}
-				}
+			.bootcamps-container .bootcamps-body .bootcamp-container .bootcamp {
+				width: 50%;
+				max-width: 50%;
+				flex: 50%;
 			}
 		}
 	}
@@ -296,22 +248,6 @@
 					}
 				}
 			}
-
-			.bootcamps-container {
-
-				.bootcamps-body {
-
-					.bootcamp-container {
-
-						.bootcamp {
-							width: 50%;
-							max-width: 50%;
-							flex: 50%;
-						}
-					}
-				}
-			}
-
 		}
 	}
 
@@ -431,56 +367,6 @@
 		}
 	}
 
-	.single-page-diploma {
-
-		.single-diploma {
-
-			.related-post {
-
-				.row {
-
-					.r-post-slider {
-
-						.r-post {
-
-							.r-post-img {
-
-								img {
-									height: 80px;
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-
-	.single-page-post {
-
-		.singe-post {
-
-			.related-post {
-
-				.row {
-
-					.r-post-slider {
-
-						.r-post {
-
-							.r-post-img {
-
-								img {
-									height: 80px;
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-
 	.page-adv-diploma-container {
 
 		.ad-container {
@@ -584,7 +470,7 @@
 	.home-info-slider {
 
 		.row {
-			margin-left: 30px;
+			margin-left: 15px;
 		}
 	}
 
@@ -899,7 +785,7 @@
 				.first-title {
 
 					h1 {
-						right: 106%;
+						right: 100%;
 					}
 				}
 
@@ -918,7 +804,7 @@
 				.first-title {
 
 					h1 {
-						right: 106%;
+						right: 100%;
 					}
 				}
 
@@ -965,7 +851,7 @@
 				.first-title {
 
 					h1 {
-						right: 106%;
+						right: 100%;
 					}
 				}
 
@@ -1096,25 +982,7 @@
 					}
 				}
 			}
-
-			.footer-nav-body {
-
-				.footer-menus {
-
-					.row {
-
-						div {
-							margin-bottom: 20px;
-						}
-					}
-				}
-			}
 		}
-	}
-
-	//about
-	.page-about-container {
-		padding: 30px 10px;
 	}
 
 	//diploma

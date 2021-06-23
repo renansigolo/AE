@@ -15,6 +15,30 @@
 		}
 	}
 
+	.first-title {
+		position: relative;
+
+		h2 {
+			color: #000;
+			font-weight: 700;
+			font-size: 2rem;
+			position: absolute;
+			top: 10px;
+			right: 104%;
+			white-space: nowrap;
+			-webkit-transform: rotate(270deg);
+			-webkit-transform-origin: right top;
+			-moz-transform: rotate(270deg);
+			-moz-transform-origin: right top;
+			-ms-transform: rotate(270deg);
+			-ms-transform-origin: right top;
+			-o-transform: rotate(270deg);
+			-o-transform-origin: right top;
+			transform: rotate(270deg);
+			transform-origin: right top;
+		}
+	}
+
 	.home-container {
 
 		.first-banner {
@@ -31,36 +55,12 @@
 			position: relative;
 			min-height: 200px;
 
-			.first-title {
-
-				h1 {
-					color: #000;
-					font-weight: 700;
-					font-size: 2rem;
-					position: absolute;
-					top: 10px;
-					right: 104%;
-					white-space: nowrap;
-					-webkit-transform: rotate(270deg);
-					-webkit-transform-origin: right top;
-					-moz-transform: rotate(270deg);
-					-moz-transform-origin: right top;
-					-ms-transform: rotate(270deg);
-					-ms-transform-origin: right top;
-					-o-transform: rotate(270deg);
-					-o-transform-origin: right top;
-					transform: rotate(270deg);
-					transform-origin: right top;
-				}
-			}
-
 			.ew-title {
 				padding-left: 40px;
 
 				h1 {
 					color: var(--pink-dark);
 					font-weight: 700;
-					font-size: 55px;
 				}
 			}
 
@@ -174,35 +174,12 @@
 			background-color: var(--pink-light);
 			position: relative;
 
-			.first-title {
-
-				h1 {
-					color: #000;
-					font-weight: 700;
-					-webkit-transform: rotate(270deg);
-					position: absolute;
-					top: 10px;
-					right: 104%;
-					white-space: nowrap;
-					-webkit-transform-origin: right top;
-					-moz-transform: rotate(270deg);
-					-moz-transform-origin: right top;
-					-ms-transform: rotate(270deg);
-					-ms-transform-origin: right top;
-					-o-transform: rotate(270deg);
-					-o-transform-origin: right top;
-					transform: rotate(270deg);
-					transform-origin: right top;
-				}
-			}
-
 			.courses-title {
 				padding-left: 40px;
 
 				h1 {
-					color: var(--pink);
+					color: var(--pink-dark);
 					font-weight: 700;
-					font-size: 55px;
 				}
 
 				b,
@@ -251,36 +228,16 @@
 							.courses-date-author {
 								border-bottom: 1px solid var(--pink);
 								overflow: hidden;
-								// @extend %regular-text-white;
-								// p{
-								//   margin-bottom: 0px;
-								//   font-size: 13px;
-								//   text-transform: uppercase;
-								// }
-								// #date{
-								//   float: left;
-								// }
-								// #price{
-								//   float: right;
-								// }
 							}
 
 							.courses-content {
 								text-transform: uppercase;
-								color: #000;
 
 								@extend %text-content-h1-6-12-600-15;
 
 								h3 {
 									text-transform: uppercase;
 								}
-								// &:hover{
-								//   text-decoration: none;
-								//   h3{
-								//     color: #ffffff;
-								//   }
-								// }
-								@extend %regular-text-white;
 							}
 						}
 					}
@@ -302,35 +259,12 @@
 		.bootcamps-container {
 			position: relative;
 
-			.first-title {
-
-				h1 {
-					color: #000;
-					font-weight: 700;
-					-webkit-transform: rotate(270deg);
-					position: absolute;
-					top: 10px;
-					right: 104%;
-					white-space: nowrap;
-					-webkit-transform-origin: right top;
-					-moz-transform: rotate(270deg);
-					-moz-transform-origin: right top;
-					-ms-transform: rotate(270deg);
-					-ms-transform-origin: right top;
-					-o-transform: rotate(270deg);
-					-o-transform-origin: right top;
-					transform: rotate(270deg);
-					transform-origin: right top;
-				}
-			}
-
 			.bootcamps-title {
 				padding-left: 40px;
 
 				h1 {
 					color: var(--pink-dark);
 					font-weight: 700;
-					font-size: 55px;
 				}
 
 				b,
@@ -358,7 +292,7 @@
 						display: inline-block;
 
 						.card-title {
-							color: var(--pink-dark);
+							color: var(--pink);
 							font-weight: 700;
 							text-transform: capitalize;
 
@@ -387,7 +321,7 @@
 								margin-bottom: 5px;
 
 								i {
-									color: var(--pink-dark);
+									color: var(--pink);
 									padding-right: 5px;
 									font-size: 15px;
 									width: 20px;
@@ -400,14 +334,14 @@
 						text-align: center;
 
 						.btn-link-general {
-							background-color: var(--pink-dark);
+							background-color: var(--pink);
 							color: rgb(255, 255, 255);
 							font-weight: 700;
 							font-size: 15px;
 							width: 230px;
 
 							&:hover {
-								background-color: var(--pink);
+								background-color: var(--pink-dark);
 							}
 						}
 					}
@@ -418,26 +352,22 @@
 		.video-list-container {
 			background-color: var(--gray-light);
 
-			.first-title {
+			.video-title {
 
-				h1 {
-					position: relative;
-					color: #000;
+				h2 {
 					font-weight: 700;
 					white-space: nowrap;
 				}
 			}
 
 			.video-displays {
-				margin: 25px 25px;
 				overflow-x: scroll;
 				overflow-y: hidden;
-				display: flex;
-				height: 500px;
-				z-index: 1;
+				max-height: 400px;
 
 				.video-items {
-					display: inline-block;
+					min-width: 20rem;
+					margin-right: 16px;
 
 					.video-frame {
 
@@ -448,20 +378,18 @@
 					}
 
 					.video-info {
-						// position: absolute;
-						// top: 225px;
-						width: 80%;
-						// left: 16px;
 						text-transform: uppercase;
 
 						@extend %text-content-h1-6-12-600-15;
 
-						p {
-							color: #000;
+						h5 {
+							margin-top: 8px;
+							font-size: 1.25rem;
 						}
 
-						h3 {
-							margin-top: 10px;
+						p {
+							width: 90%;
+							color: #000;
 						}
 					}
 				}
@@ -486,22 +414,19 @@
 				.about-info {
 
 					@extend %text-content-h1-6-12-600-15;
+					color: #fff;
 
 					h1 {
 						font-weight: 600;
-						color: #fff;
 					}
 
 					h3 {
 						color: #fff;
 					}
 
-					@extend %regular-text-white;
-
 					p {
 						font-weight: 600;
 						line-height: 2;
-						color: #fff;
 					}
 
 					.about-us-btn {

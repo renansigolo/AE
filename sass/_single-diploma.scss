@@ -7,7 +7,6 @@
 	.single-diploma {
 		background-color: #fff;
 		padding: 35px;
-		font-size: 13px;
 		font-weight: 600;
 
 		.post-content {
@@ -18,9 +17,9 @@
 
 				a {
 					color: #000;
+					text-decoration: none;
 
 					&:hover {
-						text-decoration: none;
 						color: var(--pink);
 					}
 				}
@@ -33,15 +32,6 @@
 					text-transform: uppercase;
 					display: none;
 				}
-
-				hr {
-					margin-top: 0;
-					border-bottom: 2px solid var(--pink);
-					width: 30%;
-					float: left;
-					margin-bottom: 0;
-				}
-
 			}
 
 			.blog-title {
@@ -174,8 +164,6 @@
 		}
 
 		.author-info {
-			display: none;
-			padding: 10px;
 
 			.author-desc {
 
@@ -200,8 +188,6 @@
 		.related-post {
 			position: relative;
 			padding: 20px 0;
-			border-top: 1px solid #000;
-			border-bottom: 1px solid #000;
 
 			.row {
 				margin: 0;
@@ -210,20 +196,31 @@
 					text-align: center;
 					background-color: #1a1a1a;
 					padding: 5px;
-
-					p {
-						color: #fff;
-						font-size: 13px;
-					}
+					color: #fff;
 				}
 
 				.r-post-slider {
 					overflow: hidden;
 					display: flex;
+					text-align: center;
 
 					.r-post {
-						display: inline-block;
+						display: flex;
+						flex-direction: column;
+						justify-content: start;
+						align-items: center;
 						padding: 15px;
+
+						&:hover {
+
+							p {
+								color: var(--pink-dark);
+							}
+						}
+
+						p {
+							color: #000;
+						}
 
 						.r-post-img {
 
@@ -238,7 +235,7 @@
 
 							a {
 								color: #333;
-								font-size: 13px;
+								text-decoration: none;
 
 								&:hover {
 									color: var(--pink);
@@ -263,7 +260,7 @@
 
 						&:hover {
 							transition: all 0.1s ease-in-out;
-							transform: scale(2);
+							transform: scale(1.1);
 						}
 					}
 

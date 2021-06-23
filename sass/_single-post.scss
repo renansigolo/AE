@@ -1,11 +1,9 @@
 .single-page-post {
 	position: relative;
-	// padding: 50px 10px;
 	overflow: hidden;
 	background-color: #f6f6f6;
 
 	.single-post {
-		font-size: 13px;
 		font-weight: 600;
 
 		.post-content {
@@ -189,6 +187,14 @@
 				.r-post {
 					padding: 15px;
 
+					a:hover {
+
+						p {
+							color: var(--pink);
+							text-decoration: none;
+						}
+					}
+
 					.r-post-img {
 
 						img {
@@ -198,17 +204,8 @@
 						}
 					}
 
-					.r-post-title {
-
-						a {
-							color: #333;
-							font-size: 13px;
-
-							&:hover {
-								color: var(--pink);
-								text-decoration: none;
-							}
-						}
+					p {
+						color: #333;
 					}
 				}
 			}

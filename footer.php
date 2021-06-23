@@ -1,32 +1,31 @@
+<?php $footer_bg = get_field('footer_apply_now_background_image',2); ?>
+
 <footer>
 	<div class="footer-body">
-		<div class="partners-icon-body">
-			<!-- <div class="partners-1">
-				<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Footer Partners Icon 1") ) : ?>
-				<?php endif;?>
-			</div> -->
+		
+		<section class="partners-icon-body">
 			<div class="partners-2">
 				<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Footer Partners Icon 2") ) : ?>
 				<?php endif;?>
 			</div>
-		</div>
-		<?php
-		$footer_bg = get_field('footer_apply_now_background_image',2);
-		?>
-		<div class="apply-now-body" style="background-image:url(<?php echo $footer_bg; ?>); background-size: cover; background-position: center; background-repeat: no-repeat;">
-				<div class="col-12">
-					<div class="row">
-						<div class="col-12 col-lg-6 offset-lg-3" >
-							<p class="apply-now-text"><?php echo get_field('footer_apply_now_text',2); ?></p>
-							<a href="<?php echo get_field('footer_apply_now_button_link',2); ?>"><button class="btn-link-general">APPLY NOW</button></a>
-						</div>
+		</section>
+
+		<section class="apply-now-body">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-lg-8 offset-lg-2">
+						<h2 class="fw-bold mb-4"><?php echo get_field('footer_apply_now_text',2); ?></h2>
+						<a href="<?php echo get_field('footer_apply_now_button_link',2); ?>"><button class="btn-link-general">APPLY NOW</button></a>
 					</div>
 				</div>
-		</div>
-		<div class="footer-nav-body">
+			</div>
+		</section>
+		
+		<section class="footer-nav-body">
 			<div class="footer-menus">
+				<div class="container">
 				<div class="col-12 col-lg-10 offset-lg-1">
-					<div class="row ">
+					<div class="row">
 						<div class="col-12 col-lg-3 col-md col-sm-6 footer-icon-social">
 							<div class="website-icon">
 								<?php $custom_logo_id = get_theme_mod( 'custom_logo' );
@@ -46,40 +45,25 @@
 						<div class="col-6 col-lg-4 col-md-4 col-sm-6 footer-menu-1">
 							<div class="footer-menu-header">
 								<p>PROGRAMS WE DELIVER</p>
-								<hr />
+								<div class="small-divider"></div>
+								<br />
 							</div>
 							<div class="menu">
 								<?php wp_nav_menu( array( 'theme_location' => 'footer-menu-1' ) ); ?>
 							</div>
 						</div>
-						<!-- <div class="col-6 col-lg-2 col-md col-sm-6 footer-menu-2">
-							<div class="footer-menu-header">
-								<p>ABOUT US</p>
-								<hr />
-							</div>
-							<div class="menu">
-								<?php wp_nav_menu( array( 'theme_location' => 'footer-menu-4' ) ); ?>
-							</div>
-						</div>
-						<div class="col-6 col-lg-2 col-md col-sm-6 footer-menu-3">
-							<div class="footer-menu-header">
-								<p>AUSTRALIA</p>
-								<hr />
-							</div>
-							<div class="menu">
-								<?php wp_nav_menu( array( 'theme_location' => 'footer-menu-3' ) ); ?>
-							</div>
-						</div> -->
 						<div class="col-6 col-lg-4 col-md-4 col-sm-6 footer-menu-4">
 							<div class="footer-menu-header">
 								<p>ABOUT US</p>
-								<hr />
+								<div class="small-divider"></div>
+								<br />
 							</div>
 							<div class="menu">
 								<?php wp_nav_menu( array( 'theme_location' => 'footer-menu-2' ) ); ?>
 							</div>
 					 </div>
 					</div>
+				</div>
 				</div>
 			</div>
 			<div class="footer-copyright">
@@ -92,24 +76,11 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	</div>
 </footer>
+
 <?php wp_footer(); ?>
+
 </body>
 </html>
-<!-- <style media="screen">
-	.button-fake{
-		position: relative;
-	}
-	.button-fake .btn-link-general{
-		position: absolute;
-		bottom: 35px;
-		left: 45%;
-		text-align: center;
-	}
-</style>
-<div class="button-fake">
-<img id="#fake-footer" src="wp-content/themes/AE/assets/images/fake-footer.png" alt="" width="100%">
-		<a id="btn" href="#"><button class="btn-link-general">APPLY NOW</button></a>
-</div> -->

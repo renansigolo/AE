@@ -1,24 +1,14 @@
 .page-about-container {
 	overflow: hidden;
-	padding: 50px 10px;
-	position: relative;
 
 	.about-info-1 {
 		position: relative;
-
-		.info-video {
-
-			iframe {
-				width: 100%;
-			}
-		}
 
 		.info-desc {
 
 			.info-desc-text {
 
 				@extend %all-headers-text-bold;
-				@extend %regular-text-white;
 			}
 		}
 
@@ -51,14 +41,6 @@
 			}
 		}
 
-		.info-2-image{
-		}
-
-		.info-2-desc {
-
-			@extend %list-with-check;
-		}
-
 		.big-polygon {
 			position: absolute;
 			left: -12vw;
@@ -88,22 +70,11 @@
 
 		.info-3-desc {
 
-			.i3-desc-1 {
-
-				@extend %all-headers-text-bold;
-				@extend %regular-text-white;
-			}
-
-			.i3-desc-2 {
-
-				@extend %all-headers-text-bold;
-				@extend %regular-text-white;
-			}
-
+			.i3-desc-1,
+			.i3-desc-2,
 			.i3-desc-3 {
 
 				@extend %all-headers-text-bold;
-				@extend %list-with-check;
 			}
 		}
 	}

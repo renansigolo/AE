@@ -65,11 +65,9 @@ get_header();
 		</section>
 		
 		<section class="container mt-5 event-workshop">
-				<div class="row">
-					<div class="col-12 first-title">
-						<h1><?php echo get_field('first_section_label_vertical');?></h1>
+					<div class="first-title">
+						<h2><?php echo get_field('first_section_label_vertical');?></h2>
 					</div>
-				</div>
 				<div class="row">
 					<div class="col-12 ew-title">
 						<h1><?php echo get_field('first_section_label_horizontal');?></h1>
@@ -159,10 +157,8 @@ get_header();
 
 		<section class="pt-5 study-courses">
 			<div class="container">
-				<div class="row">
-					<div class="col-12 first-title">
-						<h1><?php echo get_field('courses_first_label_vertical');?></h1>
-					</div>
+				<div class="first-title">
+					<h2><?php echo get_field('courses_first_label_vertical');?></h2>
 				</div>
 				<div class="row">
 					<div class="col-12 courses-title">
@@ -185,7 +181,7 @@ get_header();
 											<div class="col-12 col-md-6 courses">
 												<div class="card-like">
 													<div class="row">
-														<div class="col-12 col-md-6 courses-img">
+														<div class="col-12 col-md-6 courses-img mb-2">
 															<img src="<?php echo $img_url; ?>" alt="Course Image">
 														</div>
 														<div class="col-12 col-md-6 courses-info">
@@ -218,8 +214,8 @@ get_header();
 		<hr />
 
 		<section class="container mt-5 bootcamps-container">
-			<div class="col-12 first-title">
-				<h1><?php echo get_field('bootcamp_first_label_vertical');?></h1>
+			<div class="first-title">
+				<h2><?php echo get_field('bootcamp_first_label_vertical');?></h2>
 			</div>
 			<div class="row">
 				<div class="col-12 bootcamps-title">
@@ -300,27 +296,27 @@ get_header();
 		
 		<section class="py-5 video-list-container">
 			<div class="container">
-				<div class="first-title">
-					<h1><?php echo get_field('second_section_label_vertical');?></h1>
+				<div class="video-title">
+					<h2 class="mb-4"><?php echo get_field('second_section_label_vertical');?></h2>
 				</div>
 				
-				<div class="row">
-					<div class="video-displays">
+				<div class="video-displays">
+					<div class="d-flex">
 					<?php
-					$args3 = array(
-						'post_type' => 'videos',
-						'post_status'    => 'publish'
-					);
+						$args3 = array(
+							'post_type' => 'videos',
+							'post_status'    => 'publish'
+						);
 
-					$videos = new WP_Query( $args3 );
-					while ( $videos->have_posts() ) : $videos->the_post();
+						$videos = new WP_Query( $args3 );
+						while ( $videos->have_posts() ) : $videos->the_post();
 					?>
-					<div class="col-10 col-md-5 video-items">
-						<div class="video-frame">
+					<div class="video-items">
+						<div class="ratio ratio-16x9">
 							<?php echo get_field('video_link'); ?>
 						</div>
 						<div class="video-info">
-							<h3><?php echo the_title(); ?></h3>
+							<h5><?php echo the_title(); ?></h5>
 							<p><?php echo get_field('video_description'); ?></p>
 						</div>
 					</div>
@@ -339,7 +335,7 @@ get_header();
 			<div class="container">
 				<div class="col-12 about-us-container">
 					<div class="row">
-						<div class="col-12 text-center text-white mb-3"><h1 class="font-weight-bolder"><?php echo $about_title; ?></h1></div>
+						<div class="col-12 text-center text-white mb-3"><h1 class="fw-bolder"><?php echo $about_title; ?></h1></div>
 						<div class="col-12 col-md-6 about-img">
 							<img src="<?php echo $about_featured_url; ?>" class="rounded" alt="About Us Image">
 						</div>

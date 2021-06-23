@@ -178,23 +178,20 @@
 						}
 
 						a {
+							// text-decoration: none;
+							color: var(--pink);
 
 							&:hover {
-								text-decoration: none;
+
+								h3 {
+									color: var(--pink-dark);
+								}
 							}
 
 							h3 {
 								text-transform: uppercase;
 								margin: 0;
-
-								&:hover {
-									color: #000;
-								}
 							}
-						}
-
-						p {
-							font-size: 9px;
 						}
 
 						b,
@@ -302,17 +299,8 @@
 						padding-left: 15px;
 
 						li {
-							font-size: 12px;
 							font-weight: 600;
-							line-height: 1.5;
 						}
-					}
-				}
-
-				.second-requrement-details {
-
-					p{
-
 					}
 				}
 			}
@@ -325,6 +313,10 @@
 
 			.apply-label {
 				text-align: center;
+
+				.link {
+					color: var(--pink-dark);
+				}
 
 				a {
 

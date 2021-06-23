@@ -6,9 +6,6 @@ get_header();
 ?>
 
 <div class="page-adv-diploma-container">
-	<div class="small-polygon">
-		<img src="<?php echo home_url() . '/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="Small Polygon">
-	</div>
 	<div class="big-polygon">
 		<img src="<?php echo home_url() . '/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="Big Polygon">
 	</div>
@@ -41,14 +38,11 @@ get_header();
 
 								$studies = new WP_Query( $args );
 								while ( $studies->have_posts() ) : $studies->the_post();
-										//inside the loop
 								?>
 								<div class="study-title">
 									<p id="<?php echo get_the_id(); ?>"><?php echo the_title(); ?></p>
 								</div>
-								<?php
-										// the_content();
-								endwhile;
+								<?php endwhile;
 
 								// Reset Post Data
 								wp_reset_postdata();
@@ -61,10 +55,9 @@ get_header();
 							?>
 							<div class="col-12 offset-md-1 col-md-10 study-content" id="<?php echo get_the_id(); ?>">
 								<div class="row">
-									<div class="col-12 col-md-6 study-img mb-2">
-										<?php echo the_post_thumbnail();?>
+									<div class="col-12 study-img mb-2">
+										<?php echo the_post_thumbnail('large');?>
 									</div>
-									<hr />
 									<div class="col-12 col-md-6 study-labels">
 										<a href="<?php echo the_permalink(); ?>">
 										<h3><?php the_title(); ?></h3>
@@ -72,14 +65,12 @@ get_header();
 										<p><?php the_content(); ?></p>
 									</div>
 									<div class="col-12 study-description">
-										<hr />
+										<div class="small-divider"></div>
 										<p><?php echo $content2; ?></p>
 									</div>
 								</div>
 							</div>
-							<?php
-							// the_content();
-								endwhile;
+							<?php endwhile;
 
 								// Reset Post Data
 								wp_reset_postdata();
@@ -220,7 +211,7 @@ get_header();
 							<div class="col-12 col-md-6 first-requirement-details">
 								<p><?php echo get_field('ad_requirements_1'); ?></p>
 							</div>
-							<div class="col-12 col-md-6 second-requrement-details">
+							<div class="col-12 col-md-6 second-requirement-details">
 								<p><?php echo get_field('ad_requirements_2'); ?></p>
 							</div>
 						</div>
@@ -238,7 +229,7 @@ get_header();
 						</a>
 						<br />
 						<br />
-						<a href="<?php echo get_field('ad_apply_button_link'); ?>" class="btn btn-primary"><?php echo get_field('ad_apply_button_label'); ?></a>
+						<a href="<?php echo get_field('ad_apply_button_link'); ?>" class="link"><?php echo get_field('ad_apply_button_label'); ?></a>
 					</div>
 				</div>
 			</div>

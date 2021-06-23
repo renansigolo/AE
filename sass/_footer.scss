@@ -1,6 +1,6 @@
 %display-inline {
 	display: inline-block;
-	margin: 25px 35px;
+	margin: 25px 28px;
 	width: 100px;
 }
 
@@ -22,7 +22,7 @@ footer {
 			.textwidget {
 				text-align: left;
 				color: #fff;
-				font-size: 35px;
+				font-size: 1.8rem;
 				font-weight: 900;
 				margin-top: 25px;
 			}
@@ -48,17 +48,10 @@ footer {
 		.apply-now-body {
 			text-align: center;
 			padding: 10% 0;
-			// border-top: 1px solid #000000;
-			// border-bottom: 1px solid #000000;
 			position: relative;
 
 			.background-transparency {
 				background-color: unset;
-			}
-
-			.apply-now-text {
-				font-weight: 600;
-				font-size: 23px;
 			}
 
 			a {
@@ -79,6 +72,10 @@ footer {
 				padding-top: 30px;
 				padding-bottom: 30px;
 				background-color: #2e2e2e;
+
+				a {
+					text-decoration: none;
+				}
 
 				.footer-icon-social {
 					text-align: center;
@@ -130,7 +127,6 @@ footer {
 
 								&:hover {
 									background-color: var(--pink-dark) !important;
-									// color: #212121 !important;
 								}
 							}
 						}
@@ -140,16 +136,9 @@ footer {
 				.footer-menu-header {
 
 					p {
-
-						@extend %header-title;
-					}
-
-					hr {
-
-						@extend %horizontal-line;
-						border: 1px solid var(--pink);
-						margin: 10px 0;
-						width: 80px;
+						color: #fff;
+						font-weight: 700;
+						text-transform: uppercase;
 					}
 				}
 
@@ -162,7 +151,7 @@ footer {
 						li {
 
 							a {
-								font-size: 10px;
+								font-size: 0.8rem;
 								font-weight: 600;
 							}
 						}

@@ -5,9 +5,11 @@ the_post();
 
 $post_id = get_the_id();
 $date = get_the_date('F j, Y');
+
 $fnameAuthor = get_the_author_meta('first_name');
 $lnameAuthor = get_the_author_meta('last_name');
 $author = $fnameAuthor. ' ' . $lnameAuthor;
+
 $post_tags = get_the_tags();
 $tag_id = array();
 $previous = get_previous_post();
@@ -85,6 +87,7 @@ $next = get_next_post();
 				</div>
 
 			</div>
+			
 			<div class="author-info text-center">
 				<div class="row">
 					<div class="col-12 author-desc">
@@ -97,6 +100,7 @@ $next = get_next_post();
 					</div>
 				</div>
 			</div>
+
 			<div class="related-post">
 				<div class="row">
 					<div class="col-12 related-title">
@@ -118,14 +122,16 @@ $next = get_next_post();
 							while ($my_query->have_posts()) : $my_query->the_post();
 						?>
 						<div class="col-12 col-md-4 r-post">
+						<a href="<?php echo the_permalink(); ?>" class="text-decoration-none">
 							<div class="row">
 								<div class="col-12 r-post-img">
-									<img src="<?php the_post_thumbnail_url(); ?>" alt="">
+									<img src="<?php the_post_thumbnail_url(); ?>" alt="Related Image Thumbnail">
 								</div>
 								<div class="col-12 r-post-title">
-									<a href="<?php echo the_permalink(); ?>"><?php echo the_title(); ?></a>
+									<p class="text-decoration-none"><?php echo the_title(); ?></p>
 								</div>
 							</div>
+						</a>
 						</div>
 						<?php
 							endwhile;

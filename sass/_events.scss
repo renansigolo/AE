@@ -170,54 +170,10 @@
 			@extend %text-content-h1-6-12-600-15;
 
 			h1 {
-
-				@extend %bold-uppercase-45;
 				color: #000;
+				font-weight: 700;
+				text-transform: uppercase;
 			}
 		}
 	}
-
-	// .interests-form-container{
-	//   width: 100%;
-	//   position: relative;
-	//   overflow: hidden;
-	//   .event-form{
-	//     padding: 25px 7vw;
-	//     background-color: #0c0c0c;
-	//     div.wpforms-container-full{
-	//       position: relative;
-	//       .wpforms-form{
-	//         .wpforms-field-label,
-	//         input[type=text],
-	//         input[type=number],
-	//         input[type=email]{
-	//           display: inline-block;
-	//         }
-	//
-	//         input[type=text],
-	//         input[type=number],
-	//         input[type=email]{
-	//           position: absolute;
-	//           right: 0;
-	//           width: 25%;
-	//           height: auto;
-	//           padding: 10px 10px;
-	//         }
-	//
-	//         .wpforms-field-label, .wpforms-field-label-inline{
-	//           color: #ffffff;
-	//           font-size: 10px;
-	//           font-weight: 600;
-	//           line-height: 2;
-	//           margin-bottom: 0;
-	//           padding: 10px 10px;
-	//         }
-	//
-	//         #wpforms-254-field_2-container{
-	//           border-right: 2px solid var(--pink);
-	//         }
-	//       }
-	//     }
-	//   }
-	// }
 }

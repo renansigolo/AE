@@ -5,16 +5,14 @@
 get_header();
 
 ?>
-<div class="page-about-container">
+<div class="container pt-5 page-about-container">
 	<div class="col-12 offset-md-2 col-md-8 about-info-1">
-		<div class="row">
-			<div class="col-12 col-md-6 info-video">
-				<?php echo get_field('about_info_1_video_link'); ?>
-			</div>
-			<div class="col-12 col-md-6 info-desc">
-				<div class="info-desc-text">
-					<p><?php echo get_field('about_info_1_description'); ?></p>
-				</div>
+		<div class="ratio ratio-16x9">
+			<?php echo get_field('about_info_1_video_link'); ?>
+		</div>
+		<div class="info-desc">
+			<div class="info-desc-text">
+				<p><?php echo get_field('about_info_1_description'); ?></p>
 			</div>
 		</div>
 		<div class="small-polygon">

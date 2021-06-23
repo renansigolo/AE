@@ -5,15 +5,16 @@
 get_header();
 ?>
 <div class="page-contact-container">
-	<div class="location-contact-container">
-		<div class="col-12 offset-md-2 col-md-8 location-contact">
+	<div class="container">
+		<div class="col-12 offset-lg-2 col-lg-8 location-contact">
 			<div class="row">
-				<div class="col-12 col-md-4 location-description">
+				<div class="col-12 col-lg-4 location-description">
 					<h3><?php echo get_field('location_label'); ?></h3>
-					<hr />
+					<div class="divider"></div>
+					<br />
 					<p><?php echo get_field('location_address'); ?></p>
 				</div>
-				<div class="col-12 col-md-8 location-map">
+				<div class="col-12 col-lg-8 location-map">
 					<?php
 					$location = get_field('location_map');
 					if( !empty($location) ):

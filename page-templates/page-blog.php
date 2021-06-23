@@ -11,8 +11,7 @@ get_header();
 	
 	<div class="col-12 offset-md-2 col-md-9 blog-container">
 		<div class="row">
-			<div class="col-12 col-md-9 blog-list">
-				<div class="row">
+			<section class="col-12 col-md-9 blog-list">
 					<?php
 					$txtBlogSearch = '';
 					if ( isset ($_GET['txtBlogSearch']) ) {
@@ -45,8 +44,7 @@ get_header();
 						$author = $fnameAuthor. ' ' . $lnameAuthor;
 					?>
 
-					<div class="col-12 blog">
-						<div class="row">
+					<div class="blog">
 							<div class="blog-img">
 								<img src="<?php the_post_thumbnail_url(); ?>" alt="Blog Article Image">
 							</div>
@@ -54,7 +52,7 @@ get_header();
 								<div class="blog-date-author">
 									<p><?php echo $date; ?> </p>
 								</div>
-								<div class="blog-content">
+								<div class="blog-content pt-1">
 									<?php the_field('authors_name'); ?>
 									<h4 class="mt-2"><?php the_title(); ?></h4>
 									<p>
@@ -71,7 +69,6 @@ get_header();
 									<a href="<?php the_permalink(); ?>"><button class="btn-link-general">Read More</button></a>
 								</div>
 							</div>
-						</div>
 					</div>
 					
 				<?php
@@ -82,8 +79,7 @@ get_header();
 				}
 				wp_reset_query();
 				?>
-				</div>
-			</div>
+			</section>
 
 			
 			<section class="col-12 col-md-3 search-popular">

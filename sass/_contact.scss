@@ -1,45 +1,32 @@
 .page-contact-container {
 	border-top: 2px solid var(--pink);
-	overflow: hidden;
 	padding: 50px 0;
-	position: relative;
 
-	.location-contact-container {
+	.location-contact {
 		position: relative;
-		overflow: hidden;
 
-		.location-contact {
-			position: relative;
+		.location-description {
 
-			.location-description {
+			@extend %text-content-h1-6-12-600-15;
+		}
 
-				@extend %text-content-h1-6-12-600-15;
+		.location-map {
 
-				hr {
-					border: 1px solid var(--pink);
-				}
-				color: #000;
+			.acf-map {
+				height: 300px;
 			}
+		}
 
-			.location-map {
+		.left-polygon {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			z-index: -1;
 
-				.acf-map {
-					height: 300px;
-				}
+			img {
+				width: 70%;
+				height: auto;
 			}
-
-			.left-polygon {
-				position: absolute;
-				left: 0;
-				bottom: 0;
-				z-index: -1;
-
-				img {
-					width: 70%;
-					height: auto;
-				}
-			}
-
 		}
 	}
 
@@ -53,76 +40,10 @@
 			@extend %text-content-h1-6-12-600-15;
 
 			h1 {
-
-				@extend %bold-uppercase-45;
 				color: #fff;
+				font-weight: 700;
+				text-transform: uppercase;
 			}
 		}
 	}
-
-	// .book-form-container{
-	//   width: 100%;
-	//   position: relative;
-	//   overflow: hidden;
-	//   .book-form{
-	//     padding: 25px;
-	//     background-color: #1c1c1c;
-	//     div.wpforms-container-full{
-	//       position: relative;
-	//       .wpforms-form{
-	//         .wpforms-field-label,
-	//         input[type=text],
-	//         input[type=number],
-	//         input[type=email],
-	//         ul{
-	//           display: inline-block;
-	//         }
-	//
-	//         input[type=text],
-	//         input[type=number],
-	//         input[type=email]{
-	//           position: absolute;
-	//           right: 0;
-	//           width: 100%;
-	//           height: auto;
-	//           padding: 10px 10px;
-	//         }
-	//
-	//         .wpforms-field-label, .wpforms-field-label-inline{
-	//           color: #ffffff;
-	//           font-size: 11px;
-	//           font-weight: 600;
-	//           line-height: 2;
-	//           margin-bottom: 0;
-	//           padding: 10px 10px;
-	//         }
-	//
-	//         .wpforms-first{
-	//           position: relative;
-	//         }
-	//
-	//         #wpforms-174-field-6-container {
-	//           position: absolute;
-	//           right: 0;
-	//           .wpforms-field-label{
-	//             width: 50%;
-	//             padding: 0;
-	//           }
-	//         }
-	//         #wpforms-174-field-7-container{
-	//           position: absolute;
-	//           right: 0;
-	//           top: 55px;
-	//           .wpforms-field-label{
-	//             padding:0;
-	//           }
-	//         }
-	//
-	//         .wpforms-submit-container{
-	//           overflow: hidden;
-	//         }
-	//       }
-	//     }
-	//   }
-	// }
 }
