@@ -5,10 +5,10 @@ the_post();
 ?>
 <div class="single-page-bootcamp">
 	<div class="single-polygon">
-		<img src="<?php echo home_url() . '/wp-content/uploads/2020/04/single-polygon.png'; ?>" alt="">
+		<img src="<?php echo home_url() . '/wp-content/uploads/2020/04/single-polygon.png'; ?>" alt="Single Polygon Image">
 	</div>
 	<div class="small-polygon">
-		<img src="<?php echo home_url() . '/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="">
+		<img src="<?php echo home_url() . '/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="Small Polygon Image">
 	</div>
 	<div class="col-12 offset-md-1 col-md-10 single-bootcamp-container">
 		<div class="col-12 bootcamp-structure">
@@ -17,7 +17,7 @@ the_post();
 					<h1><?php echo get_field('bootcamp_structure_title'); ?></h1>
 				</div>
 				<div class="col-12 col-md-5 bootcamp-structure-img">
-					<img src="<?php echo get_field('bootcamp_structure_image'); ?>" alt="">
+					<img src="<?php echo get_field('bootcamp_structure_image'); ?>" alt="Bootcamp Image">
 				</div>
 				<div class="col-12 col-md-5 bootcamp-structure-info">
 					<div class="sub-label">
@@ -50,7 +50,7 @@ the_post();
 						<div class="col-12 first-content">
 							<div class="row">
 								<div class="col-12 col-md-6 first-content-img">
-									<!-- <img src="<?php the_post_thumbnail_url(); ?>" alt=""> -->
+									<!-- <img src="<?php the_post_thumbnail_url(); ?>" alt="Bootbamp Image"> -->
 									<div class="embed-video-bootcamp">
 										<?php echo get_field('bootcamp_video'); ?>
 									</div>

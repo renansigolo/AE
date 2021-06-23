@@ -88,7 +88,7 @@ get_header();
 						<h1><?php echo get_field('ad_page_first_header'); ?></h1>
 					</div>
 					<div class="col-12 col-md-5 sched-img">
-						<img src="<?php echo get_field('ad_first_section_image'); ?>" alt="">
+						<img src="<?php echo get_field('ad_first_section_image'); ?>" alt="Diploma Image">
 					</div>
 					<div class="col-12 offset-md-1 col-md-6 schedules-details">
 						<div class="row">

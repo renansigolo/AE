@@ -114,7 +114,7 @@ $pagePostID = get_field('study_course_page',$term->taxonomy . '_' . $term->term_
 						<a href="<?php echo the_permalink(); ?>" class="text-decoration-none">
 							<div class="row">
 								<div class="r-post-img mb-2">
-									<img src="<?php echo get_field('icon'); ?>" alt="">
+									<img src="<?php echo get_field('icon'); ?>" alt="Related Post Image">
 								</div>
 								<div class="r-post-title">
 									<p class="text-decoration-none"><?php echo the_title(); ?></p>

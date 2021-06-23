@@ -73,13 +73,12 @@
 
 		<div class="row">
 			<div class="col-12">
-				<h6 class="login-portal"><span id="lp_link"><a href="<?php echo get_field('header_login_link',2); ?>" class="badge rounded-pill bg-dark" target="_blank"><?php echo get_field('header_login_label',2); ?></a></span></h6>
 				<div class="row">
 					<div class="col-12 offset-md-1 col-md-4 navigation">
 						<div class="navigation-bar">
 							<div class="nav-logo">
 								<a href="<?php echo home_url(); ?>">
-									<img src="<?php echo $image[0]; ?>" alt="">
+									<img src="<?php echo $image[0]; ?>" alt="Logo">
 								</a>
 							</div>
 

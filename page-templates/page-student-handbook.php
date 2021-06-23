@@ -6,19 +6,19 @@ get_header();
 ?>
 <div class="page-handbook-container">  
 	<div class="big-polygon">
-			<!--img src="?php echo home_url() . '/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="" --> 
+			<!--img src="?php echo home_url() . '/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="Polygon Image" --> 
 	</div>
 	
 	<div class="small-polygon">
-		<img src="<?php echo home_url() . '/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="">
+		<img src="<?php echo home_url() . '/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="Small Polygon Image">
 	</div>
 	
-	<div class="col-12 offset-md-1 col-md-10 handbook-container">
+	<div class="container handbook-container">
 
-		<div class="col-12 company-info">
+		<section class="company-info">
 			<div class="row">
 				<div class="col-12 col-md-6 c-info-img">
-					<img src="<?php echo get_field('company_info_image'); ?>" alt="">
+					<img src="<?php echo get_field('company_info_image'); ?>" alt="Company Image">
 				</div>
 				<div class="col-12 col-md-6 c-info-desc">
 					<p><?php echo get_field('company_info'); ?></p>
@@ -26,14 +26,14 @@ get_header();
 					<?php endif;?>
 				</div>
 			</div>
-		</div>
+		</section>
 
-		<div class="col-12 handbook-collapse-container">
+		<section class="handbook-collapse-container">
 			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Student Handbook Collapse") ) : ?>
 			<?php endif;?>
-		</div>
+		</section>
 
-		<div class="col-12 handbook-forms-container">
+		<section class="handbook-forms-container">
 			<div class="col-12 header-title">
 				<h1><?php echo get_field('forms_link_label');?></h1>
 			</div>
@@ -50,7 +50,8 @@ get_header();
 					</div>
 				</div>
 			</div>
-		</div>
+			</section>
+
 	</div>
 </div>
 <?php

@@ -16,7 +16,7 @@ get_header();
 			</div>
 		</div>
 		<div class="small-polygon">
-			<img src="<?php echo home_url() . '/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="">
+			<img src="<?php echo home_url() . '/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="Small Polygon">
 		</div>
 	</div>
 
@@ -36,7 +36,7 @@ get_header();
 			</div>
 		</div>
 		<div class="big-polygon">
-			<img src="<?php echo home_url() . '/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="">
+			<img src="<?php echo home_url() . '/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="Big Polygon">
 		</div>
 	</div>
 
@@ -44,7 +44,7 @@ get_header();
 		<div class="row">
 			<div class="col-12 col-md-6 info-3-image">
 				<div class="image-container">
-					<img src="<?php echo get_field('about_info_3_image'); ?>" alt="">
+					<img src="<?php echo get_field('about_info_3_image'); ?>" alt="Info Image">
 				</div>
 			</div>
 			<div class="col-12 col-md-6 info-3-desc">

@@ -19,9 +19,9 @@
 
 				a {
 					color: #000;
+					text-decoration: none;
 
 					&:hover {
-						text-decoration: none;
 						color: var(--pink);
 					}
 				}
@@ -54,10 +54,18 @@
 
 			.text-content {
 
+				h3 {
+					color: var(--pink);
+				}
+
 				blockquote {
 					border-left: 3px solid var(--pink);
 					font-family: Zing;
 					font-weight: initial;
+
+					p {
+						padding-left: 8px;
+					}
 				}
 
 				img {

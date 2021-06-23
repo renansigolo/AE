@@ -1,7 +1,5 @@
 .page-meet-container {
 	position: relative;
-	padding: 50px 10px;
-	overflow: hidden;
 
 	.left-polygon {
 		position: absolute;
@@ -16,8 +14,6 @@
 	}
 
 	.meet-container {
-		overflow-y: scroll;
-		height: 900px;
 
 		.ml-profile {
 			margin-top: 20px;
@@ -49,10 +45,7 @@
 					@extend %text-content-h1-6-12-600-15;
 
 					a {
-
-						&:hover {
-							text-decoration: unset;
-						}
+						text-decoration: none;
 
 						h3 {
 
@@ -60,10 +53,6 @@
 								color: var(--pink-dark);
 							}
 						}
-					}
-
-					p {
-						color: #000;
 					}
 				}
 			}

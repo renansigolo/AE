@@ -27,7 +27,7 @@ get_header();
 			</div>
 
 			<div class="left-polygon">
-				<img src="<?php echo home_url().'/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="">
+				<img src="<?php echo home_url().'/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="Polygon Image">
 			</div>
 		</div>
 	</div>

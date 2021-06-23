@@ -6,42 +6,46 @@ get_header();
 ?>
 <div class="page-bootcamp-container">
 	<div class="small-polygon">
-		<img src="<?php echo home_url() . '/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="">
+		<img src="<?php echo home_url() . '/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="Small Polygon Image">
 	</div>
-	<div class="col-12 offset-md-1 col-md-10 bootcamp-container">
-		<div class="col-12 bootcamp-list-container">
-			<div class="row">
-				<div class="col-12 bootcamp-list-title">
-					<h1><?php echo get_field('bootcamp_list_title'); ?></h1>
-				</div>
-				<div class="col-12 bootcamp-body">
-					<div class="row">
-							<?php
-							$args = array(
-								'post_type' => 'bootcamps',
-								'post_status' => 'publish',
-								'posts_per_page' => -1,
-								'orderby' => 'date',
-								'order' => 'ASC'
-							);
-							$bootcamps = new WP_Query( $args );
-							if( $bootcamps->have_posts() ) {
-								while( $bootcamps->have_posts() ) {
-									$bootcamps->the_post();
-									$date = get_field('bootcamp_start_date');
-									$duration = get_field('bootcamp_structure_duration');
-									$time = get_field('bootcamp_structure_time');
-									$location = get_field('bootcamp_structure_location');
-									$price = get_field('bootcamp_structure_cost');
-									$day = date('l', strtotime($date));
-							?>
-							<div class="col-12 col-md-4 bootcamp">
-									<div class="bootcamp-img">
-										<img src="<?php the_post_thumbnail_url(); ?>" class="mb-3" alt="Bootcamp Post Image">
-										<div class="btn_learnmore">
-											<a href="<?php the_permalink(); ?>"><button class="btn-link-general">Learn More</button></a>
-										</div>
+	
+	<section class="container bootcamp-container">
+		<div class="bootcamp-list-container">
+			<h1 class="bootcamp-list-title mb-3">
+				<?php echo get_field('bootcamp_list_title'); ?>
+			</h1>
+			
+			<div class="bootcamp-body">
+				<div class="row">
+						<?php
+						$args = array(
+							'post_type' => 'bootcamps',
+							'post_status' => 'publish',
+							'posts_per_page' => -1,
+							'orderby' => 'date',
+							'order' => 'ASC'
+						);
+						$bootcamps = new WP_Query( $args );
+						
+						if( $bootcamps->have_posts() ) :
+							while( $bootcamps->have_posts() ) :
+								$bootcamps->the_post();
+								$date = get_field('bootcamp_start_date');
+								$duration = get_field('bootcamp_structure_duration');
+								$time = get_field('bootcamp_structure_time');
+								$location = get_field('bootcamp_structure_location');
+								$price = get_field('bootcamp_structure_cost');
+								$day = date('l', strtotime($date));
+						?>
+						<div class="col-12 col-md-4">
+							<div class="card bootcamp">
+								<div class="bootcamp-img">
+									<img src="<?php the_post_thumbnail_url(); ?>" class="card-img-top mb-3" alt="Bootcamp Post Image">
+									<div class="btn_learnmore">
+										<a href="<?php the_permalink(); ?>"><button class="btn-link-general">Learn More</button></a>
 									</div>
+								</div>
+								<div class="card-body">
 									<div class="bootcamp-title">
 										<h4><?php echo the_title(); ?></h4>
 									</div>
@@ -58,37 +62,40 @@ get_header();
 										}
 										?></p>
 									</div>
-							</div>
-									<?php
-								}
-							}
-							wp_reset_query();
-							?>
-							<div class="col-12 col-md-4 next-term-img">
-								<img src="<?php echo get_field('list_next_term_image'); ?>" alt="">
-							</div>
-							<div class="col-12 col-md-4 next-term-title">
-								<div class="term-title">
-									<h3><?php echo get_field('list_next_term_label'); ?></h3>
-									<a href="<?php  echo get_field('list_next_term_button_link'); ?>"><button class="btn-link-general"><?php echo get_field('list_next_term_button_label'); ?></button></a>
-									</div>
 								</div>
-							<div class="col-12 col-md-4 next-term-other-info">
-								<div class="info">
-									<p><?php echo get_field('list_next_term_other_info'); ?></p>
-									</div>
-								</div>
+							</div>
 						</div>
+								<?php
+							endwhile;
+						endif;
+						wp_reset_query();
+						?>
+						<div class="col-12 col-md-4 next-term-img">
+							<img src="<?php echo get_field('list_next_term_image'); ?>" alt="Term Image">
+						</div>
+						<div class="col-12 col-md-4 next-term-title">
+							<div class="term-title">
+								<h3><?php echo get_field('list_next_term_label'); ?></h3>
+								<a href="<?php  echo get_field('list_next_term_button_link'); ?>"><button class="btn-link-general"><?php echo get_field('list_next_term_button_label'); ?></button></a>
+								</div>
+							</div>
+						<div class="col-12 col-md-4 next-term-other-info">
+							<div class="info">
+								<p><?php echo get_field('list_next_term_other_info'); ?></p>
+								</div>
+							</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-12 bootcamp-structure">
+		</div>
+			
+			<!-- <section class="bootcamp-structure">
 				<div class="row">
 					<div class="col-12 bootcamp-structure-title">
 						<h1><?php echo get_field('bootcamp_structure_title'); ?></h1>
 					</div>
 					<div class="col-12 col-md-5 bootcamp-structure-img">
-						<img src="<?php echo get_field('bootcamp_structure_image'); ?>" alt="">
+						<img src="<?php echo get_field('bootcamp_structure_image'); ?>" alt="Bootcamp Image">
 					</div>
 					<div class="col-12 col-md-5 bootcamp-structure-info">
 						<div class="sub-label">
@@ -110,9 +117,9 @@ get_header();
 						?>
 					</div>
 				</div>
-			</div>
-		</div>
-	</div>
+			</section> -->
+	</section>
+
 </div>
 <?php
 get_footer();

@@ -120,7 +120,7 @@ $selected_events = $_SESSION['set_which_event'];
 						<div class="col-12 col-md-6 event-box">
 							<div class="row">
 								<div class="col-12 col-md-6 event-img">
-									<img src="<?php the_post_thumbnail_url(); ?>" alt="">
+									<img src="<?php the_post_thumbnail_url(); ?>" alt="Event Image">
 								</div>
 								<div class="col-12 col-md-6 event-info">
 									<div class="event-date-author">
@@ -199,7 +199,7 @@ $selected_events = $_SESSION['set_which_event'];
 						<div class="col-12 col-md-6 event-box">
 							<div class="row">
 								<div class="col-12 col-md-6 event-img">
-									<img src="<?php the_post_thumbnail_url(); ?>" alt="">
+									<img src="<?php the_post_thumbnail_url(); ?>" alt="Event Image">
 								</div>
 								<div class="col-12 col-md-6 event-info">
 									<div class="event-date-author">

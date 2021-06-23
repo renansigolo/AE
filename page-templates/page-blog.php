@@ -6,7 +6,7 @@ get_header();
 ?>
 <div class="page-blog-container">
 	<div class="big-polygon">
-		<img src="<?php echo home_url() . '/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="">
+		<img src="<?php echo home_url() . '/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="Polygon Image">
 	</div>
 	
 <div class="container">
@@ -19,7 +19,7 @@ get_header();
 						's' => $txtBlogSearch,
 						'post_status'=>'publish',
 						'orderby' => 'date',
-						'posts_per_page' => 4,
+						'posts_per_page' => 8,
 						'paged'          => get_query_var( 'paged' )
 					);
 					$blogs = new WP_Query( $args );
@@ -77,8 +77,7 @@ get_header();
 			}
 			?>
 			<section class="col-12 col-lg-3 search-popular">
-				<div class="row">
-					<div class="col-12 search-form">
+					<div class="search-form">
 						<form action="<?php echo home_url() . '/blog'?>" method="get">
 							<input class="search-blog" type="text" name="txtBlogSearch" placeholder="Search Here">
 							<button type="submit" class="btn-search">
@@ -86,14 +85,13 @@ get_header();
 							</button>
 						</form>
 					</div>
-					<div class="col-12 popular-posts mt-3">
+					<div class="popular-posts mt-3">
 						<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Popular Post Blog") ) : ?>
 						<?php endif;?>
 						<div class="small-polygon">
-							<img src="<?php echo home_url() . '/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="">
+							<img src="<?php echo home_url() . '/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="Small Polygon Image">
 						</div>
 					</div>
-				</div>
 			</section>
 
 		</div>

@@ -20,13 +20,13 @@ $next = get_next_post();
 	<div class="single-post">
 			<div class="container post-content">
 				<div class="back-btn">
-					<a href="<?php echo home_url().'\blog'; ?>">< BACK</a>
+					<a href="<?php echo home_url().'\blog'; ?>"><i class="fas fa-chevron-left"></i> BACK</a>
 				</div>
 				<br />
 				<div class="blog-date-author">
 					<p><?php echo $date; ?> | <?php echo $author; ?></p>
-					<hr />
 				</div>
+				<div class="small-divider"></div>
 				<br />
 				<div class="blog-title">
 					<h4><?php the_title(); ?></h4>

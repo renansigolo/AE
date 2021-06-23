@@ -1,7 +1,5 @@
 .page-hr-portal-container {
 	position: relative;
-	overflow: hidden;
-	padding: 50px 10px;
 
 	.big-polygon {
 		position: absolute;
@@ -88,13 +86,9 @@
 							li {
 
 								a {
-									font-size: 10px;
+									font-size: 1rem;
 									font-weight: 600;
 									color: #000;
-								}
-
-								&:hover {
-									background-color: transparent;
 								}
 							}
 						}

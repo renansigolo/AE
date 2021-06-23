@@ -4,20 +4,22 @@
 */
 get_header();
 ?>
-<div class="page-hr-portal-container">
+<div class="page-hr-portal-container container">
 	<div class="big-polygon">
-		<img src="<?php echo home_url() . '/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="">
+		<img src="<?php echo home_url() . '/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="Polygon Image">
 	</div>
 	<div class="small-polygon">
-		<img src="<?php echo home_url() . '/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="">
+		<img src="<?php echo home_url() . '/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="Small Polygon Image">
 	</div>
 
-	<div class="col-12 offset-md-2 col-md-8 hr-portal-container">
+	<div class="offset-md-1 col-md-10 hr-portal-container">
 		<div class="col-12 hr-portal-content">
 			<div class="row">
+				
 				<div class="col-12 content">
 					<?php echo get_field('first_content');?>
 				</div>
+				
 				<div class="col-12 content-links content-policies">
 					<div class="col-12 header-title">
 						<h1><?php echo get_field('first_label');?></h1>
@@ -36,6 +38,7 @@ get_header();
 						</div>
 					</div>
 				</div>
+				
 				<div class="col-12 content-links content-forms">
 					<div class="col-12 header-title">
 						<h1><?php echo get_field('second_label');?></h1>
@@ -54,6 +57,7 @@ get_header();
 						</div>
 					</div>
 				</div>
+
 			</div>
 		</div>
 	</div>
