@@ -11,11 +11,11 @@ get_header();
 		$third_home_banner = get_field('home_third_banner');
 
 		// Section - About Us
-		$about_title = get_the_title( 6 );
+		$about_title = get_the_title(6);
 		$about_post = get_post(6);
 		$about_content = $about_post->post_content;
 		$about_content = apply_filters('the_content', $about_content);
-		$about_featured_url = wp_get_attachment_url( get_post_thumbnail_id(6 ) );
+		$about_featured_url = wp_get_attachment_url( get_post_thumbnail_id(6) );
 		?>
 
 <div class="page-home-container">

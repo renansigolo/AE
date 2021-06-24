@@ -89,12 +89,8 @@ body {
 }
 
 .banner-bg-img {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 132.6%;
-	margin-left: -16.3%;
 	height: 100%;
+	width: 100%;
 }
 
 .card-like-no-padding {
@@ -147,19 +143,6 @@ body {
 			}
 		}
 	}
-}
-
-%home-header-design {
-	color: #fff;
-	position: relative;
-	height: 50vh;
-}
-
-%home-header-from-bottom {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
 }
 
 %all-headers-text-bold {

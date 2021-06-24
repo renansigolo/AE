@@ -43,9 +43,9 @@
 
 		.first-banner {
 			position: relative;
-			height: 360px;
 
 			.banner-bg-img {
+				min-height: 200px;
 				object-fit: cover;
 				border-bottom: 5px solid var(--pink-dark);
 			}
@@ -426,7 +426,6 @@
 
 					p {
 						font-weight: 600;
-						line-height: 2;
 					}
 
 					.about-us-btn {

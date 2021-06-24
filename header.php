@@ -41,12 +41,47 @@
 	</head>
 <body>
 		<!-- Google Tag Manager (noscript) -->
-		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MLQDHPD"
-		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<noscript>
+			<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MLQDHPD" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+		</noscript>
 		<!-- End Google Tag Manager (noscript) -->
 
 	<header>
-		<?php if ($page_id == 2) { ?>
+	<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">Navbar</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+				<div class="navbar-nav">
+					<a class="nav-link active" aria-current="page" href="#">Home</a>
+					<a class="nav-link" href="#">Features</a>
+					<a class="nav-link" href="#">Pricing</a>
+					<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+				</div>
+			</div>
+		</div>
+	</nav> -->
+	<!-- <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="https://placeholder.pics/svg/1400x1000" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold lh-1 mb-3">Responsive left-aligned hero with image</h1>
+        <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <button type="button" class="btn btn-primary btn-lg px-4">Primary</button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+		<!-- <?php echo the_ID(); ?> -->
+		
+		<!-- START Background Image -->
+		<!-- Page ID 2 is homepage -->
+		<?php if ($page_id === 2) { ?>
 			<div class="header-body">
 		 <?php $args = array(
 				 'post_type' => 'home_header',
@@ -54,7 +89,6 @@
 				 'post_status'    => 'publish',
 				 'orderby'        => 'date'
 			 );
-
 			 $homeslider = new WP_Query( $args );
 
 			 if( $homeslider->have_posts() ) :
@@ -70,22 +104,22 @@
 		<?php } else { ?>
 			 <div class="header-body" style="background-image: url('<?php echo $page_featured_url; ?>'); background-repeat: no-repeat; background-position: center; background-size: cover;">
 		<?php } ?>
+		<!-- END Background Image -->
 
 		<div class="row">
 			<div class="col-12">
 				<div class="row">
-					<div class="col-12 offset-md-1 col-md-4 navigation">
+					
+					<section class="col-12 offset-md-1 col-md-4 navigation">
 						<div class="navigation-bar">
 							<div class="nav-logo">
 								<a href="<?php echo home_url(); ?>">
 									<img src="<?php echo $image[0]; ?>" alt="Logo">
 								</a>
 							</div>
-
 							<div class="nav-list">
 								<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
 							</div>
-
 							<div class="mobile-nav-menu">
 								<a href="javascript:void(0);" id="burger-menu" class="icon">
 									 <i class="fa fa-bars"></i>
@@ -94,11 +128,12 @@
 										<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
 								</div>
 							</div>
-
 						</div>
-					</div>
-					<?php if($page_id == 2){ ?>
-					<div class="col-12 offset-md-1 col-md-5 home-info-slider">
+					</section>
+					
+					<!-- START Home Slider -->
+					<?php if($page_id === 2) { ?>
+					<section class="col-12 offset-md-1 col-md-5 home-info-slider">
 						<div class="row">
 								<?php $args = array(
 										'post_type' => 'home_header',
@@ -112,57 +147,60 @@
 									if( $homeslider->have_posts() ) {
 									?>
 									<div class="info-slider-body p-5">
-									<?php
-											while( $homeslider->have_posts() ) :
-												$homeslider_id = get_the_id();
-												$homeslider->the_post();
-												$home_header = get_field('home_header_label');
-												$content = apply_filters('the_content', $post->post_content);
-												$home_header_btn_label = get_field('homeheader_button_label');
-												$home_header_btn_link = get_field('homeheader_button_link');
-												?>
+										<?php while( $homeslider->have_posts() ) :
+														$homeslider_id = get_the_id();
+														$homeslider->the_post();
+														$home_header = get_field('home_header_label');
+														$content = apply_filters('the_content', $post->post_content);
+														$home_header_btn_label = get_field('homeheader_button_label');
+														$home_header_btn_link = get_field('homeheader_button_link');
+											?>
 										<div class="info-slider-body-list" id="<?php echo $homeslider_id; ?>">
 											<h1><?php echo $home_header ?></h1>
 											<div class="header-info-text">
 												<p><?php echo $content; ?></p>
 											</div>
-											<?php
-												if($home_header_btn_label != '' && $home_header_btn_link != '') {
+											<?php if($home_header_btn_label !== '' && $home_header_btn_link !== '') {
 													echo '<a href="'.$home_header_btn_link.'"><button class="btn-link-general">'.$home_header_btn_label.'</button></a>';
-												}
-											?>
+												} ?>
 										</div>
-
 										<?php endwhile; ?>
 									</div>
-						</div>
+							</div>
+						
+						<!-- START Home Slider Navbar -->
 						<div class="info-slider-navigation">
 							<ul class="d-none d-lg-block info-slider-navigation-list">
 							<?php $number = 1;
-										while( $homeslider->have_posts() ) {
-											$homeslider->the_post();
-											$homeslider_id = get_the_id();
-											echo '<li id="'.$homeslider_id.'">'.sprintf('%02s', $number).'</li>';
-											$number ++;
-										}
-								?>
+								while( $homeslider->have_posts() ) {
+									$homeslider->the_post();
+									$homeslider_id = get_the_id();
+									echo '<li id="'.$homeslider_id.'">'.sprintf('%02s', $number).'</li>';
+									$number ++;
+								}
+							?>
 							</ul>
 						</div>
-						<?php
-						}
-						wp_reset_query();
+						<!-- END Home Slider Navbar -->
+						<?php }
+							wp_reset_query();
 						?>
-					</div>
+					</section>
+					<!-- END Home Slider -->
 
-					<?php
-					} else if ($page_id == 20 || $page_id == 482 || $page_id == 471){
+					<!-- START Logic for pages with Contact Form
+						ID 20 -> Contact Us
+						ID 482 -> ???
+						ID 471 -> ???
+					-->
+					<?php } else if ($page_id === 20 || $page_id === 482 || $page_id === 471){
 						$content_post = get_post($page_id);
 						$content = $content_post->post_content;
 						$content = apply_filters('the_content', $content);
 						$header_form_label = get_field('header_form_label', $page_id);
 						$header_form_sublabel = get_field('header_form_sub_label', $page_id);
 					?>
-					<div class="col-12 offset-md-1 col-md-6 contact-page-header">
+					<section class="col-12 offset-md-1 col-md-6 contact-page-header">
 						<div class="col-12 page-content">
 							<div class="row">
 								<div class="col-12 form-header">
@@ -173,13 +211,13 @@
 								</div>
 								<div class="col-12 col-md-8 py-3 form-fields" id='form-id-<?php echo $page_id; ?>'>
 									<?php
-									if($page_id == 20):
-										echo do_shortcode( '[wpforms id="173"]' );
-									elseif ($page_id == 482):
-										echo do_shortcode( '[wpforms id="469"]' );
-									elseif ($page_id == 471):
-										echo do_shortcode( '[wpforms id="174"]' );
-									endif;
+										if($page_id === 20):
+											echo do_shortcode( '[wpforms id="173"]' );
+										elseif ($page_id === 482):
+											echo do_shortcode( '[wpforms id="469"]' );
+										elseif ($page_id === 471):
+											echo do_shortcode( '[wpforms id="174"]' );
+										endif;
 									?>
 								</div>
 								<div class="col-12 col-md-4 sched-and-info">
@@ -191,34 +229,37 @@
 								</div>
 							</div>
 						</div>
-					</div>
+					</section>
+					<!-- END Logic for pages with Contact Form -->
+				
+					<!-- START Header for Events and Workshops Page -->
+					<?php } else if ($page_id === 16) {
+								session_start();
 
-				<?php
-					}else if ($page_id == 16){
-							session_start();
+								if ( isset ($_GET['btn_current']) ) {
+									$txtSelected = $_GET['btn_current'];
+									$_SESSION['set_which_event'] = $txtSelected;
+								}else{
+									$_SESSION['set_which_event'] = 'CURRENT EVENTS';
+								}
 
-							if ( isset ($_GET['btn_current']) ) {
-								$txtSelected = $_GET['btn_current'];
-								$_SESSION['set_which_event'] = $txtSelected;
-							}else{
-								$_SESSION['set_which_event'] = 'CURRENT EVENTS';
-							}
+							$content_post = get_post($page_id);
+							$page_title = get_the_title( $page_id );
+							$content = $content_post->post_content;
+							$content = apply_filters('the_content', $content);
+						?>
+					<section class="col-12 offset-md-1 col-md-6 home-page-info">
+						<div class="page-content">
+							<h1><?php echo $page_title ?></h1>
+							<div class="text-content">
+								<p><?php echo $content; ?></p>
+							</div>
+						</div>
+					</section>
 
-						$content_post = get_post($page_id);
-						$page_title = get_the_title( $page_id );
-						$content = $content_post->post_content;
-						$content = apply_filters('the_content', $content);
-					?>
-			<div class="col-12 offset-md-1 col-md-6 home-page-info">
-				<div class="page-content">
-					<h1><?php echo $page_title ?></h1>
-					<div class="text-content">
-						<p><?php echo $content; ?></p>
-					</div>
 				</div>
-			</div>
-</div>
 
+			<!-- POSTS -->
 			<?php } else if (is_singular('post')) {
 				$content_post = get_post($page_id);
 				$page_title = get_the_title( $page_id );
@@ -232,57 +273,47 @@
 				$lnameAuthor = get_the_author_meta('last_name', $authorid);
 				$author = $fnameAuthor. ' ' . $lnameAuthor;
 				?>
-					<div class="col-12 offset-md-1 col-md-6 home-page-info">
+					<section class="col-12 offset-md-1 col-md-6 home-page-info">
 						<div class="page-content">
 							<div class="blog-date-author">
 								<p><?php echo $date; ?> | <?php echo $author; ?></p>
-					
-					<?php the_field('authors_name'); ?>
+								<?php the_field('authors_name'); ?>
 							</div>
 							<div class="text-content">
 								<h3><?php echo $page_title ?></h3>
 							</div>
 							<?php
-								if($button_label != '' && $button_link != ''){
+								if ( $button_label != '' && $button_link != '' ) {
 									echo '<a href="'.$button_link.'"><button class="btn-link-general">'.$button_label.'</button></a>';
 								}
 							?>
 						</div>
-					</div>
-				<?php
-				}else{
-					$content_post = get_post($page_id);
-					$page_title = get_the_title( $page_id );
-					$content = $content_post->post_content;
-					$content = apply_filters('the_content', $content);
-					$button_label = get_field('header_button_label', $page_id);
-					$button_link = get_field('header_button_link', $page_id);
-					?>
-					<div class="col-12 offset-md-1 col-md-6 home-page-info">
-						<div class="page-content">
-							<h1><?php echo $page_title ?></h1>
-							<div class="text-content">
-								<p><?php echo $content; ?></p>
+					</section>
+					<?php
+						} else {
+							$content_post = get_post($page_id);
+							$page_title = get_the_title( $page_id );
+							$content = $content_post->post_content;
+							$content = apply_filters('the_content', $content);
+							$button_label = get_field('header_button_label', $page_id);
+							$button_link = get_field('header_button_link', $page_id);
+						?>
+						<section class="col-12 offset-md-1 col-md-6 home-page-info">
+							<div class="page-content">
+								<h1><?php echo $page_title ?></h1>
+								<div class="text-content">
+									<p><?php echo $content; ?></p>
+								</div>
+								<?php
+									if($button_label != '' && $button_link != '') {
+										echo '<a href="'.$button_link.'"><button class="btn-link-general">'.$button_label.'</button></a>';
+									}
+								?>
 							</div>
-							<?php
-								if($button_label != '' && $button_link != ''){
-									echo '<a href="'.$button_link.'"><button class="btn-link-general">'.$button_label.'</button></a>';
-								}
-							?>
-						</div>
-					</div>
-		<?php
-		}
-
-		if($page_id != 2) {
-		?>
-		<style media="screen">
-			footer .footer-body .partners-icon-body{
-				display: none;
-			}
-		</style>
-		<?php } ?>
+						</section>
+					<?php } ?>
 				</div>
 			</div>
 		</div>
+
 	</header>
