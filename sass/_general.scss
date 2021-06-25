@@ -145,19 +145,6 @@ body {
 	}
 }
 
-%all-headers-text-bold {
-
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		color: var(--pink);
-		font-weight: 700;
-	}
-}
-
 %regular-text-white {
 
 	p {
@@ -169,7 +156,15 @@ body {
 
 %text-content-h1-6-12-600-15 {
 
-	@extend %all-headers-text-bold;
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		color: var(--pink);
+		font-weight: 700;
+	}
 
 	p {
 		font-weight: 600;
@@ -270,4 +265,14 @@ div.wpforms-container-full .wpforms-form button[type="submit"] {
 	width: 100%;
 	float: left;
 	margin-bottom: 0;
+}
+
+.navigation .navigation-bar .nav-list ul li a {
+	font-size: 0.9rem;
+	text-decoration: none;
+}
+
+.btn-link-general {
+	width: 175px;
+	font-size: 12px;
 }

@@ -43,16 +43,14 @@ get_header();
 									<p id="<?php echo get_the_id(); ?>"><?php echo the_title(); ?></p>
 								</div>
 								<?php endwhile;
-
-								// Reset Post Data
 								wp_reset_postdata();
 								?>
 							</div>
-							<?php
-							while ( $studies->have_posts() ) : $studies->the_post();
-									//inside the loop
+							<?php while ( $studies->have_posts() ) :
+									$studies->the_post();
 									$content2 = get_field('second_content_text_editor');
 							?>
+							
 							<div class="col-12 offset-md-1 col-md-10 study-content" id="<?php echo get_the_id(); ?>">
 								<div class="row">
 									<div class="col-12 study-img mb-2">
@@ -70,9 +68,8 @@ get_header();
 									</div>
 								</div>
 							</div>
+							
 							<?php endwhile;
-
-								// Reset Post Data
 								wp_reset_postdata();
 							?>
 						</div>

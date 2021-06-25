@@ -48,11 +48,7 @@ get_header();
 						<p><?php echo the_title(); ?></p>
 					</div>
 				</div>
-				<?php
-						// the_content();
-				endwhile;
-
-				// Reset Post Data
+				<?php endwhile;
 				wp_reset_postdata();
 				?>
 			</div>
@@ -322,8 +318,6 @@ get_header();
 					</div>
 					<?php
 					endwhile;
-
-					// Reset Post Data
 					wp_reset_postdata();
 					?>
 					</div>
@@ -385,8 +379,6 @@ get_header();
 					</div>
 					<?php
 					endwhile;
-
-					// Reset Post Data
 					wp_reset_postdata();
 					?>
 				<div class="testimonial-navigation">

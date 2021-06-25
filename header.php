@@ -47,36 +47,6 @@
 		<!-- End Google Tag Manager (noscript) -->
 
 	<header>
-	<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<div class="container-fluid">
-			<a class="navbar-brand" href="#">Navbar</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-				<div class="navbar-nav">
-					<a class="nav-link active" aria-current="page" href="#">Home</a>
-					<a class="nav-link" href="#">Features</a>
-					<a class="nav-link" href="#">Pricing</a>
-					<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-				</div>
-			</div>
-		</div>
-	</nav> -->
-	<!-- <div class="container col-xxl-8 px-4 py-5">
-    <div class="row flex-lg-row align-items-center g-5 py-5">
-      <div class="col-10 col-sm-8 col-lg-6">
-        <img src="https://placeholder.pics/svg/1400x1000" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
-      </div>
-      <div class="col-lg-6">
-        <h1 class="display-5 fw-bold lh-1 mb-3">Responsive left-aligned hero with image</h1>
-        <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-          <button type="button" class="btn btn-primary btn-lg px-4">Primary</button>
-        </div>
-      </div>
-    </div>
-  </div> -->
 		<!-- <?php echo the_ID(); ?> -->
 		
 		<!-- START Background Image -->
@@ -106,8 +76,7 @@
 		<?php } ?>
 		<!-- END Background Image -->
 
-		<div class="row">
-			<div class="col-12">
+
 				<div class="row">
 					
 					<section class="col-12 offset-md-1 col-md-4 navigation">
@@ -313,7 +282,5 @@
 						</section>
 					<?php } ?>
 				</div>
-			</div>
-		</div>
 
 	</header>

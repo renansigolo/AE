@@ -1,17 +1,9 @@
-%display-inline {
-	display: inline-block;
-	margin: 25px 28px;
-	width: 100px;
-}
-
 footer {
-	// background-color: #000;
+
 	.footer-body {
 
 		.partners-icon-body {
 			background-color: var(--pink);
-			// border-top: 3px solid rgba(230, 53, 82, 0.1);
-			// border-bottom: 3px solid rgba(230, 53, 82, 0.1);
 			text-align: center;
 			padding: 30px 10%;
 
@@ -20,7 +12,7 @@ footer {
 			}
 
 			.textwidget {
-				text-align: left;
+				text-align: center;
 				color: #fff;
 				font-size: 1.8rem;
 				font-weight: 900;
@@ -31,7 +23,8 @@ footer {
 
 				.partners_icons:not(:first-child) {
 
-					@extend %display-inline;
+					display: inline-block;
+					margin: 25px 28px;
 					width: auto;
 				}
 			}
@@ -40,7 +33,9 @@ footer {
 
 				.partners_icons:not(:first-child) {
 
-					@extend %display-inline;
+					display: inline-block;
+					margin: 25px 28px;
+					width: 100px;
 				}
 			}
 		}
@@ -182,12 +177,6 @@ footer {
 						.textwidget {
 							color: #7d7d7d;
 							font-weight: 900;
-							// strong{
-							//   color: #ffffff;
-							// }
-							// b{
-							//   color: #ffffff;
-							// }
 						}
 					}
 				}

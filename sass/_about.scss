@@ -8,7 +8,15 @@
 
 			.info-desc-text {
 
-				@extend %all-headers-text-bold;
+				h1,
+				h2,
+				h3,
+				h4,
+				h5,
+				h6 {
+					color: var(--pink);
+					font-weight: 700;
+				}
 			}
 		}
 
@@ -70,11 +78,14 @@
 
 		.info-3-desc {
 
-			.i3-desc-1,
-			.i3-desc-2,
-			.i3-desc-3 {
-
-				@extend %all-headers-text-bold;
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6 {
+				color: var(--pink);
+				font-weight: 700;
 			}
 		}
 	}

@@ -161,7 +161,8 @@
 						img {
 							width: 100%;
 							object-fit: cover;
-							height: auto;
+							// height: auto;
+							max-height: 300px;
 						}
 
 						.featured-video-plus.fvp-center {
@@ -178,7 +179,6 @@
 						}
 
 						a {
-							// text-decoration: none;
 							color: var(--pink);
 
 							&:hover {
