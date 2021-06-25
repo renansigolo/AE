@@ -42,7 +42,7 @@ get_header();
 								<div class="bootcamp-img">
 									<img src="<?php the_post_thumbnail_url(); ?>" class="card-img-top mb-3" alt="Bootcamp Post Image">
 									<div class="btn_learnmore">
-										<a href="<?php the_permalink(); ?>"><button class="btn-link-general">Learn More</button></a>
+										<a href="<?php the_permalink(); ?>" class="btn btn-primary" role="button">Learn More</a>
 									</div>
 								</div>
 								<div class="card-body">

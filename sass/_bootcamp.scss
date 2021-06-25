@@ -100,36 +100,30 @@
 							height: 200px;
 							object-fit: cover;
 						}
+					}
 
-						.btn_learnmore {
-							padding: 25% 25%;
-							width: 100%;
-							position: absolute;
-							top: 0;
-							height: 100%;
+					.btn_learnmore {
+						padding: 25% 25%;
+						width: 100%;
+						position: absolute;
+						top: 0;
+						height: 100%;
 
-							.btn-link-general {
-								display: none;
-								background-color: var(--pink-dark);
-								color: rgb(255, 255, 255);
+						.btn {
+							display: none;
+						}
 
-								&:hover {
-									background-color: var(--pink-light);
-								}
-							}
-
-							a {
-
-								&:hover {
-									text-decoration: none;
-								}
-							}
+						a {
 
 							&:hover {
+								text-decoration: none;
+							}
+						}
 
-								.btn-link-general {
-									display: block;
-								}
+						&:hover {
+
+							.btn {
+								display: block;
 							}
 						}
 					}
