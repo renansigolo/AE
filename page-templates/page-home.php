@@ -225,7 +225,7 @@ get_header();
 										'post_type' => 'bootcamps',
 										'post_status' => 'publish',
 										'posts_per_page' => 4,
-										'order'    => 'ASC'
+										'order'    => 'DESC'
 									);
 
 									$bootcamps = new WP_Query( $args2 );
