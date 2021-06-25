@@ -210,7 +210,7 @@ jQuery(function ($) {
 		$(".r-post-slider").animate({ scrollLeft: "-=300px" }, "slow");
 	});
 
-	$(".r-post-diploma_navigation #tm-right").click(function () {
+	$(".r-post-diploma_navigation #tm-right").on( 'click', function () {
 		$(".r-post-slider").animate({ scrollLeft: "+=300px" }, "slow");
 	});
 });
