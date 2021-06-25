@@ -14,8 +14,8 @@ $numberColumn = get_field('number_of_column');
 		<img src="<?php echo home_url() . '/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="Small Polygon Image">
 	</div>
 
-	<div class="col-12 offset-md-2 col-md-8 common-container">
-		<div class="col-12 common-content">
+	<div class="col-12 col-md-8 mx-auto common-container">
+		<div class="common-content">
 			<div class="row">
 			<?php if($numberColumn == 'one') {?>
 				<div class="col-12 content">

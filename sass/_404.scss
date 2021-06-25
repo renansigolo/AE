@@ -1,0 +1,10 @@
+.error-404 {
+
+	.tagcloud a {
+
+		@extend .badge;
+		@extend .rounded-pill;
+		@extend .bg-primary;
+		@extend .m-1;
+	}
+}

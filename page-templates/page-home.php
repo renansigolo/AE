@@ -135,8 +135,8 @@ get_header();
 								}
 								wp_reset_query();
 								?>
-								<div class="col-12 event-btn">
-									<a href="<?php echo get_field('events_button_link'); ?>"><button class="btn-link-general"><?php echo get_field('events_button_label'); ?></button></a>
+								<div class="col-12 text-center">
+									<a href="<?php echo get_field('events_button_link'); ?>" class="btn btn-primary btn-lg" role="button"><?php echo get_field('events_button_label'); ?></a>
 								</div>
 							</div>
 						</div>
@@ -177,17 +177,15 @@ get_header();
 											<div class="col-12 col-md-6 courses">
 												<div class="card-like">
 													<div class="row">
-														<div class="col-12 col-md-6 courses-img mb-2">
+														<div class="col-12 col-md-6 courses-img">
 															<img src="<?php echo $img_url; ?>" alt="Course Image">
 														</div>
-														<div class="col-12 col-md-6 courses-info">
-															<div class="courses-content">
-																<h3><?php echo $termname ?></h3>
-																<p><?php echo substr($content, 0, 100).""; ?></p>
-																<div class="courses-read-more">
-																	<a href="<?php echo get_permalink($pagePostID); ?>"><button class="btn-link-general">LEARN MORE</button></a>
+														<div class="col-12 col-md-6 d-flex flex-column justify-content-between courses-info">
+																<div>
+																	<h3><?php echo $termname ?></h3>
+																	<p><?php echo substr($content, 0, 100).""; ?></p>
 																</div>
-															</div>
+																<a href="<?php echo get_permalink($pagePostID); ?>" class="btn btn-primary fw-bold w-100 mt-3" role="button">Learn More</a>
 														</div>
 													</div>
 												</div>
@@ -245,26 +243,26 @@ get_header();
 									?>
 									<div class="col-12 col-md-3 bootcamp" id ="<?php echo get_the_id(); ?>">
 										<div class="card" style="height: 500px;">
-											<img src="<?php the_post_thumbnail_url(); ?>" class="card-img-top" style="height: 220px; object-fit: cover;" alt="Card Image">
-												<div class="card-body">
-													<a href="<?php echo $link; ?>" class="text-decoration-none" target="_blank">
+											<a href="<?php echo $link; ?>" class="text-decoration-none" target="_blank">
+												<img src="<?php the_post_thumbnail_url(); ?>" class="card-img-top" style="height: 220px; object-fit: cover;" alt="Card Image">
+													<div class="card-body">
 														<h5 class="card-title"><?php echo the_title(); ?></h5>
-													</a>
 
-													<div class="bootcamp-info">
-														<!-- <p id="date" style="font-weight: 300"><i class="fas fa-calendar-alt"></i><?php echo $date; ?></p> -->
-														<p id="duration" style="font-weight: 300"><i class="fas fa-hourglass-start"></i><?php echo $duration; ?></p>
-														<p id="time" style="font-weight: 300"><i class="far fa-clock"></i><?php echo $time; ?></p>
-														<p id="location" style="font-weight: 300"><i class="fas fa-map-pin"></i><?php echo $location; ?></p>
-														<p id="price" style="font-weight: 300"><i class="fas fa-tag"></i><?php
-														if($price != ""){
-																echo $price;
-														}else{
-															echo "FREE";
-														}
-														?></p>
+														<div class="bootcamp-info">
+															<!-- <p id="date" style="font-weight: 300"><i class="fas fa-calendar-alt"></i><?php echo $date; ?></p> -->
+															<p id="duration" style="font-weight: 300"><i class="fas fa-hourglass-start"></i><?php echo $duration; ?></p>
+															<p id="time" style="font-weight: 300"><i class="far fa-clock"></i><?php echo $time; ?></p>
+															<p id="location" style="font-weight: 300"><i class="fas fa-map-pin"></i><?php echo $location; ?></p>
+															<p id="price" style="font-weight: 300"><i class="fas fa-tag"></i><?php
+															if($price != ""){
+																	echo $price;
+															}else{
+																echo "FREE";
+															}
+															?></p>
+														</div>
 													</div>
-												</div>
+											</a>
 										</div>
 									</div>
 									<?php
@@ -272,7 +270,7 @@ get_header();
 									}
 									wp_reset_query();
 									?>
-									<div class="col-12 mt-4 bootcamp-btn">
+									<div class="col-12 mt-4 text-center">
 										<?php
 										$link = get_field('bootcamp_see_all_button');
 										if( $link ):
@@ -280,7 +278,7 @@ get_header();
 											$link_title = $link['title'];
 											$link_target = $link['target'] ? $link['target'] : '_self';
 											?>
-										<a href="<?php echo esc_url($link_url); ?>"><button class="btn-link-general"><?php echo esc_html($link_title); ?></button></a>
+										<a href="<?php echo esc_url($link_url); ?>" class="btn btn-primary btn-lg" role="button"><?php echo esc_html($link_title); ?></a>
 										<?php endif; ?>
 									</div>
 								</div>
@@ -336,7 +334,7 @@ get_header();
 						<div class="col-12 col-md-6 about-info">
 							<p><?php echo $about_content; ?></p>
 							<div class="about-us-btn">
-								<a href="<?php echo home_url().'/about'; ?>"><button class="btn-link-general">LEARN MORE</button></a>
+								<a href="<?php echo home_url().'/about'; ?>" class="btn btn-light btn-lg" role="button">Learn More</a>
 							</div>
 						</div>
 					</div>

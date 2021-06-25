@@ -11,9 +11,7 @@
 	.courses-container
 	.courses
 	.card-like
-	.courses-info
-	.courses-content
-	.courses-read-more {
+	.courses-info {
 
 		a {
 
@@ -231,19 +229,6 @@
 		}
 	}
 
-	.page-common-container {
-
-		.common-container {
-
-			.common-content {
-
-				.content {
-					padding: 20px 0;
-				}
-			}
-		}
-	}
-
 	.page-bootcamp-container {
 
 		.bootcamp-container {
@@ -413,37 +398,6 @@
 				}
 			}
 
-			.study-courses {
-
-				.courses-body {
-
-					.courses-container {
-
-						.courses {
-
-							.card-like {
-
-								.courses-info {
-
-									.courses-content {
-
-										.courses-read-more {
-
-											a {
-
-												.btn-link-general {
-													width: 100%;
-												}
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-
 			.video-list-container {
 
 				.video-displays {
@@ -494,27 +448,6 @@
 */
 
 @media (min-width: 320px) and (max-width: 480px) {
-
-	.page-common-container {
-
-		.common-container {
-
-			.common-content {
-
-				.content {
-					padding: 20px 10px;
-
-					p {
-						font-size: 14px;
-					}
-
-					iframe {
-						width: 100%;
-					}
-				}
-			}
-		}
-	}
 	//CSS
 	.home-page-info {
 
@@ -691,31 +624,6 @@
 
 				.courses-body {
 					padding: 0 30px 0 10px;
-
-					.courses-container {
-
-						.courses {
-
-							.card-like {
-
-								.courses-info {
-
-									.courses-content {
-
-										.courses-read-more {
-
-											a {
-
-												.btn-link-general {
-													width: 100%;
-												}
-											}
-										}
-									}
-								}
-							}
-						}
-					}
 				}
 			}
 
@@ -781,16 +689,6 @@
 
 						h3 {
 							font-size: 20px;
-						}
-
-						.about-us-btn {
-
-							a {
-
-								.btn-link-general {
-									width: 100%;
-								}
-							}
 						}
 					}
 				}
@@ -944,11 +842,6 @@
 
 				.apply-label {
 					text-align: center;
-				}
-
-				.apply-button {
-					margin-left: auto;
-					width: 100%;
 				}
 			}
 		}

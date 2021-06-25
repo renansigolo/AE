@@ -142,21 +142,6 @@
 							}
 						}
 					}
-
-					.event-btn {
-						text-align: center;
-
-						.btn-link-general {
-							background-color: var(--pink-dark);
-							color: rgb(255, 255, 255);
-							font-weight: 700;
-							font-size: 15px;
-
-							&:hover {
-								background-color: var(--pink);
-							}
-						}
-					}
 				}
 			}
 		}
@@ -229,14 +214,10 @@
 								overflow: hidden;
 							}
 
-							.courses-content {
-								text-transform: uppercase;
-
-								@extend %text-content-h1-6-12-600-15;
-
-								h3 {
-									text-transform: uppercase;
-								}
+							h3 {
+								color: var(--pink);
+								font-weight: 700;
+								text-transform: capitalize;
 							}
 						}
 					}
@@ -290,6 +271,14 @@
 						margin-bottom: 20px;
 						display: inline-block;
 
+						.card {
+
+							&:hover {
+
+								@extend .shadow;
+							}
+						}
+
 						.card-title {
 							color: var(--pink);
 							font-weight: 700;
@@ -325,22 +314,6 @@
 									font-size: 15px;
 									width: 20px;
 								}
-							}
-						}
-					}
-
-					.bootcamp-btn {
-						text-align: center;
-
-						.btn-link-general {
-							background-color: var(--pink);
-							color: rgb(255, 255, 255);
-							font-weight: 700;
-							font-size: 15px;
-							width: 230px;
-
-							&:hover {
-								background-color: var(--pink-dark);
 							}
 						}
 					}
@@ -411,8 +384,6 @@
 				}
 
 				.about-info {
-
-					@extend %text-content-h1-6-12-600-15;
 					color: #fff;
 
 					h1 {
@@ -423,23 +394,16 @@
 						color: #fff;
 					}
 
+					h5 {
+						font-weight: 700;
+					}
+
 					p {
 						font-weight: 600;
 					}
 
 					.about-us-btn {
 						margin-top: 30px;
-
-						.btn-link-general {
-							background-color: #fff;
-							color: var(--pink);
-							font-weight: 700;
-							font-size: 16px;
-
-							&:hover {
-								background-color: #f2f2f2;
-							}
-						}
 					}
 				}
 			}

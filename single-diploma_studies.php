@@ -21,7 +21,7 @@ foreach($terms as $term) {
 $pagePostID = get_field('study_course_page',$term->taxonomy . '_' . $term->term_id);
 ?>
 <div class="single-page-diploma">
-	<div class="col-12 offset-md-1 col-md-10 single-diploma">
+	<div class="col-12 col-md-10 mx-auto single-diploma">
 		<div class="row">
 			<div class="col-12 post-content">
 				<div class="back-btn">

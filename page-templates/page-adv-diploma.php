@@ -221,8 +221,8 @@ get_header();
 			<div class="container">
 				<div class="row text-center">
 					<div class="col-12 apply-label">
-						<a href="<?php echo get_field('ad_apply_now_link');?>">
-							<button class="btn-link-general"><?php echo get_field('ad_apply_label'); ?></button>
+						<a href="<?php echo get_field('ad_apply_now_link');?>" class="btn-xxl" role="button">
+							<?php echo get_field('ad_apply_label'); ?>
 						</a>
 						<br />
 						<br />

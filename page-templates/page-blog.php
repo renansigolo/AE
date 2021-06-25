@@ -48,7 +48,7 @@ get_header();
 									<h5 class="mt-2"><?php the_title(); ?></h5>
 									<p><?php if (strlen($preview) <=200) { echo $preview; } else { echo substr($preview, 0, 200) . '...'; } ?></p>
 								</div>
-								<a href="<?php the_permalink(); ?>"><button class="btn-link-general">Read More</button></a>
+								<a href="<?php the_permalink(); ?>" class="btn btn-primary fw-normal" role="button">Read More</a>
 							</div>
 						</div>
 					</div>

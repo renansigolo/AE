@@ -24,7 +24,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 :root {
   --pink-dark: #e63552;
-  --pink: $primary;
+  --pink: #ec4e68;
   --pink-light: #e635521a;
   --orange: #ff7442;
   --orange-light: #ff74421a;
@@ -32,8 +32,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   --white: #fff;
 }
 
-.btn-primary {
-  color: #fff;
+.btn, .btn-xxl {
+  text-transform: uppercase;
 }
 
 /*!
@@ -2502,7 +2502,7 @@ textarea.form-control-lg {
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
 }
-.btn-check[disabled] + .btn, .btn-check:disabled + .btn {
+.btn-check[disabled] + .btn, .btn-check[disabled] + .btn-xxl, .btn-check:disabled + .btn, .btn-check:disabled + .btn-xxl {
   pointer-events: none;
   filter: none;
   opacity: 0.65;
@@ -2661,11 +2661,11 @@ textarea.form-control-lg {
 .input-group > .form-select:focus {
   z-index: 3;
 }
-.input-group .btn {
+.input-group .btn, .input-group .btn-xxl {
   position: relative;
   z-index: 2;
 }
-.input-group .btn:focus {
+.input-group .btn:focus, .input-group .btn-xxl:focus {
   z-index: 3;
 }
 
@@ -2687,7 +2687,8 @@ textarea.form-control-lg {
 .input-group-lg > .form-control,
 .input-group-lg > .form-select,
 .input-group-lg > .input-group-text,
-.input-group-lg > .btn {
+.input-group-lg > .btn,
+.input-group-lg > .btn-xxl {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   border-radius: 0.3rem;
@@ -2696,7 +2697,8 @@ textarea.form-control-lg {
 .input-group-sm > .form-control,
 .input-group-sm > .form-select,
 .input-group-sm > .input-group-text,
-.input-group-sm > .btn {
+.input-group-sm > .btn,
+.input-group-sm > .btn-xxl {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0.2rem;
@@ -2901,7 +2903,7 @@ textarea.form-control-lg {
   z-index: 3;
 }
 
-.btn {
+.btn, .btn-xxl {
   display: inline-block;
   font-weight: 400;
   line-height: 1.5;
@@ -2913,53 +2915,53 @@ textarea.form-control-lg {
   user-select: none;
   background-color: transparent;
   border: 1px solid transparent;
-  padding: 0.375rem 0.75rem;
+  padding: 0.375rem 1.75rem;
   font-size: 1rem;
   border-radius: 0;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .btn {
+  .btn, .btn-xxl {
     transition: none;
   }
 }
-.btn:hover {
+.btn:hover, .btn-xxl:hover {
   color: #212529;
 }
-.btn-check:focus + .btn, .btn:focus {
+.btn-check:focus + .btn, .btn-check:focus + .btn-xxl, .btn:focus, .btn-xxl:focus {
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(236, 78, 104, 0.25);
 }
-.btn:disabled, .btn.disabled, fieldset:disabled .btn {
+.btn:disabled, .btn-xxl:disabled, .btn.disabled, .disabled.btn-xxl, fieldset:disabled .btn, fieldset:disabled .btn-xxl {
   pointer-events: none;
   opacity: 0.65;
 }
 
-.btn-primary {
+.btn-primary, .btn-xxl {
   color: #000;
   background-color: #ec4e68;
   border-color: #ec4e68;
 }
-.btn-primary:hover {
+.btn-primary:hover, .btn-xxl:hover {
   color: #000;
   background-color: #ef697f;
   border-color: #ee6077;
 }
-.btn-check:focus + .btn-primary, .btn-primary:focus {
+.btn-check:focus + .btn-primary, .btn-check:focus + .btn-xxl, .btn-primary:focus, .btn-xxl:focus {
   color: #000;
   background-color: #ef697f;
   border-color: #ee6077;
   box-shadow: 0 0 0 0.25rem rgba(201, 66, 88, 0.5);
 }
-.btn-check:checked + .btn-primary, .btn-check:active + .btn-primary, .btn-primary:active, .btn-primary.active, .show > .btn-primary.dropdown-toggle {
+.btn-check:checked + .btn-primary, .btn-check:checked + .btn-xxl, .btn-check:active + .btn-primary, .btn-check:active + .btn-xxl, .btn-primary:active, .btn-xxl:active, .btn-primary.active, .active.btn-xxl, .show > .btn-primary.dropdown-toggle, .show > .dropdown-toggle.btn-xxl {
   color: #000;
   background-color: #f07186;
   border-color: #ee6077;
 }
-.btn-check:checked + .btn-primary:focus, .btn-check:active + .btn-primary:focus, .btn-primary:active:focus, .btn-primary.active:focus, .show > .btn-primary.dropdown-toggle:focus {
+.btn-check:checked + .btn-primary:focus, .btn-check:checked + .btn-xxl:focus, .btn-check:active + .btn-primary:focus, .btn-check:active + .btn-xxl:focus, .btn-primary:active:focus, .btn-xxl:active:focus, .btn-primary.active:focus, .active.btn-xxl:focus, .show > .btn-primary.dropdown-toggle:focus, .show > .dropdown-toggle.btn-xxl:focus {
   box-shadow: 0 0 0 0.25rem rgba(201, 66, 88, 0.5);
 }
-.btn-primary:disabled, .btn-primary.disabled {
+.btn-primary:disabled, .btn-xxl:disabled, .btn-primary.disabled, .disabled.btn-xxl {
   color: #000;
   background-color: #ec4e68;
   border-color: #ec4e68;
@@ -3387,16 +3389,16 @@ textarea.form-control-lg {
   color: #6c757d;
 }
 
-.btn-lg, .btn-group-lg > .btn {
-  padding: 0.5rem 1rem;
+.btn-lg, .btn-xxl, .btn-group-lg > .btn, .btn-group-lg > .btn-xxl {
+  padding: 0.5rem 1.5rem;
   font-size: 1.25rem;
-  border-radius: 0.3rem;
+  border-radius: 0;
 }
 
-.btn-sm, .btn-group-sm > .btn {
+.btn-sm, .btn-group-sm > .btn, .btn-group-sm > .btn-xxl {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
-  border-radius: 0.2rem;
+  border-radius: 0;
 }
 
 .fade {
@@ -3738,23 +3740,35 @@ textarea.form-control-lg {
   display: inline-flex;
   vertical-align: middle;
 }
-.btn-group > .btn,
-.btn-group-vertical > .btn {
+.btn-group > .btn, .btn-group > .btn-xxl,
+.btn-group-vertical > .btn,
+.btn-group-vertical > .btn-xxl {
   position: relative;
   flex: 1 1 auto;
 }
-.btn-group > .btn-check:checked + .btn,
+.btn-group > .btn-check:checked + .btn, .btn-group > .btn-check:checked + .btn-xxl,
 .btn-group > .btn-check:focus + .btn,
+.btn-group > .btn-check:focus + .btn-xxl,
 .btn-group > .btn:hover,
+.btn-group > .btn-xxl:hover,
 .btn-group > .btn:focus,
+.btn-group > .btn-xxl:focus,
 .btn-group > .btn:active,
+.btn-group > .btn-xxl:active,
 .btn-group > .btn.active,
+.btn-group > .active.btn-xxl,
 .btn-group-vertical > .btn-check:checked + .btn,
+.btn-group-vertical > .btn-check:checked + .btn-xxl,
 .btn-group-vertical > .btn-check:focus + .btn,
+.btn-group-vertical > .btn-check:focus + .btn-xxl,
 .btn-group-vertical > .btn:hover,
+.btn-group-vertical > .btn-xxl:hover,
 .btn-group-vertical > .btn:focus,
+.btn-group-vertical > .btn-xxl:focus,
 .btn-group-vertical > .btn:active,
-.btn-group-vertical > .btn.active {
+.btn-group-vertical > .btn-xxl:active,
+.btn-group-vertical > .btn.active,
+.btn-group-vertical > .active.btn-xxl {
   z-index: 1;
 }
 
@@ -3767,25 +3781,28 @@ textarea.form-control-lg {
   width: auto;
 }
 
-.btn-group > .btn:not(:first-child),
+.btn-group > .btn:not(:first-child), .btn-group > .btn-xxl:not(:first-child),
 .btn-group > .btn-group:not(:first-child) {
   margin-left: -1px;
 }
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle),
-.btn-group > .btn-group:not(:last-child) > .btn {
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .btn-xxl:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn-group:not(:last-child) > .btn,
+.btn-group > .btn-group:not(:last-child) > .btn-xxl {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-.btn-group > .btn:nth-child(n+3),
+.btn-group > .btn:nth-child(n+3), .btn-group > .btn-xxl:nth-child(n+3),
 .btn-group > :not(.btn-check) + .btn,
-.btn-group > .btn-group:not(:first-child) > .btn {
+.btn-group > :not(.btn-check) + .btn-xxl,
+.btn-group > .btn-group:not(:first-child) > .btn,
+.btn-group > .btn-group:not(:first-child) > .btn-xxl {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
 
 .dropdown-toggle-split {
-  padding-right: 0.5625rem;
-  padding-left: 0.5625rem;
+  padding-right: 1.3125rem;
+  padding-left: 1.3125rem;
 }
 .dropdown-toggle-split::after, .dropup .dropdown-toggle-split::after, .dropend .dropdown-toggle-split::after {
   margin-left: 0;
@@ -3794,14 +3811,14 @@ textarea.form-control-lg {
   margin-right: 0;
 }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .btn-group-sm > .btn-xxl + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem;
 }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split {
-  padding-right: 0.75rem;
-  padding-left: 0.75rem;
+.btn-lg + .dropdown-toggle-split, .btn-xxl + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .btn-group-lg > .btn-xxl + .dropdown-toggle-split {
+  padding-right: 1.125rem;
+  padding-left: 1.125rem;
 }
 
 .btn-group-vertical {
@@ -3809,21 +3826,23 @@ textarea.form-control-lg {
   align-items: flex-start;
   justify-content: center;
 }
-.btn-group-vertical > .btn,
+.btn-group-vertical > .btn, .btn-group-vertical > .btn-xxl,
 .btn-group-vertical > .btn-group {
   width: 100%;
 }
-.btn-group-vertical > .btn:not(:first-child),
+.btn-group-vertical > .btn:not(:first-child), .btn-group-vertical > .btn-xxl:not(:first-child),
 .btn-group-vertical > .btn-group:not(:first-child) {
   margin-top: -1px;
 }
-.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle),
-.btn-group-vertical > .btn-group:not(:last-child) > .btn {
+.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .btn-xxl:not(:last-child):not(.dropdown-toggle),
+.btn-group-vertical > .btn-group:not(:last-child) > .btn,
+.btn-group-vertical > .btn-group:not(:last-child) > .btn-xxl {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
-.btn-group-vertical > .btn ~ .btn,
-.btn-group-vertical > .btn-group:not(:first-child) > .btn {
+.btn-group-vertical > .btn ~ .btn, .btn-group-vertical > .btn-xxl ~ .btn, .btn-group-vertical > .btn ~ .btn-xxl, .btn-group-vertical > .btn-xxl ~ .btn-xxl,
+.btn-group-vertical > .btn-group:not(:first-child) > .btn,
+.btn-group-vertical > .btn-group:not(:first-child) > .btn-xxl {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
@@ -4621,7 +4640,7 @@ textarea.form-control-lg {
   border-bottom-right-radius: 0.2rem;
 }
 
-.badge {
+.badge, .error-404 .tagcloud a {
   display: inline-block;
   padding: 0.35em 0.65em;
   font-size: 0.75em;
@@ -4633,11 +4652,11 @@ textarea.form-control-lg {
   vertical-align: baseline;
   border-radius: 0.25rem;
 }
-.badge:empty {
+.badge:empty, .error-404 .tagcloud a:empty {
   display: none;
 }
 
-.btn .badge {
+.btn .badge, .btn .error-404 .tagcloud a, .error-404 .tagcloud .btn a, .btn-xxl .badge, .btn-xxl .error-404 .tagcloud a, .error-404 .tagcloud .btn-xxl a {
   position: relative;
   top: -1px;
 }
@@ -6325,7 +6344,7 @@ textarea.form-control-lg {
   display: none !important;
 }
 
-.shadow {
+.shadow, .page-home-container .home-container .bootcamps-container .bootcamps-body .bootcamp-container .bootcamp .card:hover {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
 
@@ -6781,7 +6800,7 @@ textarea.form-control-lg {
   margin: 0 !important;
 }
 
-.m-1 {
+.m-1, .error-404 .tagcloud a {
   margin: 0.25rem !important;
 }
 
@@ -7346,7 +7365,7 @@ textarea.form-control-lg {
   color: inherit !important;
 }
 
-.bg-primary {
+.bg-primary, .error-404 .tagcloud a {
   background-color: #ec4e68 !important;
 }
 
@@ -7438,7 +7457,7 @@ textarea.form-control-lg {
   border-radius: 50% !important;
 }
 
-.rounded-pill {
+.rounded-pill, .error-404 .tagcloud a {
   border-radius: 50rem !important;
 }
 
@@ -10847,7 +10866,7 @@ body {
 .btn-link-general {
   background-color: var(--pink);
   color: white;
-  height: 40px;
+  min-height: 40px;
   width: 175px;
   text-transform: uppercase;
   font-weight: 600;
@@ -10918,8 +10937,8 @@ footer .footer-body .footer-nav-body .footer-menus .menu ul li ul li a, .page-hr
 }
 
 .page-booking-container .common-container .common-content .content h1, .page-hr-portal-container .hr-portal-container .hr-portal-content .content h1, .page-common-container .common-container .common-content .content h1, .page-meet-container .meet-container .ml-profile .row .ml-profile-desc h1, .page-handbook-container .handbook-container .handbook-collapse-container .handbook-list h1, .page-handbook-container .handbook-container .company-info .c-info-desc h1, .page-adv-diploma-container .ad-container .apply-button-container h1, .page-adv-diploma-container .ad-container .requirements-details .requirements-descriptions h1, .page-adv-diploma-container .ad-container .application-details .applications-informations .informations-body .info-labels-description h1, .page-adv-diploma-container .ad-container .diploma-studies .listing-studies .study-content h1, .single-page-bootcamp .bootcamp-learn-how .bootcamp-learn-body .second-content .second-content-sched h1, .single-page-bootcamp .bootcamp-learn-how .bootcamp-learn-body .second-content .second-content-text h1, .single-page-bootcamp .bootcamp-learn-how .bootcamp-learn-body .first-content .first-content-text h1, .single-page-bootcamp .single-bootcamp-container .bootcamp-structure .bootcamp-structure-info h1, .page-bootcamp-container .bootcamp-container .bootcamp-list-container .bootcamp-body .next-term-other-info .info h1, .page-bootcamp-container .bootcamp-container .bootcamp-list-container .bootcamp-body .next-term-title .term-title h1, .page-bootcamp-container .bootcamp-container .bootcamp-list-container .bootcamp-body .bootcamp .bootcamp-title h1, .page-bootcamp-container .bootcamp-container .bootcamp-structure .bootcamp-structure-info h1, .page-event-container .banner-form-header .banner-form-label h1, .page-event-container .event-container-body .event-container .current-events .event-box .event-info .event-content h1,
-.page-event-container .event-container-body .event-container .previous-events .event-box .event-info .event-content h1, .page-event-container .event-container-body .event-container .result-search h1, .page-blog-container .blog-container .search-popular .popular-posts h1, .page-blog-container .blog-container .blog-list .blog .blog-content h1, .page-blog-container .blog-container .blog-list .result-search h1, .page-partner-container .partner-body .partners-info .partner-content h1, .page-partner-container .partner-body .partner-countries .list-continent li h1, .page-contact-container .book-form-header .book-form-label h1, .page-contact-container .location-contact .location-description h1, .page-home-container .home-container .about-us-new-body .about-us-container .about-info h1, .page-home-container .home-container .video-list-container .video-displays .video-items .video-info h1, .page-home-container .home-container .study-courses .courses-body .courses-container .courses .courses-info .courses-content h1, .page-home-container .home-container .event-workshop .ew-body .events-container .event .event-info .event-content h1, .home-page-info .page-content .mentor-list h1, .home-page-info .page-content .text-content h1, .contact-page-header .page-content .sched-and-info h1, .contact-page-header .page-content .form-header .form-sub-header h1, .page-booking-container .common-container .common-content .content .h1, .page-hr-portal-container .hr-portal-container .hr-portal-content .content .h1, .page-common-container .common-container .common-content .content .h1, .page-meet-container .meet-container .ml-profile .row .ml-profile-desc .h1, .page-handbook-container .handbook-container .handbook-collapse-container .handbook-list .h1, .page-handbook-container .handbook-container .company-info .c-info-desc .h1, .page-adv-diploma-container .ad-container .apply-button-container .h1, .page-adv-diploma-container .ad-container .requirements-details .requirements-descriptions .h1, .page-adv-diploma-container .ad-container .application-details .applications-informations .informations-body .info-labels-description .h1, .page-adv-diploma-container .ad-container .diploma-studies .listing-studies .study-content .h1, .single-page-bootcamp .bootcamp-learn-how .bootcamp-learn-body .second-content .second-content-sched .h1, .single-page-bootcamp .bootcamp-learn-how .bootcamp-learn-body .second-content .second-content-text .h1, .single-page-bootcamp .bootcamp-learn-how .bootcamp-learn-body .first-content .first-content-text .h1, .single-page-bootcamp .single-bootcamp-container .bootcamp-structure .bootcamp-structure-info .h1, .page-bootcamp-container .bootcamp-container .bootcamp-list-container .bootcamp-body .next-term-other-info .info .h1, .page-bootcamp-container .bootcamp-container .bootcamp-list-container .bootcamp-body .next-term-title .term-title .h1, .page-bootcamp-container .bootcamp-container .bootcamp-list-container .bootcamp-body .bootcamp .bootcamp-title .h1, .page-bootcamp-container .bootcamp-container .bootcamp-structure .bootcamp-structure-info .h1, .page-event-container .banner-form-header .banner-form-label .h1, .page-event-container .event-container-body .event-container .current-events .event-box .event-info .event-content .h1,
-.page-event-container .event-container-body .event-container .previous-events .event-box .event-info .event-content .h1, .page-event-container .event-container-body .event-container .result-search .h1, .page-blog-container .blog-container .search-popular .popular-posts .h1, .page-blog-container .blog-container .blog-list .blog .blog-content .h1, .page-blog-container .blog-container .blog-list .result-search .h1, .page-partner-container .partner-body .partners-info .partner-content .h1, .page-partner-container .partner-body .partner-countries .list-continent li .h1, .page-contact-container .book-form-header .book-form-label .h1, .page-contact-container .location-contact .location-description .h1, .page-home-container .home-container .about-us-new-body .about-us-container .about-info .h1, .page-home-container .home-container .video-list-container .video-displays .video-items .video-info .h1, .page-home-container .home-container .study-courses .courses-body .courses-container .courses .courses-info .courses-content .h1, .page-home-container .home-container .event-workshop .ew-body .events-container .event .event-info .event-content .h1, .home-page-info .page-content .mentor-list .h1, .home-page-info .page-content .text-content .h1, .contact-page-header .page-content .sched-and-info .h1, .contact-page-header .page-content .form-header .form-sub-header .h1,
+.page-event-container .event-container-body .event-container .previous-events .event-box .event-info .event-content h1, .page-event-container .event-container-body .event-container .result-search h1, .page-blog-container .blog-container .search-popular .popular-posts h1, .page-blog-container .blog-container .blog-list .blog .blog-content h1, .page-blog-container .blog-container .blog-list .result-search h1, .page-partner-container .partner-body .partners-info .partner-content h1, .page-partner-container .partner-body .partner-countries .list-continent li h1, .page-contact-container .book-form-header .book-form-label h1, .page-contact-container .location-contact .location-description h1, .page-home-container .home-container .video-list-container .video-displays .video-items .video-info h1, .page-home-container .home-container .event-workshop .ew-body .events-container .event .event-info .event-content h1, .home-page-info .page-content .mentor-list h1, .home-page-info .page-content .text-content h1, .contact-page-header .page-content .sched-and-info h1, .contact-page-header .page-content .form-header .form-sub-header h1, .page-booking-container .common-container .common-content .content .h1, .page-hr-portal-container .hr-portal-container .hr-portal-content .content .h1, .page-common-container .common-container .common-content .content .h1, .page-meet-container .meet-container .ml-profile .row .ml-profile-desc .h1, .page-handbook-container .handbook-container .handbook-collapse-container .handbook-list .h1, .page-handbook-container .handbook-container .company-info .c-info-desc .h1, .page-adv-diploma-container .ad-container .apply-button-container .h1, .page-adv-diploma-container .ad-container .requirements-details .requirements-descriptions .h1, .page-adv-diploma-container .ad-container .application-details .applications-informations .informations-body .info-labels-description .h1, .page-adv-diploma-container .ad-container .diploma-studies .listing-studies .study-content .h1, .single-page-bootcamp .bootcamp-learn-how .bootcamp-learn-body .second-content .second-content-sched .h1, .single-page-bootcamp .bootcamp-learn-how .bootcamp-learn-body .second-content .second-content-text .h1, .single-page-bootcamp .bootcamp-learn-how .bootcamp-learn-body .first-content .first-content-text .h1, .single-page-bootcamp .single-bootcamp-container .bootcamp-structure .bootcamp-structure-info .h1, .page-bootcamp-container .bootcamp-container .bootcamp-list-container .bootcamp-body .next-term-other-info .info .h1, .page-bootcamp-container .bootcamp-container .bootcamp-list-container .bootcamp-body .next-term-title .term-title .h1, .page-bootcamp-container .bootcamp-container .bootcamp-list-container .bootcamp-body .bootcamp .bootcamp-title .h1, .page-bootcamp-container .bootcamp-container .bootcamp-structure .bootcamp-structure-info .h1, .page-event-container .banner-form-header .banner-form-label .h1, .page-event-container .event-container-body .event-container .current-events .event-box .event-info .event-content .h1,
+.page-event-container .event-container-body .event-container .previous-events .event-box .event-info .event-content .h1, .page-event-container .event-container-body .event-container .result-search .h1, .page-blog-container .blog-container .search-popular .popular-posts .h1, .page-blog-container .blog-container .blog-list .blog .blog-content .h1, .page-blog-container .blog-container .blog-list .result-search .h1, .page-partner-container .partner-body .partners-info .partner-content .h1, .page-partner-container .partner-body .partner-countries .list-continent li .h1, .page-contact-container .book-form-header .book-form-label .h1, .page-contact-container .location-contact .location-description .h1, .page-home-container .home-container .video-list-container .video-displays .video-items .video-info .h1, .page-home-container .home-container .event-workshop .ew-body .events-container .event .event-info .event-content .h1, .home-page-info .page-content .mentor-list .h1, .home-page-info .page-content .text-content .h1, .contact-page-header .page-content .sched-and-info .h1, .contact-page-header .page-content .form-header .form-sub-header .h1,
 .page-booking-container .common-container .common-content .content h2,
 .page-hr-portal-container .hr-portal-container .hr-portal-content .content h2,
 .page-common-container .common-container .common-content .content h2,
@@ -10949,9 +10968,7 @@ footer .footer-body .footer-nav-body .footer-menus .menu ul li ul li a, .page-hr
 .page-partner-container .partner-body .partner-countries .list-continent li h2,
 .page-contact-container .book-form-header .book-form-label h2,
 .page-contact-container .location-contact .location-description h2,
-.page-home-container .home-container .about-us-new-body .about-us-container .about-info h2,
 .page-home-container .home-container .video-list-container .video-displays .video-items .video-info h2,
-.page-home-container .home-container .study-courses .courses-body .courses-container .courses .courses-info .courses-content h2,
 .page-home-container .home-container .event-workshop .ew-body .events-container .event .event-info .event-content h2,
 .home-page-info .page-content .mentor-list h2,
 .home-page-info .page-content .text-content h2,
@@ -10986,9 +11003,7 @@ footer .footer-body .footer-nav-body .footer-menus .menu ul li ul li a, .page-hr
 .page-partner-container .partner-body .partner-countries .list-continent li .h2,
 .page-contact-container .book-form-header .book-form-label .h2,
 .page-contact-container .location-contact .location-description .h2,
-.page-home-container .home-container .about-us-new-body .about-us-container .about-info .h2,
 .page-home-container .home-container .video-list-container .video-displays .video-items .video-info .h2,
-.page-home-container .home-container .study-courses .courses-body .courses-container .courses .courses-info .courses-content .h2,
 .page-home-container .home-container .event-workshop .ew-body .events-container .event .event-info .event-content .h2,
 .home-page-info .page-content .mentor-list .h2,
 .home-page-info .page-content .text-content .h2,
@@ -11023,9 +11038,7 @@ footer .footer-body .footer-nav-body .footer-menus .menu ul li ul li a, .page-hr
 .page-partner-container .partner-body .partner-countries .list-continent li h3,
 .page-contact-container .book-form-header .book-form-label h3,
 .page-contact-container .location-contact .location-description h3,
-.page-home-container .home-container .about-us-new-body .about-us-container .about-info h3,
 .page-home-container .home-container .video-list-container .video-displays .video-items .video-info h3,
-.page-home-container .home-container .study-courses .courses-body .courses-container .courses .courses-info .courses-content h3,
 .page-home-container .home-container .event-workshop .ew-body .events-container .event .event-info .event-content h3,
 .home-page-info .page-content .mentor-list h3,
 .home-page-info .page-content .text-content h3,
@@ -11060,9 +11073,7 @@ footer .footer-body .footer-nav-body .footer-menus .menu ul li ul li a, .page-hr
 .page-partner-container .partner-body .partner-countries .list-continent li .h3,
 .page-contact-container .book-form-header .book-form-label .h3,
 .page-contact-container .location-contact .location-description .h3,
-.page-home-container .home-container .about-us-new-body .about-us-container .about-info .h3,
 .page-home-container .home-container .video-list-container .video-displays .video-items .video-info .h3,
-.page-home-container .home-container .study-courses .courses-body .courses-container .courses .courses-info .courses-content .h3,
 .page-home-container .home-container .event-workshop .ew-body .events-container .event .event-info .event-content .h3,
 .home-page-info .page-content .mentor-list .h3,
 .home-page-info .page-content .text-content .h3,
@@ -11097,9 +11108,7 @@ footer .footer-body .footer-nav-body .footer-menus .menu ul li ul li a, .page-hr
 .page-partner-container .partner-body .partner-countries .list-continent li h4,
 .page-contact-container .book-form-header .book-form-label h4,
 .page-contact-container .location-contact .location-description h4,
-.page-home-container .home-container .about-us-new-body .about-us-container .about-info h4,
 .page-home-container .home-container .video-list-container .video-displays .video-items .video-info h4,
-.page-home-container .home-container .study-courses .courses-body .courses-container .courses .courses-info .courses-content h4,
 .page-home-container .home-container .event-workshop .ew-body .events-container .event .event-info .event-content h4,
 .home-page-info .page-content .mentor-list h4,
 .home-page-info .page-content .text-content h4,
@@ -11134,9 +11143,7 @@ footer .footer-body .footer-nav-body .footer-menus .menu ul li ul li a, .page-hr
 .page-partner-container .partner-body .partner-countries .list-continent li .h4,
 .page-contact-container .book-form-header .book-form-label .h4,
 .page-contact-container .location-contact .location-description .h4,
-.page-home-container .home-container .about-us-new-body .about-us-container .about-info .h4,
 .page-home-container .home-container .video-list-container .video-displays .video-items .video-info .h4,
-.page-home-container .home-container .study-courses .courses-body .courses-container .courses .courses-info .courses-content .h4,
 .page-home-container .home-container .event-workshop .ew-body .events-container .event .event-info .event-content .h4,
 .home-page-info .page-content .mentor-list .h4,
 .home-page-info .page-content .text-content .h4,
@@ -11171,9 +11178,7 @@ footer .footer-body .footer-nav-body .footer-menus .menu ul li ul li a, .page-hr
 .page-partner-container .partner-body .partner-countries .list-continent li h5,
 .page-contact-container .book-form-header .book-form-label h5,
 .page-contact-container .location-contact .location-description h5,
-.page-home-container .home-container .about-us-new-body .about-us-container .about-info h5,
 .page-home-container .home-container .video-list-container .video-displays .video-items .video-info h5,
-.page-home-container .home-container .study-courses .courses-body .courses-container .courses .courses-info .courses-content h5,
 .page-home-container .home-container .event-workshop .ew-body .events-container .event .event-info .event-content h5,
 .home-page-info .page-content .mentor-list h5,
 .home-page-info .page-content .text-content h5,
@@ -11208,9 +11213,7 @@ footer .footer-body .footer-nav-body .footer-menus .menu ul li ul li a, .page-hr
 .page-partner-container .partner-body .partner-countries .list-continent li .h5,
 .page-contact-container .book-form-header .book-form-label .h5,
 .page-contact-container .location-contact .location-description .h5,
-.page-home-container .home-container .about-us-new-body .about-us-container .about-info .h5,
 .page-home-container .home-container .video-list-container .video-displays .video-items .video-info .h5,
-.page-home-container .home-container .study-courses .courses-body .courses-container .courses .courses-info .courses-content .h5,
 .page-home-container .home-container .event-workshop .ew-body .events-container .event .event-info .event-content .h5,
 .home-page-info .page-content .mentor-list .h5,
 .home-page-info .page-content .text-content .h5,
@@ -11245,9 +11248,7 @@ footer .footer-body .footer-nav-body .footer-menus .menu ul li ul li a, .page-hr
 .page-partner-container .partner-body .partner-countries .list-continent li h6,
 .page-contact-container .book-form-header .book-form-label h6,
 .page-contact-container .location-contact .location-description h6,
-.page-home-container .home-container .about-us-new-body .about-us-container .about-info h6,
 .page-home-container .home-container .video-list-container .video-displays .video-items .video-info h6,
-.page-home-container .home-container .study-courses .courses-body .courses-container .courses .courses-info .courses-content h6,
 .page-home-container .home-container .event-workshop .ew-body .events-container .event .event-info .event-content h6,
 .home-page-info .page-content .mentor-list h6,
 .home-page-info .page-content .text-content h6,
@@ -11282,9 +11283,7 @@ footer .footer-body .footer-nav-body .footer-menus .menu ul li ul li a, .page-hr
 .page-partner-container .partner-body .partner-countries .list-continent li .h6,
 .page-contact-container .book-form-header .book-form-label .h6,
 .page-contact-container .location-contact .location-description .h6,
-.page-home-container .home-container .about-us-new-body .about-us-container .about-info .h6,
 .page-home-container .home-container .video-list-container .video-displays .video-items .video-info .h6,
-.page-home-container .home-container .study-courses .courses-body .courses-container .courses .courses-info .courses-content .h6,
 .page-home-container .home-container .event-workshop .ew-body .events-container .event .event-info .event-content .h6,
 .home-page-info .page-content .mentor-list .h6,
 .home-page-info .page-content .text-content .h6,
@@ -11294,11 +11293,11 @@ footer .footer-body .footer-nav-body .footer-menus .menu ul li ul li a, .page-hr
   font-weight: 700;
 }
 .page-booking-container .common-container .common-content .content p, .page-hr-portal-container .hr-portal-container .hr-portal-content .content p, .page-common-container .common-container .common-content .content p, .page-meet-container .meet-container .ml-profile .row .ml-profile-desc p, .page-handbook-container .handbook-container .handbook-collapse-container .handbook-list p, .page-handbook-container .handbook-container .company-info .c-info-desc p, .page-adv-diploma-container .ad-container .apply-button-container p, .page-adv-diploma-container .ad-container .requirements-details .requirements-descriptions p, .page-adv-diploma-container .ad-container .application-details .applications-informations .informations-body .info-labels-description p, .page-adv-diploma-container .ad-container .diploma-studies .listing-studies .study-content p, .single-page-bootcamp .bootcamp-learn-how .bootcamp-learn-body .second-content .second-content-sched p, .single-page-bootcamp .bootcamp-learn-how .bootcamp-learn-body .second-content .second-content-text p, .single-page-bootcamp .bootcamp-learn-how .bootcamp-learn-body .first-content .first-content-text p, .single-page-bootcamp .single-bootcamp-container .bootcamp-structure .bootcamp-structure-info p, .page-bootcamp-container .bootcamp-container .bootcamp-list-container .bootcamp-body .next-term-other-info .info p, .page-bootcamp-container .bootcamp-container .bootcamp-list-container .bootcamp-body .next-term-title .term-title p, .page-bootcamp-container .bootcamp-container .bootcamp-list-container .bootcamp-body .bootcamp .bootcamp-title p, .page-bootcamp-container .bootcamp-container .bootcamp-structure .bootcamp-structure-info p, .page-event-container .banner-form-header .banner-form-label p, .page-event-container .event-container-body .event-container .current-events .event-box .event-info .event-content p,
-.page-event-container .event-container-body .event-container .previous-events .event-box .event-info .event-content p, .page-event-container .event-container-body .event-container .result-search p, .page-blog-container .blog-container .search-popular .popular-posts p, .page-blog-container .blog-container .blog-list .blog .blog-content p, .page-blog-container .blog-container .blog-list .result-search p, .page-partner-container .partner-body .partners-info .partner-content p, .page-partner-container .partner-body .partner-countries .list-continent li p, .page-contact-container .book-form-header .book-form-label p, .page-contact-container .location-contact .location-description p, .page-home-container .home-container .about-us-new-body .about-us-container .about-info p, .page-home-container .home-container .video-list-container .video-displays .video-items .video-info p, .page-home-container .home-container .study-courses .courses-body .courses-container .courses .courses-info .courses-content p, .page-home-container .home-container .event-workshop .ew-body .events-container .event .event-info .event-content p, .home-page-info .page-content .mentor-list p, .home-page-info .page-content .text-content p, .contact-page-header .page-content .sched-and-info p, .contact-page-header .page-content .form-header .form-sub-header p {
+.page-event-container .event-container-body .event-container .previous-events .event-box .event-info .event-content p, .page-event-container .event-container-body .event-container .result-search p, .page-blog-container .blog-container .search-popular .popular-posts p, .page-blog-container .blog-container .blog-list .blog .blog-content p, .page-blog-container .blog-container .blog-list .result-search p, .page-partner-container .partner-body .partners-info .partner-content p, .page-partner-container .partner-body .partner-countries .list-continent li p, .page-contact-container .book-form-header .book-form-label p, .page-contact-container .location-contact .location-description p, .page-home-container .home-container .video-list-container .video-displays .video-items .video-info p, .page-home-container .home-container .event-workshop .ew-body .events-container .event .event-info .event-content p, .home-page-info .page-content .mentor-list p, .home-page-info .page-content .text-content p, .contact-page-header .page-content .sched-and-info p, .contact-page-header .page-content .form-header .form-sub-header p {
   font-weight: 600;
 }
 .page-booking-container .common-container .common-content .content b, .page-hr-portal-container .hr-portal-container .hr-portal-content .content b, .page-common-container .common-container .common-content .content b, .page-meet-container .meet-container .ml-profile .row .ml-profile-desc b, .page-handbook-container .handbook-container .handbook-collapse-container .handbook-list b, .page-handbook-container .handbook-container .company-info .c-info-desc b, .page-adv-diploma-container .ad-container .apply-button-container b, .page-adv-diploma-container .ad-container .requirements-details .requirements-descriptions b, .page-adv-diploma-container .ad-container .application-details .applications-informations .informations-body .info-labels-description b, .page-adv-diploma-container .ad-container .diploma-studies .listing-studies .study-content b, .single-page-bootcamp .bootcamp-learn-how .bootcamp-learn-body .second-content .second-content-sched b, .single-page-bootcamp .bootcamp-learn-how .bootcamp-learn-body .second-content .second-content-text b, .single-page-bootcamp .bootcamp-learn-how .bootcamp-learn-body .first-content .first-content-text b, .single-page-bootcamp .single-bootcamp-container .bootcamp-structure .bootcamp-structure-info b, .page-bootcamp-container .bootcamp-container .bootcamp-list-container .bootcamp-body .next-term-other-info .info b, .page-bootcamp-container .bootcamp-container .bootcamp-list-container .bootcamp-body .next-term-title .term-title b, .page-bootcamp-container .bootcamp-container .bootcamp-list-container .bootcamp-body .bootcamp .bootcamp-title b, .page-bootcamp-container .bootcamp-container .bootcamp-structure .bootcamp-structure-info b, .page-event-container .banner-form-header .banner-form-label b, .page-event-container .event-container-body .event-container .current-events .event-box .event-info .event-content b,
-.page-event-container .event-container-body .event-container .previous-events .event-box .event-info .event-content b, .page-event-container .event-container-body .event-container .result-search b, .page-blog-container .blog-container .search-popular .popular-posts b, .page-blog-container .blog-container .blog-list .blog .blog-content b, .page-blog-container .blog-container .blog-list .result-search b, .page-partner-container .partner-body .partners-info .partner-content b, .page-partner-container .partner-body .partner-countries .list-continent li b, .page-contact-container .book-form-header .book-form-label b, .page-contact-container .location-contact .location-description b, .page-home-container .home-container .about-us-new-body .about-us-container .about-info b, .page-home-container .home-container .video-list-container .video-displays .video-items .video-info b, .page-home-container .home-container .study-courses .courses-body .courses-container .courses .courses-info .courses-content b, .page-home-container .home-container .event-workshop .ew-body .events-container .event .event-info .event-content b, .home-page-info .page-content .mentor-list b, .home-page-info .page-content .text-content b, .contact-page-header .page-content .sched-and-info b, .contact-page-header .page-content .form-header .form-sub-header b,
+.page-event-container .event-container-body .event-container .previous-events .event-box .event-info .event-content b, .page-event-container .event-container-body .event-container .result-search b, .page-blog-container .blog-container .search-popular .popular-posts b, .page-blog-container .blog-container .blog-list .blog .blog-content b, .page-blog-container .blog-container .blog-list .result-search b, .page-partner-container .partner-body .partners-info .partner-content b, .page-partner-container .partner-body .partner-countries .list-continent li b, .page-contact-container .book-form-header .book-form-label b, .page-contact-container .location-contact .location-description b, .page-home-container .home-container .video-list-container .video-displays .video-items .video-info b, .page-home-container .home-container .event-workshop .ew-body .events-container .event .event-info .event-content b, .home-page-info .page-content .mentor-list b, .home-page-info .page-content .text-content b, .contact-page-header .page-content .sched-and-info b, .contact-page-header .page-content .form-header .form-sub-header b,
 .page-booking-container .common-container .common-content .content strong,
 .page-hr-portal-container .hr-portal-container .hr-portal-content .content strong,
 .page-common-container .common-container .common-content .content strong,
@@ -11328,9 +11327,7 @@ footer .footer-body .footer-nav-body .footer-menus .menu ul li ul li a, .page-hr
 .page-partner-container .partner-body .partner-countries .list-continent li strong,
 .page-contact-container .book-form-header .book-form-label strong,
 .page-contact-container .location-contact .location-description strong,
-.page-home-container .home-container .about-us-new-body .about-us-container .about-info strong,
 .page-home-container .home-container .video-list-container .video-displays .video-items .video-info strong,
-.page-home-container .home-container .study-courses .courses-body .courses-container .courses .courses-info .courses-content strong,
 .page-home-container .home-container .event-workshop .ew-body .events-container .event .event-info .event-content strong,
 .home-page-info .page-content .mentor-list strong,
 .home-page-info .page-content .text-content strong,
@@ -11424,6 +11421,25 @@ div.wpforms-container-full .wpforms-form button[type=submit]:focus {
 .navigation .navigation-bar .nav-list ul li a {
   font-size: 0.9rem;
   text-decoration: none;
+}
+
+.btn-lg, .btn-xxl, .btn-group-lg > .btn, .btn-group-lg > .btn-xxl {
+  font-weight: 700;
+}
+
+.btn-primary, .btn-xxl {
+  color: #fff !important;
+}
+
+.btn-light {
+  color: var(--pink) !important;
+}
+
+@media (min-width: 992px) {
+  .btn-xxl {
+    padding: 0.5rem 3rem;
+    font-size: 2rem;
+  }
 }
 
 .header-body {
@@ -11560,10 +11576,6 @@ div.wpforms-container-full .wpforms-form button[type=submit]:focus {
 }
 .home-info-slider .row .info-slider-body-list .header-info-text p {
   width: 96%;
-}
-.home-info-slider .row .info-slider-body-list a .btn-link-general {
-  font-weight: 700;
-  font-size: 20px;
 }
 .home-info-slider .info-slider-navigation {
   position: absolute;
@@ -11848,18 +11860,6 @@ div.wpforms-container-full .wpforms-form button[type=submit]:focus {
 .page-home-container .home-container .event-workshop .ew-body .events-container .event .event-info .event-content a:hover h4, .page-home-container .home-container .event-workshop .ew-body .events-container .event .event-info .event-content a:hover .h4 {
   color: var(--pink-dark);
 }
-.page-home-container .home-container .event-workshop .ew-body .events-container .event-btn {
-  text-align: center;
-}
-.page-home-container .home-container .event-workshop .ew-body .events-container .event-btn .btn-link-general {
-  background-color: var(--pink-dark);
-  color: white;
-  font-weight: 700;
-  font-size: 15px;
-}
-.page-home-container .home-container .event-workshop .ew-body .events-container .event-btn .btn-link-general:hover {
-  background-color: var(--pink);
-}
 .page-home-container .home-container .second-banner {
   position: relative;
   height: 200px;
@@ -11911,11 +11911,10 @@ div.wpforms-container-full .wpforms-form button[type=submit]:focus {
   border-bottom: 1px solid var(--pink);
   overflow: hidden;
 }
-.page-home-container .home-container .study-courses .courses-body .courses-container .courses .courses-info .courses-content {
-  text-transform: uppercase;
-}
-.page-home-container .home-container .study-courses .courses-body .courses-container .courses .courses-info .courses-content h3, .page-home-container .home-container .study-courses .courses-body .courses-container .courses .courses-info .courses-content .h3 {
-  text-transform: uppercase;
+.page-home-container .home-container .study-courses .courses-body .courses-container .courses .courses-info h3, .page-home-container .home-container .study-courses .courses-body .courses-container .courses .courses-info .h3 {
+  color: var(--pink);
+  font-weight: 700;
+  text-transform: capitalize;
 }
 .page-home-container .home-container .study-courses .courses-body .courses-container .courses-btn {
   text-align: center;
@@ -11981,19 +11980,6 @@ div.wpforms-container-full .wpforms-form button[type=submit]:focus {
   font-size: 15px;
   width: 20px;
 }
-.page-home-container .home-container .bootcamps-container .bootcamps-body .bootcamp-container .bootcamp-btn {
-  text-align: center;
-}
-.page-home-container .home-container .bootcamps-container .bootcamps-body .bootcamp-container .bootcamp-btn .btn-link-general {
-  background-color: var(--pink);
-  color: white;
-  font-weight: 700;
-  font-size: 15px;
-  width: 230px;
-}
-.page-home-container .home-container .bootcamps-container .bootcamps-body .bootcamp-container .bootcamp-btn .btn-link-general:hover {
-  background-color: var(--pink-dark);
-}
 .page-home-container .home-container .video-list-container {
   background-color: var(--gray-light);
 }
@@ -12045,20 +12031,14 @@ div.wpforms-container-full .wpforms-form button[type=submit]:focus {
 .page-home-container .home-container .about-us-new-body .about-us-container .about-info h3, .page-home-container .home-container .about-us-new-body .about-us-container .about-info .h3 {
   color: #fff;
 }
+.page-home-container .home-container .about-us-new-body .about-us-container .about-info h5, .page-home-container .home-container .about-us-new-body .about-us-container .about-info .h5 {
+  font-weight: 700;
+}
 .page-home-container .home-container .about-us-new-body .about-us-container .about-info p {
   font-weight: 600;
 }
 .page-home-container .home-container .about-us-new-body .about-us-container .about-info .about-us-btn {
   margin-top: 30px;
-}
-.page-home-container .home-container .about-us-new-body .about-us-container .about-info .about-us-btn .btn-link-general {
-  background-color: #fff;
-  color: var(--pink);
-  font-weight: 700;
-  font-size: 16px;
-}
-.page-home-container .home-container .about-us-new-body .about-us-container .about-info .about-us-btn .btn-link-general:hover {
-  background-color: #f2f2f2;
 }
 .page-home-container .home-container .hashtag-container {
   text-align: center;
@@ -13098,11 +13078,11 @@ div.wpforms-container-full .wpforms-form button[type=submit]:focus {
 }
 .page-adv-diploma-container .ad-container .diploma-sched .schedules-details .btn-schedule {
   margin-top: 10px;
-  margin-left: 15%;
 }
 .page-adv-diploma-container .ad-container .diploma-sched .schedules-details .btn-schedule a button {
-  height: 45px;
-  width: 230px;
+  padding: 8px 16px;
+  min-height: 45px;
+  width: 280px;
 }
 .page-adv-diploma-container .ad-container .diploma-studies .studies-title {
   margin-bottom: 25px;
@@ -13230,33 +13210,6 @@ div.wpforms-container-full .wpforms-form button[type=submit]:focus {
 }
 .page-adv-diploma-container .ad-container .apply-button-container .apply-label .link {
   color: var(--pink-dark);
-}
-.page-adv-diploma-container .ad-container .apply-button-container .apply-label a button {
-  width: 300px;
-  height: 50px;
-  font-weight: 700;
-  font-size: 30px;
-}
-.page-adv-diploma-container .ad-container .apply-button-container .apply-button {
-  margin-top: 15px;
-  text-align: left;
-  margin-left: 8.3%;
-}
-.page-adv-diploma-container .ad-container .apply-button-container .apply-button a {
-  display: inline-block;
-}
-.page-adv-diploma-container .ad-container .apply-button-container .apply-button a p {
-  color: #000;
-  width: 250px;
-  font-size: 9px;
-  font-weight: 600;
-  line-height: 1.5;
-}
-.page-adv-diploma-container .ad-container .apply-button-container .apply-button a:hover {
-  text-decoration: none;
-}
-.page-adv-diploma-container .ad-container .apply-button-container .apply-button a:hover p {
-  color: var(--pink);
 }
 
 .single-page-diploma {
@@ -13627,10 +13580,7 @@ div.wpforms-container-full .wpforms-form button[type=submit]:focus {
   height: auto;
 }
 .page-common-container .common-container .common-content .content {
-  padding: 20px 60px;
-  color: #000;
   font-weight: 600;
-  line-height: 1.5;
 }
 .page-common-container .common-container .common-content .content b,
 .page-common-container .common-container .common-content .content strong,
@@ -13756,8 +13706,6 @@ div.wpforms-container-full .wpforms-form button[type=submit]:focus {
 }
 .page-booking-container .common-container .common-content .content {
   padding: 20px 60px;
-  color: #000;
-  font-weight: 600;
   line-height: 1.5;
 }
 .page-booking-container .common-container .common-content .content p {
@@ -13826,12 +13774,6 @@ footer .footer-body .apply-now-body {
 }
 footer .footer-body .apply-now-body .background-transparency {
   background-color: unset;
-}
-footer .footer-body .apply-now-body a button {
-  width: 300px;
-  height: 50px;
-  font-weight: 700;
-  font-size: 30px;
 }
 footer .footer-body .footer-nav-body .footer-menus {
   overflow: auto;
@@ -13912,10 +13854,10 @@ footer .footer-body .footer-nav-body .footer-copyright .copy-text .copyright .te
   ##Screen = B/w 1025px to 1280px
 */
 @media (min-width: 1024px) and (max-width: 1280px) {
-  .page-home-container .home-container .study-courses .courses-body .courses-container .courses .card-like .courses-info .courses-content .courses-read-more a .btn-link-general {
+  .page-home-container .home-container .study-courses .courses-body .courses-container .courses .card-like .courses-info a .btn-link-general {
     width: 100%;
   }
-  .page-home-container .home-container .study-courses .courses-body .courses-container .courses .card-like .courses-info .courses-content .courses-read-more a .bootcamps-container .bootcamps-body .bootcamp-container .bootcamp {
+  .page-home-container .home-container .study-courses .courses-body .courses-container .courses .card-like .courses-info a .bootcamps-container .bootcamps-body .bootcamp-container .bootcamp {
     width: 50%;
     max-width: 50%;
     flex: 50%;
@@ -14017,10 +13959,6 @@ footer .footer-body .footer-nav-body .footer-copyright .copy-text .copyright .te
     margin-top: 50px;
   }
 
-  .page-common-container .common-container .common-content .content {
-    padding: 20px 0;
-  }
-
   .page-bootcamp-container .bootcamp-container .bootcamp-list-container .bootcamp-body .bootcamp .bootcamp-title {
     min-height: 80px;
   }
@@ -14101,9 +14039,6 @@ footer .footer-body .footer-nav-body .footer-copyright .copy-text .copyright .te
     padding-top: 8%;
     font-size: 60px;
   }
-  .page-home-container .home-container .study-courses .courses-body .courses-container .courses .card-like .courses-info .courses-content .courses-read-more a .btn-link-general {
-    width: 100%;
-  }
   .page-home-container .home-container .video-list-container .video-displays {
     height: 465px;
   }
@@ -14124,16 +14059,6 @@ footer .footer-body .footer-nav-body .footer-copyright .copy-text .copyright .te
   ##Screen = B/w 320px to 479px
 */
 @media (min-width: 320px) and (max-width: 480px) {
-  .page-common-container .common-container .common-content .content {
-    padding: 20px 10px;
-  }
-  .page-common-container .common-container .common-content .content p {
-    font-size: 14px;
-  }
-  .page-common-container .common-container .common-content .content iframe {
-    width: 100%;
-  }
-
   .home-page-info .page-content .text-content h3, .home-page-info .page-content .text-content .h3 {
     font-size: 20px !important;
   }
@@ -14218,9 +14143,6 @@ footer .footer-body .footer-nav-body .footer-copyright .copy-text .copyright .te
   .page-home-container .home-container .study-courses .courses-body {
     padding: 0 30px 0 10px;
   }
-  .page-home-container .home-container .study-courses .courses-body .courses-container .courses .card-like .courses-info .courses-content .courses-read-more a .btn-link-general {
-    width: 100%;
-  }
   .page-home-container .home-container .bootcamps-container {
     padding: 0 30px 0 10px;
   }
@@ -14250,9 +14172,6 @@ footer .footer-body .footer-nav-body .footer-copyright .copy-text .copyright .te
   }
   .page-home-container .home-container .about-us-new-body .about-us-container .about-info h3, .page-home-container .home-container .about-us-new-body .about-us-container .about-info .h3 {
     font-size: 20px;
-  }
-  .page-home-container .home-container .about-us-new-body .about-us-container .about-info .about-us-btn a .btn-link-general {
-    width: 100%;
   }
   .page-home-container .home-container .testimonial-container .testimonial-header h1, .page-home-container .home-container .testimonial-container .testimonial-header .h1 {
     width: 100%;
@@ -14315,10 +14234,6 @@ footer .footer-body .footer-nav-body .footer-copyright .copy-text .copyright .te
   }
   .page-adv-diploma-container .ad-container .apply-button-container .apply-label {
     text-align: center;
-  }
-  .page-adv-diploma-container .ad-container .apply-button-container .apply-button {
-    margin-left: auto;
-    width: 100%;
   }
 
   .page-event-container .event-container-body {

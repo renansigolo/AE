@@ -49,15 +49,13 @@ footer {
 				background-color: unset;
 			}
 
-			a {
+			// @include media-breakpoint-up(lg) {
 
-				button {
-					width: 300px;
-					height: 50px;
-					font-weight: 700;
-					font-size: 30px;
-				}
-			}
+			// 	a {
+			// 		padding: 0.5rem 3rem;
+			// 		font-size: 2rem;
+			// 	}
+			// }
 		}
 
 		.footer-nav-body {

@@ -130,8 +130,7 @@
 												<p><?php echo $content; ?></p>
 											</div>
 											<?php if($home_header_btn_label !== '' && $home_header_btn_link !== '') {
-													// echo '<a href="'.$home_header_btn_link.'"><button class="btn-link-general">'.$home_header_btn_label.'</button></a>';
-													echo '<a href="'.$home_header_btn_link.'" class="btn btn-primary" role="button">'.$home_header_btn_label.'</a>';
+													echo '<a href="'.$home_header_btn_link.'" class="btn btn-primary btn-lg" role="button">'.$home_header_btn_label.'</a>';
 												} ?>
 										</div>
 										<?php endwhile; ?>
@@ -253,8 +252,8 @@
 								<h3><?php echo $page_title ?></h3>
 							</div>
 							<?php
-								if ( $button_label != '' && $button_link != '' ) {
-									echo '<a href="'.$button_link.'"><button class="btn-link-general">'.$button_label.'</button></a>';
+								if ( $button_label && $button_link ) {
+									echo '<a href="'.$button_link.'" class="btn btn-primary" role="button">'.$button_label.'</a>';
 								}
 							?>
 						</div>
@@ -275,8 +274,8 @@
 									<p><?php echo $content; ?></p>
 								</div>
 								<?php
-									if($button_label != '' && $button_link != '') {
-										echo '<a href="'.$button_link.'"><button class="btn-link-general">'.$button_label.'</button></a>';
+									if($button_label !== '' && $button_link !== '') {
+										echo '<a href="'.$button_link.'" class="btn btn-primary" role="button">'.$button_label.'</a>';
 									}
 								?>
 							</div>

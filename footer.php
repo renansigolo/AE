@@ -13,9 +13,9 @@
 		<section class="apply-now-body">
 			<div class="container">
 				<div class="row">
-					<div class="col-12 col-lg-8 offset-lg-2">
+					<div class="col-12 col-lg-8 mx-auto">
 						<h2 class="fw-bold mb-4"><?php echo get_field('footer_apply_now_text',2); ?></h2>
-						<a href="<?php echo get_field('footer_apply_now_button_link',2); ?>"><button class="btn-link-general">APPLY NOW</button></a>
+						<a href="<?php echo get_field('footer_apply_now_button_link',2); ?>" class="btn-xxl" role="button" target="_blank">Apply Now</a>
 					</div>
 				</div>
 			</div>
@@ -24,7 +24,7 @@
 		<section class="footer-nav-body">
 			<div class="footer-menus">
 				<div class="container">
-				<div class="col-12 col-lg-10 offset-lg-1">
+				<div class="col-12 col-lg-10 mx-auto">
 					<div class="row">
 						<div class="col-12 col-lg-3 col-md col-sm-6 footer-icon-social">
 							<div class="website-icon">
@@ -67,12 +67,10 @@
 				</div>
 			</div>
 			<div class="footer-copyright">
-				<div class="col-12">
-					<div class="row">
-						<div class="col-12 copy-text">
-							<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Footer Copyright") ) : ?>
-							<?php endif;?>
-						</div>
+				<div class="row">
+					<div class="col-12 copy-text">
+						<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Footer Copyright") ) : ?>
+						<?php endif;?>
 					</div>
 				</div>
 			</div>
