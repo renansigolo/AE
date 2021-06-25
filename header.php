@@ -273,8 +273,7 @@
 								<div class="text-content">
 									<p><?php echo $content; ?></p>
 								</div>
-								<?php
-									if($button_label !== '' && $button_link !== '') {
+								<?php if ( $button_label && $button_link ) {
 										echo '<a href="'.$button_link.'" class="btn btn-primary" role="button">'.$button_label.'</a>';
 									}
 								?>
