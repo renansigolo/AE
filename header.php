@@ -91,7 +91,7 @@
 							</div>
 							<div class="mobile-nav-menu">
 								<a href="javascript:void(0);" id="burger-menu" class="icon">
-									 <i class="fa fa-bars"></i>
+									 <i class="fas fa-bars"></i>
 								</a>
 								<div id="menu_list" class="menu_list">
 										<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
@@ -130,7 +130,8 @@
 												<p><?php echo $content; ?></p>
 											</div>
 											<?php if($home_header_btn_label !== '' && $home_header_btn_link !== '') {
-													echo '<a href="'.$home_header_btn_link.'"><button class="btn-link-general">'.$home_header_btn_label.'</button></a>';
+													// echo '<a href="'.$home_header_btn_link.'"><button class="btn-link-general">'.$home_header_btn_label.'</button></a>';
+													echo '<a href="'.$home_header_btn_link.'" class="btn btn-primary" role="button">'.$home_header_btn_label.'</a>';
 												} ?>
 										</div>
 										<?php endwhile; ?>

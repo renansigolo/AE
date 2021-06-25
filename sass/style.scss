@@ -22,7 +22,9 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
+// Custom Bootstrap
 @import "variables";
+@import "../node_modules/bootstrap/scss/bootstrap";
 @import "general";
 @import "header";
 @import "home";

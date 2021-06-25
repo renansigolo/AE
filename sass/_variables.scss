@@ -1,9 +1,25 @@
+$primary:       	 #ec4e68;
+// $secondary:     $gray-600;
+// $success:       $green;
+// $info:          $cyan;
+// $warning:       $yellow;
+// $danger:        $red;
+// $light:         $gray-100;
+// $dark:          $gray-900;
+
 :root {
 	--pink-dark: #e63552;
-	--pink: #ec4e68;
+	--pink: $primary;
 	--pink-light: #e635521a;
 	--orange: #ff7442;
 	--orange-light: #ff74421a;
 	--gray-light: #f2f2f2;
 	--white: #fff;
+}
+
+// Allows for customizing button radius independently from global border radius
+$btn-border-radius: 0;
+
+.btn-primary {
+	color: #fff;
 }
