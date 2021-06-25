@@ -154,7 +154,7 @@ jQuery(function ($) {
 
 	let map = null;
 
-	$(document).ready(function () {
+	$(function() {
 		$(".acf-map").each(function () {
 			// create map
 			map = newMap($(this));
