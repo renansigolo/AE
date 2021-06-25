@@ -4,7 +4,7 @@
 */
 get_header();
 
-$numberColumn = get_field('number_of_column');
+$numberColumn = get_field( 'number_of_column' );
 ?>
 <div class="page-booking-container">
 	<div class="big-polygon">
@@ -18,7 +18,7 @@ $numberColumn = get_field('number_of_column');
 		<div class="col-12 common-content">
 			<div class="row">
 				<div class="col-12 content">
-					<?php echo get_field('booking_form');?>
+					<?php echo get_field( 'booking_form' ); ?>
 				</div>
 			</div>
 		</div>

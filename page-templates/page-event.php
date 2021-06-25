@@ -15,45 +15,45 @@ $selected_events = $_SESSION['set_which_event'];
 				</div>
 				<?php
 					$txtEventSearch = '';
-					if ( isset ($_GET['txtSearchEvent']) ) {
-						$txtEventSearch = $_GET['txtSearchEvent'];
-					}
-					if ( isset ($_GET['dateSearchEvent']) ) {
-						$txtsrchdate = $_GET['dateSearchEvent'];
-					}
+				if ( isset( $_GET['txtSearchEvent'] ) ) {
+					$txtEventSearch = $_GET['txtSearchEvent'];
+				}
+				if ( isset( $_GET['dateSearchEvent'] ) ) {
+					$txtsrchdate = $_GET['dateSearchEvent'];
+				}
 
-					if($txtEventSearch != '' || $txtsrchdate != ''){
+				if ( $txtEventSearch != '' || $txtsrchdate != '' ) {
 					?>
 						<div class="col-12 result-search">
 							<h3>Result for: <br>
-							<?php
-								if ($txtEventSearch != ''){
-									echo '<span><b>Search: </b>'.$txtEventSearch.'</span>';
-								}
-								if($txtsrchdate != ''){
-									echo '<span><b>Date: </b>'.$txtsrchdate.'</span>';
-								}
-							?>
+						<?php
+						if ( $txtEventSearch != '' ) {
+							echo '<span><b>Search: </b>' . $txtEventSearch . '</span>';
+						}
+						if ( $txtsrchdate != '' ) {
+							echo '<span><b>Date: </b>' . $txtsrchdate . '</span>';
+						}
+						?>
 						</h3>
 					</div>
 					<?php
-					}else {
+				} else {
 					?>
 					<div class="col-12 current-previous-btn">
 						<p>
-						<form class="" action="<?php echo home_url().'\events'; ?>" method="get">
+						<form class="" action="<?php echo home_url() . '\events'; ?>" method="get">
 							<input type="submit" id="current" name="btn_current" value="CURRENT EVENTS">
 						</form>
 						<p id="half">|</p>
-						<form class="" action="<?php echo home_url().'\events'; ?>" method="get">
+						<form class="" action="<?php echo home_url() . '\events'; ?>" method="get">
 							<input type="submit" id="previous" name="btn_current" value="PREVIOUS EVENTS">
 						</form>
 					</p>
 					</div>
-				<?php
+					<?php
 				}
-				if($selected_events != 'PREVIOUS EVENTS'){
-				?>
+				if ( $selected_events != 'PREVIOUS EVENTS' ) {
+					?>
 				<style media="screen">
 					.current-previous-btn #current{
 						color: var(--pink);
@@ -62,61 +62,60 @@ $selected_events = $_SESSION['set_which_event'];
 				<div class="col-12 current-events">
 					<div class="row">
 						<?php
-						if($txtEventSearch != '' || $txtsrchdate != ''){
-							if($txtsrchdate != ''){
+						if ( $txtEventSearch != '' || $txtsrchdate != '' ) {
+							if ( $txtsrchdate != '' ) {
 								$meta_query = array(
 									array(
-										'key' => 'event_date',
-										'value' => $txtsrchdate,
-										'type' => 'DATE',
-										'compare' => '='
-									)
+										'key'     => 'event_date',
+										'value'   => $txtsrchdate,
+										'type'    => 'DATE',
+										'compare' => '=',
+									),
 								);
-							}else {
+							} else {
 								$meta_query = '';
 							}
-
-						}else{
+						} else {
 							$meta_query = array(
 								array(
-									'key' => 'event_date',
-									'value' => date('Ymd'),
-									'type' => 'DATE',
-									'compare' => '>='
-								)
+									'key'     => 'event_date',
+									'value'   => date( 'Ymd' ),
+									'type'    => 'DATE',
+									'compare' => '>=',
+								),
 							);
 						}
 
 						$args = array(
-							'post_type' => 'events_post_type',
-							's' => $txtEventSearch,
-							'post_status'=>'publish',
-							'orderby' => 'date',
-							'order' => 'ASC',
+							'post_type'      => 'events_post_type',
+							's'              => $txtEventSearch,
+							'post_status'    => 'publish',
+							'orderby'        => 'date',
+							'order'          => 'ASC',
 							'posts_per_page' => 4,
 							'paged'          => get_query_var( 'paged' ),
-							'meta_key' => 'event_date',
-							'meta_query' => $meta_query
+							'meta_key'       => 'event_date',
+							'meta_query'     => $meta_query,
 						);
 
 						$events = new WP_Query( $args );
-						if( $events->have_posts() ) {
-						while( $events->have_posts() ) {
-							$events->the_post();
-							$date = get_field('event_date');
-							$price = get_field('event_price');
-							$content = get_the_content();
-							$preview = get_the_excerpt();
-							$timefrom = get_field('time_from');
-							$timeTo = get_field('time_to');
-							$sched = $timefrom .' - '.$timeTo.' AEST';
-							$free = get_field('is_it_free');
-							$location = get_field('event_location');
+						if ( $events->have_posts() ) {
+							while ( $events->have_posts() ) {
+								$events->the_post();
+								$date     = get_field( 'event_date' );
+								$price    = get_field( 'event_price' );
+								$content  = get_the_content();
+								$preview  = get_the_excerpt();
+								$timefrom = get_field( 'time_from' );
+								$timeTo   = get_field( 'time_to' );
+								$sched    = $timefrom . ' - ' . $timeTo . ' AEST';
+								$free     = get_field( 'is_it_free' );
+								$location = get_field( 'event_location' );
 
-							if($free == 'yes'){
-								$price = 'Free';
-							}
-						?>
+								if ( $free == 'yes' ) {
+									$price = 'Free';
+								}
+								?>
 						<div class="col-12 col-md-6 event-box">
 							<div class="row">
 								<div class="col-12 col-md-6 event-img">
@@ -132,21 +131,21 @@ $selected_events = $_SESSION['set_which_event'];
 										<p id="location"><?php echo $location; ?></p>
 									</div>
 									<div class="event-content">
-										<a href="<?php echo get_field('event_bright_link');  ?>" target="_blank"><h4><?php the_title(); ?></h4></a>
+										<a href="<?php echo get_field( 'event_bright_link' ); ?>" target="_blank"><h4><?php the_title(); ?></h4></a>
 										<p>
 									<?php
-								if (strlen($preview) <=90) {
-									echo $preview;
-								} else {
-									echo substr($preview, 0, 90) . '...';
-								}
-								?>
+									if ( strlen( $preview ) <= 90 ) {
+										echo $preview;
+									} else {
+										echo substr( $preview, 0, 90 ) . '...';
+									}
+									?>
 									 </p>
 									</div>
 								</div>
 							</div>
 						</div>
-						<?php
+								<?php
 							}
 							echo '<div class="col-12 page-navigation">';
 							wp_pagenavi( array( 'query' => $events ) );
@@ -156,7 +155,7 @@ $selected_events = $_SESSION['set_which_event'];
 						?>
 					</div>
 				</div>
-			<?php }else{ ?>
+			<?php } else { ?>
 				<style media="screen">
 					.current-previous-btn #previous{
 						color: var(--pink);
@@ -167,35 +166,35 @@ $selected_events = $_SESSION['set_which_event'];
 						<?php
 						$meta_query = array(
 							array(
-								'key' => 'event_date',
-								'value' => date('Ymd'),
-								'type' => 'DATE',
-								'compare' => '<='
-							)
+								'key'     => 'event_date',
+								'value'   => date( 'Ymd' ),
+								'type'    => 'DATE',
+								'compare' => '<=',
+							),
 						);
-						$args = array(
-							'post_type' => 'events_post_type',
-							's' => $txtEventSearch,
-							'post_status'=>'publish',
-							'orderby' => 'date',
-							'order' => 'DESC',
+						$args       = array(
+							'post_type'      => 'events_post_type',
+							's'              => $txtEventSearch,
+							'post_status'    => 'publish',
+							'orderby'        => 'date',
+							'order'          => 'DESC',
 							'posts_per_page' => 4,
 							'paged'          => get_query_var( 'paged' ),
-							'meta_key' => 'event_date',
-							'meta_query' => $meta_query
+							'meta_key'       => 'event_date',
+							'meta_query'     => $meta_query,
 						);
 
 						$events = new WP_Query( $args );
-						if( $events->have_posts() ) {
-						while( $events->have_posts() ) {
-							$events->the_post();
-							$date = get_field('event_date');
-							$content = get_the_content();
-							$preview = get_the_excerpt();
-							$timefrom = get_field('time_from');
-							$timeTo = get_field('time_to');
-							$sched = $timefrom .' - '.$timeTo.' AEST';
-						?>
+						if ( $events->have_posts() ) {
+							while ( $events->have_posts() ) {
+								$events->the_post();
+								$date     = get_field( 'event_date' );
+								$content  = get_the_content();
+								$preview  = get_the_excerpt();
+								$timefrom = get_field( 'time_from' );
+								$timeTo   = get_field( 'time_to' );
+								$sched    = $timefrom . ' - ' . $timeTo . ' AEST';
+								?>
 						<div class="col-12 col-md-6 event-box">
 							<div class="row">
 								<div class="col-12 col-md-6 event-img">
@@ -211,21 +210,21 @@ $selected_events = $_SESSION['set_which_event'];
 										<p id="location"><?php echo $location; ?></p>
 									</div>
 									<div class="event-content">
-										<a href="<?php echo get_field('event_bright_link');  ?>" target="_blank"><h4><?php the_title(); ?></h4></a>
+										<a href="<?php echo get_field( 'event_bright_link' ); ?>" target="_blank"><h4><?php the_title(); ?></h4></a>
 										<p>
 												<?php
-											if (strlen($preview) <=90) {
-												echo $preview;
-											} else {
-												echo substr($preview, 0, 90) . '...';
-											}
-											?>
+												if ( strlen( $preview ) <= 90 ) {
+													echo $preview;
+												} else {
+													echo substr( $preview, 0, 90 ) . '...';
+												}
+												?>
 									 </p>
 									</div>
 								</div>
 							</div>
 						</div>
-						<?php
+								<?php
 							}
 							echo '<div class="col-12 page-navigation">';
 							wp_pagenavi( array( 'query' => $events ) );
@@ -235,9 +234,9 @@ $selected_events = $_SESSION['set_which_event'];
 						?>
 					</div>
 				</div>
-				<?php
-				}
-				?>
+					<?php
+			}
+			?>
 			</div>
 		</div>
 </div>

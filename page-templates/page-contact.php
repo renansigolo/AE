@@ -5,7 +5,7 @@
 get_header();
 ?>
 
-<?php 
+<?php
 $page_id = null;
 // $page_id = $post->ID;
 // $content_post = get_post($page_id);
@@ -20,16 +20,16 @@ $page_id = null;
 		<div class="col-12 col-lg-8 mx-auto location-contact">
 			<div class="row">
 				<div class="col-12 col-lg-4 location-description">
-					<h3><?php echo get_field('location_label'); ?></h3>
+					<h3><?php echo get_field( 'location_label' ); ?></h3>
 					<div class="divider"></div>
 					<br />
-					<p><?php echo get_field('location_address'); ?></p>
+					<p><?php echo get_field( 'location_address' ); ?></p>
 				</div>
 				<div class="col-12 col-lg-8 location-map">
 					<?php
-					$location = get_field('location_map');
-					if( !empty($location) ):
-					?>
+					$location = get_field( 'location_map' );
+					if ( ! empty( $location ) ) :
+						?>
 					<div class="acf-map">
 						<div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
 					</div>
@@ -38,19 +38,19 @@ $page_id = null;
 			</div>
 
 			<div class="left-polygon">
-				<img src="<?php echo home_url().'/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="Polygon Image">
+				<img src="<?php echo home_url() . '/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="Polygon Image">
 			</div>
 		</div>
 	</div>
 
-	<?php $book_bg = get_field('book_header_background'); ?>
+	<?php $book_bg = get_field( 'book_header_background' ); ?>
 
 </div>
 <?php
 get_footer();
 ?>
 
-<?php if($page_id === 20) : ?>
+<?php if ( $page_id === 20 ) : ?>
 <div class="row">
 	<section class="col-12 col-md-8 mx-auto bg-primary contact-page-header">
 		<div class="col-12 page-content">
@@ -67,8 +67,8 @@ get_footer();
 				<div class="col-12 col-md-4 sched-and-info">
 					<div class="text-content">
 						<p><?php echo $content; ?></p>
-						<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Social Icon") ) : ?>
-						<?php endif;?>
+						<?php if ( ! function_exists( 'dynamic_sidebar' ) || ! dynamic_sidebar( 'Social Icon' ) ) : ?>
+						<?php endif; ?>
 					</div>
 				</div>
 			</div>

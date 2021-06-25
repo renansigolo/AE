@@ -18,24 +18,24 @@ get_header();
 		<section class="company-info">
 			<div class="row">
 				<div class="col-12 col-md-6 c-info-img">
-					<img src="<?php echo get_field('company_info_image'); ?>" alt="Company Image">
+					<img src="<?php echo get_field( 'company_info_image' ); ?>" alt="Company Image">
 				</div>
 				<div class="col-12 col-md-6 c-info-desc">
-					<p><?php echo get_field('company_info'); ?></p>
-					<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Social Icon") ) : ?>
-					<?php endif;?>
+					<p><?php echo get_field( 'company_info' ); ?></p>
+					<?php if ( ! function_exists( 'dynamic_sidebar' ) || ! dynamic_sidebar( 'Social Icon' ) ) : ?>
+					<?php endif; ?>
 				</div>
 			</div>
 		</section>
 
 		<section class="handbook-collapse-container">
-			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Student Handbook Collapse") ) : ?>
-			<?php endif;?>
+			<?php if ( ! function_exists( 'dynamic_sidebar' ) || ! dynamic_sidebar( 'Student Handbook Collapse' ) ) : ?>
+			<?php endif; ?>
 		</section>
 
 		<section class="handbook-forms-container">
 			<div class="col-12 header-title">
-				<h1><?php echo get_field('forms_link_label');?></h1>
+				<h1><?php echo get_field( 'forms_link_label' ); ?></h1>
 			</div>
 			<div class="col-12 form-links-container">
 				<div class="row">

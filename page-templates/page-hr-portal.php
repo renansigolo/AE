@@ -17,12 +17,12 @@ get_header();
 			<div class="row">
 				
 				<div class="col-12 content">
-					<?php echo get_field('first_content');?>
+					<?php echo get_field( 'first_content' ); ?>
 				</div>
 				
 				<div class="col-12 content-links content-policies">
 					<div class="col-12 header-title">
-						<h1><?php echo get_field('first_label');?></h1>
+						<h1><?php echo get_field( 'first_label' ); ?></h1>
 					</div>
 					<div class="col-12 form-links-container">
 						<div class="row">
@@ -41,7 +41,7 @@ get_header();
 				
 				<div class="col-12 content-links content-forms">
 					<div class="col-12 header-title">
-						<h1><?php echo get_field('second_label');?></h1>
+						<h1><?php echo get_field( 'second_label' ); ?></h1>
 					</div>
 					<div class="col-12 form-links-container">
 						<div class="row">
