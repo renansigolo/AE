@@ -48,13 +48,13 @@ $video_url = get_field( 'video' );
 	</div>
 	</section>
 
-	<!-- <div class="row">
-	<div class="col-lg-11 mx-auto">
-		<hr />
+	<div class="row">
+		<div class="col-lg-11 mx-auto">
+			<hr />
+		</div>
 	</div>
-	</div> -->
 	
-	<!-- <section class="container mt-3 mb-5">
+	<section class="container mt-3 mb-5">
 	<div class="row text-center">
 		<div class="col-lg-6 mx-auto mb-4">
 		<h2 class="display-5 fw-bold">Apply Now</h2>
@@ -64,38 +64,12 @@ $video_url = get_field( 'video' );
 	
 	<div class="row">
 		<div class="col-lg-6 mx-auto">
-		<form>
-			<div class="mb-3">
-			<label for="name" class="form-label">Full Name</label>
-			<input type="email" class="form-control" id="name" aria-describedby="name">
-			</div>
-			<div class="mb-3">
-			<label for="email" class="form-label">Email address</label>
-			<input type="email" class="form-control" id="email" aria-describedby="email">
-			</div>
-			<div class="mb-3">
-			<label for="phone" class="form-label">Phone</label>
-			<input type="tel" class="form-control" id="phone" aria-describedby="phone">
-			</div>
-			<div class="mb-3">
-			<label for="nationality" class="form-label">Nationality</label>
-			<input type="text" class="form-control" id="nationality" aria-describedby="nationality">
-			</div>
-			<div class="mb-3">
-			<label for="university" class="form-label">University Name</label>
-			<input type="text" class="form-control" id="university" aria-describedby="university">
-			</div>
-			<div class="mb-3">
-			<label for="degree" class="form-label">University Degree</label>
-			<input type="text" class="form-control" id="degree" aria-describedby="degree">
-			</div>
-			<button type="submit" class="btn btn-primary">Apply</button>
-		</form>
+			<?php echo do_shortcode( '[contact-form-7 id="2433" title="Panama Form"]' ); ?>
 		</div>
 	</div>
-	</section> -->
+	</section>
 
-	<section class="fixed-bottom bg-light border-top text-center">
+	<section class="bg-light border-top text-center">
 	<div class="container">
 		<div class="row">
 		<div class="col-12">
