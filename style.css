@@ -13473,16 +13473,10 @@ div.wpforms-container-full .wpforms-form button[type=submit]:focus {
 .page-handbook-container .handbook-container .handbook-collapse-container .handbook-list .container-title .fa-chevron-up::before {
   content: "" !important;
 }
-.page-handbook-container .handbook-container .handbook-collapse-container .handbook-list p {
-  color: #000;
-}
 .page-handbook-container .handbook-container .handbook-collapse-container .handbook-list .textwidget {
   display: none;
   padding: 20px;
-  color: #000;
-  font-size: 12px;
   font-weight: 600;
-  line-height: 1.5;
 }
 .page-handbook-container .handbook-container .handbook-collapse-container .handbook-list .textwidget b,
 .page-handbook-container .handbook-container .handbook-collapse-container .handbook-list .textwidget strong,

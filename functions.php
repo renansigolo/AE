@@ -111,7 +111,7 @@ if ( function_exists( 'register_sidebar' ) ) {
 			array(
 				'name'          => 'Student Handbook Collapse',
 				'id'            => 'student-handbook-collapse',
-				'before_widget' => '<div class="handbook-list">',
+				'before_widget' => '<div class="handbook-list my-3">',
 				'after_widget'  => '</div>',
 				'before_title'  => '<div class="container-title"><h3>',
 				'after_title'   => '</h3><i class="fas fa-chevron-down"></i></div>',
