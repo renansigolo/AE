@@ -1,6 +1,7 @@
 <?php
 function load_libs() {
 	// Style Libs
+	wp_enqueue_style( 'fontawesome-css', 'https://use.fontawesome.com/releases/v5.3.1/css/all.css' );
 	wp_enqueue_style( 'stylesheet', get_template_directory_uri() . '/style.css' );
 	// Javascript Libs
 	wp_enqueue_script( 'bootstrap-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js', '', '5.0.2', true );
