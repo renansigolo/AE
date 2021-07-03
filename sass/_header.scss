@@ -18,7 +18,7 @@
 
 .navigation {
 
-	@media (max-width: 991.98px) {
+	@include media-breakpoint-down(lg) {
 		padding: 60px 20px 100px;
 	}
 
@@ -42,50 +42,18 @@
 
 				.menu {
 
-					a {
-						background-color: transparent;
-					}
-
-					li {
-
-						a {
-							padding: 5px 20px;
-						}
+					a:hover {
+						text-decoration: underline;
 					}
 
 					li.menu-item-has-children {
-
-						&:hover {
-							background-color: transparent;
-						}
 
 						a {
 							pointer-events: none;
 						}
 
-						ul {
-
-							li {
-
-								a {
-									pointer-events: auto;
-								}
-							}
-						}
-
-						&.current-menu-item {
-
-							a {
-								background-color: transparent;
-							}
-						}
-					}
-
-					li.current-menu-item {
-
-						a {
-							background-color: #ec4e68;
-							font-weight: 800;
+						ul li a {
+							pointer-events: auto;
 						}
 					}
 				}
