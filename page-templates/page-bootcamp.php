@@ -30,6 +30,7 @@ get_header();
 						if ( $bootcamps->have_posts() ) :
 							while ( $bootcamps->have_posts() ) :
 								$bootcamps->the_post();
+								$link     = get_field( 'header_button_link' );
 								$date     = get_field( 'bootcamp_start_date' );
 								$duration = get_field( 'bootcamp_structure_duration' );
 								$time     = get_field( 'bootcamp_structure_time' );
@@ -38,12 +39,10 @@ get_header();
 								$day      = date( 'l', strtotime( $date ) );
 								?>
 						<div class="col-12 col-md-4">
+							<a href="<?php echo $link; ?>" class="text-decoration-none" target="_blank">
 							<div class="card bootcamp">
 								<div class="bootcamp-img">
 									<img src="<?php the_post_thumbnail_url(); ?>" class="card-img-top mb-3" alt="Bootcamp Post Image">
-									<div class="btn_learnmore">
-										<a href="<?php the_permalink(); ?>" class="btn btn-primary" role="button">Learn More</a>
-									</div>
 								</div>
 								<div class="card-body">
 									<div class="bootcamp-title">
@@ -66,6 +65,7 @@ get_header();
 									</div>
 								</div>
 							</div>
+							</a>
 						</div>
 								<?php
 							endwhile;
@@ -90,46 +90,6 @@ get_header();
 				</div>
 			</div>
 		</div>
-			
-			<!-- <section class="bootcamp-structure">
-				<div class="row">
-					<div class="col-12 bootcamp-structure-title">
-						<h1><?php echo get_field( 'bootcamp_structure_title' ); ?></h1>
-					</div>
-					<div class="col-12 col-md-5 bootcamp-structure-img">
-						<img src="<?php echo get_field( 'bootcamp_structure_image' ); ?>" alt="Bootcamp Image">
-					</div>
-					<div class="col-12 col-md-5 bootcamp-structure-info">
-						<div class="sub-label">
-							<p id="structure-sub-label"><?php echo get_field( 'bootcamp_structure_sub_label' ); ?></p>
-							<hr />
-						</div>
-						<?php
-						$duration = get_field( 'bootcamp_structure_duration' );
-						$time     = get_field( 'bootcamp_structure_time' );
-						$date     = get_field( 'bootcamp_structure_date' );
-						$location = get_field( 'bootcamp_structure_location' );
-						$cost     = get_field( 'bootcamp_structure_cost' );
-
-						if ( $duration != '' ) :
-							echo '<label>DURATION</label><h4>' . $duration . '</h4>';
-endif;
-						if ( $time != '' ) :
-							echo '<label>TIME</label><h4>' . $time . '</h4>';
-endif;
-						if ( $date != '' ) :
-							echo '<label>DATE</label><h4>' . $date . '</h4>';
-endif;
-						if ( $location != '' ) :
-							echo '<label>LOCATION</label><h4>' . $location . '</h4>';
-endif;
-						if ( $cost != '' ) :
-							echo '<label>COST</label><h4>' . $cost . '</h4>';
-endif;
-						?>
-					</div>
-				</div>
-			</section> -->
 	</section>
 
 </div>
