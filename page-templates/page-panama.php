@@ -27,6 +27,12 @@ $video_url = get_field( 'video' );
 	</head>
 	<body>
 	
+	<style>
+	.screen-reader-response {
+		display: none;
+	}
+	</style>
+
 <main>
 	<h1 class="visually-hidden">Panama Page</h1>
 
