@@ -5,10 +5,6 @@
 get_header();
 ?>
 <div class="page-meet-container">
-	<div class="left-polygon">
-		<img src="<?php echo home_url() . '/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="Left Polygon IMage">
-	</div>
-
 	<div class="container meet-container">
 		<div class="row">
 			<?php

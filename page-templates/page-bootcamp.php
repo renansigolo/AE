@@ -4,11 +4,7 @@
 */
 get_header();
 ?>
-<div class="page-bootcamp-container">
-	<div class="small-polygon">
-		<img src="<?php echo home_url() . '/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="Small Polygon Image">
-	</div>
-	
+<div class="page-bootcamp-container">	
 	<section class="container bootcamp-container">
 		<div class="bootcamp-list-container">
 			<h1 class="bootcamp-list-title mb-3">

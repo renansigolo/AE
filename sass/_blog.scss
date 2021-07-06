@@ -161,32 +161,7 @@
 						}
 					}
 				}
-
-				.small-polygon {
-					position: absolute;
-					display: inline-block;
-					right: -15vw;
-					bottom: 0;
-					z-index: -1;
-
-					img {
-						width: 65%;
-						height: auto;
-					}
-				}
 			}
-		}
-	}
-
-	.big-polygon {
-		position: absolute;
-		left: 2vw;
-		bottom: 7vw;
-		z-index: -1;
-
-		img {
-			width: 100%;
-			height: auto;
 		}
 	}
 }

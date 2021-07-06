@@ -5,11 +5,7 @@
 get_header();
 ?>
 
-<div class="page-adv-diploma-container">
-	<div class="big-polygon">
-		<img src="<?php echo home_url() . '/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="Big Polygon">
-	</div>
-	
+<div class="page-adv-diploma-container">	
 	<div class="ad-container">
 		<section class="diploma-studies my-5">
 			<div class="container">

@@ -15,9 +15,6 @@ get_header();
 				<p><?php echo get_field( 'about_info_1_description' ); ?></p>
 			</div>
 		</div>
-		<div class="small-polygon">
-			<img src="<?php echo home_url() . '/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="Small Polygon">
-		</div>
 	</div>
 
 	<div class="col-12 offset-md-2 col-md-8 about-info-2">
@@ -34,9 +31,6 @@ get_header();
 			<div class="col-12 col-md-6 info-2-desc">
 				<p><?php echo get_field( 'about_info_2_description' ); ?></p>
 			</div>
-		</div>
-		<div class="big-polygon">
-			<img src="<?php echo home_url() . '/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="Big Polygon">
 		</div>
 	</div>
 

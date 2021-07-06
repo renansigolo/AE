@@ -1,30 +1,6 @@
 .page-adv-diploma-container {
 	overflow: hidden;
 
-	.big-polygon {
-		position: absolute;
-		right: 2vw;
-		bottom: -700px;
-		z-index: -1;
-
-		img {
-			width: 100%;
-			height: auto;
-		}
-	}
-
-	.small-polygon {
-		position: absolute;
-		right: 0;
-		top: 17vw;
-		z-index: -1;
-
-		img {
-			width: 70%;
-			height: auto;
-		}
-	}
-
 	.ad-container {
 
 		.diploma-sched {

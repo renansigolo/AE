@@ -4,12 +4,6 @@ get_header();
 the_post();
 ?>
 <div class="single-page-bootcamp">
-	<div class="single-polygon">
-		<img src="<?php echo home_url() . '/wp-content/uploads/2020/04/single-polygon.png'; ?>" alt="Single Polygon Image">
-	</div>
-	<div class="small-polygon">
-		<img src="<?php echo home_url() . '/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="Small Polygon Image">
-	</div>
 	<div class="col-12 offset-md-1 col-md-10 single-bootcamp-container">
 		<div class="col-12 bootcamp-structure">
 			<div class="row">

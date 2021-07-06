@@ -3,30 +3,6 @@
 	padding: 50px 0;
 	overflow: hidden;
 
-	.single-polygon {
-		position: absolute;
-		left: 2vw;
-		bottom: 0;
-		z-index: -1;
-
-		img {
-			width: 70%;
-			height: auto;
-		}
-	}
-
-	.small-polygon {
-		position: absolute;
-		right: 2vw;
-		top: 15vw;
-		z-index: -1;
-
-		img {
-			width: 70%;
-			height: auto;
-		}
-	}
-
 	.single-bootcamp-container {
 
 		.bootcamp-structure {

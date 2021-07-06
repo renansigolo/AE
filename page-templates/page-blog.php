@@ -4,11 +4,7 @@
 */
 get_header();
 ?>
-<div class="page-blog-container">
-	<div class="big-polygon">
-		<img src="<?php echo home_url() . '/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="Polygon Image">
-	</div>
-	
+<div class="page-blog-container">	
 <div class="container">
 <div class="col-12 blog-container">
 		<div class="row">
@@ -95,9 +91,6 @@ get_header();
 					<div class="popular-posts mt-3">
 						<?php if ( ! function_exists( 'dynamic_sidebar' ) || ! dynamic_sidebar( 'Popular Post Blog' ) ) : ?>
 						<?php endif; ?>
-						<div class="small-polygon">
-							<img src="<?php echo home_url() . '/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="Small Polygon Image">
-						</div>
 					</div>
 			</section>
 

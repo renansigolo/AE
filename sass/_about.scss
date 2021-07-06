@@ -19,18 +19,6 @@
 				}
 			}
 		}
-
-		.small-polygon {
-			position: absolute;
-			right: -10vw;
-			bottom: 0;
-			z-index: -1;
-
-			img {
-				width: 65%;
-				height: auto;
-			}
-		}
 	}
 
 	.about-info-2 {
@@ -46,18 +34,6 @@
 			h1 {
 				font-weight: 900;
 				padding: 20px 20px;
-			}
-		}
-
-		.big-polygon {
-			position: absolute;
-			left: -12vw;
-			bottom: -12vw;
-			z-index: -1;
-
-			img {
-				width: 100%;
-				height: auto;
 			}
 		}
 	}

@@ -3,31 +3,6 @@
 	overflow: hidden;
 	padding: 50px 10px;
 
-	.big-polygon {
-		position: absolute;
-		left: 3vw;
-		bottom: 3vw;
-		z-index: -1;
-
-		img {
-			width: 100%;
-			height: auto;
-		}
-	}
-
-	.small-polygon {
-		position: absolute;
-		display: inline-block;
-		right: 0;
-		top: 15vw;
-		z-index: -1;
-
-		img {
-			width: 65%;
-			height: auto;
-		}
-	}
-
 	.common-container {
 
 		.common-content {

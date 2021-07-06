@@ -4,17 +4,8 @@
 */
 get_header();
 ?>
-<div class="page-handbook-container">  
-	<div class="big-polygon">
-			<!--img src="?php echo home_url() . '/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="Polygon Image" --> 
-	</div>
-	
-	<div class="small-polygon">
-		<img src="<?php echo home_url() . '/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="Small Polygon Image">
-	</div>
-	
+<div class="page-handbook-container">  	
 	<div class="container handbook-container">
-
 		<section class="company-info">
 			<div class="row">
 				<div class="col-12 col-md-6 c-info-img">

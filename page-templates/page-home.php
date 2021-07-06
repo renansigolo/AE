@@ -19,10 +19,6 @@ get_header();
 ?>
 
 <div class="page-home-container">
-	<div class="small-polygon">
-		<img src="<?php echo home_url() . '/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="Small Polygon">
-	</div>
-
 	<div class="home-container">
 		<section class="container counting-numbers-container" id="start_count">
 			<div class="row">

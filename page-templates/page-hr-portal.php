@@ -5,13 +5,6 @@
 get_header();
 ?>
 <div class="page-hr-portal-container container">
-	<div class="big-polygon">
-		<img src="<?php echo home_url() . '/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="Polygon Image">
-	</div>
-	<div class="small-polygon">
-		<img src="<?php echo home_url() . '/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="Small Polygon Image">
-	</div>
-
 	<div class="offset-md-1 col-md-10 hr-portal-container">
 		<div class="col-12 hr-portal-content">
 			<div class="row">

@@ -7,13 +7,6 @@ get_header();
 $numberColumn = get_field( 'number_of_column' );
 ?>
 <div class="page-common-container">
-	<div class="big-polygon">
-		<img src="<?php echo home_url() . '/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="Polygon Image">
-	</div>
-	<div class="small-polygon">
-		<img src="<?php echo home_url() . '/wp-content/uploads/2020/04/Polygon-2-small.png'; ?>" alt="Small Polygon Image">
-	</div>
-
 	<div class="col-12 col-md-8 mx-auto common-container">
 		<div class="common-content">
 			<div class="row">

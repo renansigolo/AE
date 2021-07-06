@@ -1,31 +1,6 @@
 .page-hr-portal-container {
 	position: relative;
 
-	.big-polygon {
-		position: absolute;
-		left: 3vw;
-		bottom: 3vw;
-		z-index: -1;
-
-		img {
-			width: 100%;
-			height: auto;
-		}
-	}
-
-	.small-polygon {
-		position: absolute;
-		display: inline-block;
-		right: 0;
-		top: 15vw;
-		z-index: -1;
-
-		img {
-			width: 65%;
-			height: auto;
-		}
-	}
-
 	.hr-portal-container {
 
 		.hr-portal-content {
