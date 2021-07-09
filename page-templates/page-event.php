@@ -41,18 +41,18 @@ $selected_events = $_SESSION['set_which_event'];
 					?>
 					<div class="col-12 current-previous-btn">
 						<p>
-						<form class="" action="<?php echo home_url() . '\events'; ?>" method="get">
+						<form action="<?php echo home_url() . '\events'; ?>" method="get">
 							<input type="submit" id="current" name="btn_current" value="CURRENT EVENTS">
 						</form>
 						<p id="half">|</p>
-						<form class="" action="<?php echo home_url() . '\events'; ?>" method="get">
+						<form action="<?php echo home_url() . '\events'; ?>" method="get">
 							<input type="submit" id="previous" name="btn_current" value="PREVIOUS EVENTS">
 						</form>
 					</p>
 					</div>
 					<?php
 				}
-				if ( $selected_events != 'PREVIOUS EVENTS' ) {
+				if ( $selected_events !== 'PREVIOUS EVENTS' ) {
 					?>
 				<style media="screen">
 					.current-previous-btn #current{
@@ -62,8 +62,8 @@ $selected_events = $_SESSION['set_which_event'];
 				<div class="col-12 current-events">
 					<div class="row">
 						<?php
-						if ( $txtEventSearch != '' || $txtsrchdate != '' ) {
-							if ( $txtsrchdate != '' ) {
+						if ( $txtEventSearch !== '' || $txtsrchdate !== '' ) {
+							if ( $txtsrchdate !== '' ) {
 								$meta_query = array(
 									array(
 										'key'     => 'event_date',
