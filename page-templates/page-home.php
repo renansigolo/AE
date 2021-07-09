@@ -107,11 +107,12 @@ get_header();
 											?>
 									<div class="col-12 col-md-6 event">
 										<div class="card-like-no-padding">
-											<div class="row">
-												<div class="col-12 col-md-6 event-img">
+										<a href="<?php echo get_field( 'event_bright_link' ); ?>" target="_blank">
+											<div class="event-card">
+											<div class="event-img">
 													<img src="<?php the_post_thumbnail_url(); ?>" alt="Event Post Image">
 												</div>
-												<div class="col-12 col-md-6 event-info">
+												<div class="event-info m-2 pb-2">
 													<div class="event-date-author">
 														<p id="date"><?php echo $date; ?></p>
 														<p id="price"><?php echo $price; ?> </p>
@@ -120,8 +121,8 @@ get_header();
 														<p id="sched"><?php echo $sched; ?></p>
 														<p id="location"><?php echo $location; ?></p>
 													</div>
-													<div class="event-content">
-														<a href="<?php echo get_field( 'event_bright_link' ); ?>" target="_blank"><h4><?php the_title(); ?></h4></a>
+													<div class="event-content mt-2">
+														<h4><?php the_title(); ?></h4>
 														<p>
 														<?php
 														if ( strlen( $preview ) <= 90 ) {
@@ -131,8 +132,9 @@ get_header();
 														?>
 														</p>
 													</div>
+												</div>
 											</div>
-										</div>
+										</a>
 								</div>
 								</div>
 											<?php
@@ -150,9 +152,9 @@ get_header();
 			</div>
 		</section>
 
-		<section class="container second-banner">
-			<div class="col-12 hashtag-container">
-				<h1><?php echo get_field( 'hashtag_text' ); ?></h1>
+		<section class="second-banner d-flex">
+			<div class="container hashtag-container">
+				<h2 class="m-0"><?php echo get_field( 'hashtag_text' ); ?></h2>
 			</div>
 		</section>
 

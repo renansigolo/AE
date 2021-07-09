@@ -67,11 +67,15 @@
 								width: 100%;
 								object-fit: cover;
 								height: 265px;
+
+								@include media-breakpoint-up(xl) {
+									height: 100%;
+								}
 							}
 						}
 
 						.event-info {
-							padding-right: 25px;
+							// padding-right: 25px;
 
 							.event-date-author {
 								border-bottom: 1px solid var(--pink-dark);
@@ -95,7 +99,6 @@
 							}
 
 							.event-location-time {
-								// border-bottom: 1px solid var(--pink);
 								overflow: hidden;
 
 								@extend %regular-text-white;
@@ -104,6 +107,7 @@
 									margin-bottom: 0;
 									font-size: 13px;
 									text-transform: uppercase;
+									text-decoration: none !important;
 								}
 							}
 
@@ -112,20 +116,15 @@
 
 								@extend %text-content-h1-6-12-600-15;
 
-								a {
+								h4 {
+									font-size: 1rem;
+									text-transform: uppercase;
+									color: var(--pink-dark);
+								}
 
-									h4 {
-										text-transform: uppercase;
-										color: var(--pink-dark);
-									}
-
-									&:hover {
-										text-decoration: none;
-
-										h4 {
-											color: var(--pink-dark);
-										}
-									}
+								p {
+									text-transform: capitalize;
+									margin-bottom: 0;
 								}
 							}
 						}
@@ -135,6 +134,7 @@
 		}
 
 		.second-banner {
+			background-color: var(--pink);
 			position: relative;
 			height: 200px;
 
@@ -399,12 +399,14 @@
 
 		.hashtag-container {
 			text-align: center;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 
-			h1 {
-				padding-top: 55px;
+			h2 {
 				margin-top: 0;
-				color: #fff;
-				font-size: 70px;
+				color: var(--white);
+				font-size: 3rem;
 				font-weight: bolder;
 			}
 		}
