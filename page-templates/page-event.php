@@ -21,14 +21,6 @@ get_header();
 				<div class="col-12 previous-events">
 					<div class="row">
 						<?php
-						$meta_query = array(
-							array(
-								'key'     => 'event_date',
-								'value'   => date( 'Ymd' ),
-								'type'    => 'DATE',
-								'compare' => '<=',
-							),
-						);
 						$args       = array(
 							'post_type'      => 'events_post_type',
 							's'              => $txtEventSearch,

@@ -127,14 +127,15 @@
 				}
 
 				.page-navigation {
+					margin: 15px 0;
 
 					.wp-pagenavi {
-						font-size: 5px;
+						font-size: 0.5rem;
 						float: right;
 
 						span.current {
-							padding: 0 15px;
-							color: var(--pink);
+							padding: 12px 15px;
+							color: var(--white);
 							border: 2px solid var(--pink);
 							background-color: var(--pink);
 						}
