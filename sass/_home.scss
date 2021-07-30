@@ -144,7 +144,6 @@
 		}
 
 		.study-courses {
-			background-color: var(--pink-light);
 			position: relative;
 
 			.courses-title {
@@ -388,6 +387,7 @@
 
 					p {
 						font-weight: 600;
+						font-size: 1.25rem;
 					}
 
 					.about-us-btn {
@@ -538,32 +538,42 @@
 			padding: 50px 0;
 
 			.counting-item-container {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
 				text-align: center;
 
-				.first-item-label {
+				@include media-breakpoint-up(lg) {
+					flex-direction: row;
+				}
 
-					p {
-						font-weight: 600;
-						color: #000;
-						font-size: 1.5rem;
-					}
+				p {
+					margin: 0;
 				}
 
 				.counting-item {
+					width: 50%;
 
 					p {
-						color: var(--pink);
+						color: var(--blue);
 						font-weight: 900;
 						font-size: 70px;
 					}
 				}
 
-				.second-item-label {
+				.counting-label {
+					max-width: 80%;
+
+					@include media-breakpoint-up(lg) {
+						max-width: 50%;
+					}
 
 					p {
 						font-weight: 600;
 						color: #000;
 						font-size: 23px;
+						text-transform: capitalize;
 					}
 				}
 			}

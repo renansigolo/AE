@@ -34,15 +34,14 @@ get_header();
 				while ( $counting_items->have_posts() ) :
 					$counting_items->the_post();
 					?>
-				<div class="col-12 col-md-3 counting-item-container">
-					<div class="first-item-label">
-						<p><?php echo get_field( 'first_label' ); ?></p>
-					</div>
-					<div class="counting-item">
+				<div class="col-12 col-md-6 counting-item-container">
+					<div class="counting-item mr-5">
 						<p class="counter-value" data-count="<?php echo get_field( 'counting_number' ); ?>">0</p>
 					</div>
-					<div class="second-item-label">
-						<p><?php echo the_title(); ?></p>
+					<div class="counting-label">
+						<p>
+							<?php echo get_field( 'first_label' ); ?> <?php echo the_title(); ?>
+						</p>
 					</div>
 				</div>
 					<?php

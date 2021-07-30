@@ -23,6 +23,7 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 :root {
+  --blue: #1d4773;
   --pink-dark: #e63552;
   --pink: #ec4e68;
   --pink-light: #e635521a;
@@ -11862,7 +11863,6 @@ div.wpforms-container-full .wpforms-form button[type=submit]:focus {
   border-bottom: 5px solid var(--pink-dark);
 }
 .page-home-container .home-container .study-courses {
-  background-color: var(--pink-light);
   position: relative;
 }
 .page-home-container .home-container .study-courses .courses-title {
@@ -12030,6 +12030,7 @@ div.wpforms-container-full .wpforms-form button[type=submit]:focus {
 }
 .page-home-container .home-container .about-us-new-body .about-us-container .about-info p {
   font-weight: 600;
+  font-size: 1.25rem;
 }
 .page-home-container .home-container .about-us-new-body .about-us-container .about-info .about-us-btn {
   margin-top: 30px;
@@ -12155,22 +12156,41 @@ div.wpforms-container-full .wpforms-form button[type=submit]:focus {
   padding: 50px 0;
 }
 .page-home-container .home-container .counting-numbers-container .counting-item-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
 }
-.page-home-container .home-container .counting-numbers-container .counting-item-container .first-item-label p {
-  font-weight: 600;
-  color: #000;
-  font-size: 1.5rem;
+@media (min-width: 992px) {
+  .page-home-container .home-container .counting-numbers-container .counting-item-container {
+    flex-direction: row;
+  }
+}
+.page-home-container .home-container .counting-numbers-container .counting-item-container p {
+  margin: 0;
+}
+.page-home-container .home-container .counting-numbers-container .counting-item-container .counting-item {
+  width: 50%;
 }
 .page-home-container .home-container .counting-numbers-container .counting-item-container .counting-item p {
-  color: var(--pink);
+  color: var(--blue);
   font-weight: 900;
   font-size: 70px;
 }
-.page-home-container .home-container .counting-numbers-container .counting-item-container .second-item-label p {
+.page-home-container .home-container .counting-numbers-container .counting-item-container .counting-label {
+  max-width: 80%;
+}
+@media (min-width: 992px) {
+  .page-home-container .home-container .counting-numbers-container .counting-item-container .counting-label {
+    max-width: 50%;
+  }
+}
+.page-home-container .home-container .counting-numbers-container .counting-item-container .counting-label p {
   font-weight: 600;
   color: #000;
   font-size: 23px;
+  text-transform: capitalize;
 }
 
 .page-about-container {
@@ -13803,12 +13823,6 @@ footer .footer-body .footer-nav-body .footer-copyright .copy-text .copyright .te
     margin-left: 15px;
   }
 
-  .page-home-container .home-container .counting-numbers-container .counting-item-container .second-item-label p {
-    font-size: 16px;
-  }
-  .page-home-container .home-container .counting-numbers-container .counting-item-container .counting-item p {
-    font-size: 50px;
-  }
   .page-home-container .home-container .hashtag-container h1, .page-home-container .home-container .hashtag-container .h1 {
     padding-top: 8%;
     font-size: 60px;
@@ -13887,9 +13901,6 @@ footer .footer-body .footer-nav-body .footer-copyright .copy-text .copyright .te
     text-align: center;
   }
 
-  .page-home-container .home-container .counting-numbers-container .counting-item-container {
-    margin-bottom: 40px;
-  }
   .page-home-container .home-container .event-workshop {
     padding: 0 30px 0 10px;
   }

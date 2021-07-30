@@ -21,10 +21,10 @@
   },
   "devDependencies": {
     "@wordpress/scripts": "^16.1.4",
-    "browser-sync": "^2.27.3",
+    "browser-sync": "^2.27.5",
     "dir-archiver": "^1.1.1",
-    "rtlcss": "^3.2.1",
-    "sass": "^1.35.1"
+    "rtlcss": "^3.3.0",
+    "sass": "^1.36.0"
   },
   "rtlcssConfig": {
     "options": {
