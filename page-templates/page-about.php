@@ -19,11 +19,11 @@ get_header();
 
 	<div class="col-12 col-md-9 mx-auto about-info-2">
 		<div class="row">
-			<div class="col-12 banner-header-hashtag">
+			<div class="col-12 banner-header-hashtag animate-title">
 			<?php if ( get_field( 'about_info_2_banner_title' )) : ?>	
 				<h1><?php the_field( 'about_info_2_banner_title' ); ?></h1>
 			<?php endif; ?>
-				<h3><?php echo get_field( 'about_info_2_hashtag' ); ?></h3>
+				<h2><?php echo get_field( 'about_info_2_hashtag' ); ?></h2>
 			</div>
 			<div class="col-12 info-2-image">
 				<?php

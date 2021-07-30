@@ -2,8 +2,9 @@
 	position: relative;
 
 	.row {
-		background-color: #00000018;
+		background-color: #00000080;
 		max-width: 100vw;
+		margin: 0;
 	}
 
 	.home-header-background {
@@ -42,8 +43,22 @@
 
 				.menu {
 
-					a:hover {
-						text-decoration: underline;
+					a {
+						text-decoration: none;
+						padding-left: 6px;
+					}
+
+					.current-menu-item {
+						background-color: var(--pink);
+					}
+
+					.menu-item-has-children {
+						background-color: transparent !important;
+					}
+
+					li:hover {
+						background-color: var(--pink);
+						cursor: pointer;
 					}
 
 					li.menu-item-has-children {
@@ -144,7 +159,7 @@
 						&.current-menu-item {
 
 							a {
-								background-color: transparent;
+								background-color: var(--pink);
 							}
 						}
 					}

@@ -315,3 +315,20 @@ div.wpforms-container-full .wpforms-form button[type="submit"] {
 		font-size: 2rem;
 	}
 }
+
+.animate-title {
+	transition: all 2s;
+
+	h2 {
+		font-size: 0.8rem;
+		transition: all 2s;
+	}
+}
+
+.animate-title.scrolled {
+
+	h2 {
+		font-size: 3rem;
+		transform: scale(1.1);
+	}
+}

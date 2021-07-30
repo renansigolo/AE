@@ -3,10 +3,12 @@ function load_libs() {
 	// Style Libs
 	wp_enqueue_style( 'fontawesome-css', 'https://use.fontawesome.com/releases/v5.3.1/css/all.css' );
 	wp_enqueue_style( 'stylesheet', get_template_directory_uri() . '/style.css' );
+	// wp_enqueue_script( 'aos', 'https://unpkg.com/aos@2.3.1/dist/aos.css' );
 	// Javascript Libs
 	wp_enqueue_script( 'bootstrap-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js', '', '5.0.2', true );
 	wp_enqueue_script( 'customjs', get_template_directory_uri() . '/js/custom-script.js' );
 	wp_enqueue_script( 'mapjs', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBwbuq1wo486UUaBvb7z5UcnIyP2tXtuYE' );
+	// wp_enqueue_script( 'aos', 'https://unpkg.com/aos@2.3.1/dist/aos.js' );
 }
 add_action( 'wp_enqueue_scripts', 'load_libs' );
 

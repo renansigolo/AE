@@ -152,7 +152,7 @@ get_header();
 		</section>
 
 		<section class="second-banner d-flex">
-			<div class="container hashtag-container">
+			<div class="container hashtag-container animate-title">
 				<h2 class="m-0"><?php echo get_field( 'hashtag_text' ); ?></h2>
 			</div>
 		</section>
